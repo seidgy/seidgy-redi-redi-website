@@ -1,0 +1,77 @@
+*, :root, ::before, ::after {
+    --primary-hsl: 136, 67%, 38%;
+    --secondary-hsl: 189, 99%, 36%;
+    --tertiary-hsl: 171, 73%, 36%;
+    --accent-hsl: 273, 64%, 52%;
+    --base-hsl: 0, 0%, 13%;
+    --white-hsl: 0, 0%, 99%;
+    
+
+    --primary-color: hsl(var(--primary-hsl), 1);
+    --primary-color-80: hsl(var(--primary-hsl), 0.8);
+    --primary-color-30: hsl(var(--primary-hsl), 0.3);
+
+    --base-color: hsl(var(--base-hsl), 1);
+    --base-color-90: hsl(var(--base-hsl), 0.9);
+    --base-color-10: hsl(var(--base-hsl), 0.1);
+
+    --white-color: hsl(var(--white-hsl), 1);
+    --white-color-30: hsl(var(--white-hsl), .3);
+
+    --secondary-color: hsl(var(--secondary-hsl), 1);
+    --secondary-color-80: hsl(var(--secondary-hsl), 0.8);
+
+    --tertiary-color: hsl(var(--tertiary-hsl), 1);
+
+    --accent-color: hsl(var(--accent-hsl), 1);
+
+    --body-font: 'Montserrat', sans-serif;	
+    --display-font: 'Montserrat', sans-serif;
+
+    --sec-gradient: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 100%);
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+    line-height: 1.2em;
+    color: var(--base-color-90);
+}
+
+body {
+    background-color: var(--white-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--display-font);
+}
+
+h1, *[visuals=h1] {
+    font-size: 6.25em;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+
+h2, *[visuals=h2] {
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: 500;
+}
+
+h3, *[visuals=h3] {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: 700;
+}
+
+.base-text {
+    line-height: 1.5em;
+    font-weight: 600;
+}
+
+    .base-text--lg {
+        font-size: 1.25em;
+        line-height: 1.5em;
+        font-weight: 400;
+    }

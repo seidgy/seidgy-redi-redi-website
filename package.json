@@ -1,0 +1,33 @@
+{
+  "name": "Redi Redi Website",
+  "version": "1.0.0",
+  "description": "Nuxt Directus Boilerplate",
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host",
+    "start": "nuxt start",
+    "generate": "nuxt build",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^9.5.3",
+    "nuxt": "^3.0.0-rc.11"
+  },
+  "dependencies": {
+    "@directus/sdk": "^15.0.1",
+    "@nuxt/content": "^2.9.0",
+    "axios": "^1.6.2",
+    "express": "^4.19.2",
+    "jsdom": "^22.1.0",
+    "path": "^0.12.7",
+    "sass": "^1.54.4",
+    "serve-static": "^1.15.0",
+    "showdown": "^2.1.0",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "xmldom": "^0.6.0"
+  }
+}
