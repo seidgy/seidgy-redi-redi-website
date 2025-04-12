@@ -11,26 +11,26 @@
           <img src="/images/arrow-right.svg" alt="Arrow down" aria-hidden="true">
         </div>
         <div class="catalogo__button-list">
-          <div class="catalogo__button">
+          <nuxt-link class="catalogo__button" target="_blank" to="https://petshop.rdi.store/products">
             <img src="/images/circle-brazil.svg" alt="Brazil" aria-hidden="true">
             <p>Pet Shop</p>
-          </div>
-          <div class="catalogo__button">
+          </nuxt-link>
+          <nuxt-link class="catalogo__button" target="_blank" to="https://cosmetico.rdi.store/products">
             <img src="/images/circle-colombia.svg" alt="Colombia" aria-hidden="true">
             <p>Cosméticos</p>
-          </div>
-          <div class="catalogo__button">
+          </nuxt-link>
+          <nuxt-link class="catalogo__button" target="_blank" to="https://moda.rdi.store/products">
             <img src="/images/circle-mexico.svg" alt="Mexico" aria-hidden="true">
             <p>Moda</p>
-          </div>
-          <div class="catalogo__button">
+          </nuxt-link>
+          <nuxt-link class="catalogo__button" target="_blank" to="https://supplements.rdi.store/products">
             <img src="/images/circle-usa.svg" alt="United States" aria-hidden="true">
             <p>Suplementos</p>
-          </div>
-          <div class="catalogo__button">
+          </nuxt-link>
+          <nuxt-link class="catalogo__button" target="_blank" to="https://supplements.rdi.store/products">
             <img src="/images/circle-spain.svg" alt="Spain" aria-hidden="true">
             <p>Eletrônicos</p>
-          </div>
+          </nuxt-link>
         </div>
         <div class="catalogo__display">
           <div class="catalogo__scene catalogo__scene--0" v-show="data.activeDisplay == 0">
@@ -125,6 +125,7 @@ const data = reactive({
       gap: 4px;
       background-color: var(--primary-color);
       border-radius: 12px;
+      text-decoration: none;
       p {
         color: var(--white-color);
         font-weight: 700;

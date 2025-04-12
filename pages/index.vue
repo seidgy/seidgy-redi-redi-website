@@ -29,6 +29,7 @@
         <nuxt-link class="button" visuals="primary" color="white">Veja todas as funcionalidades </nuxt-link>
         <rr-features></rr-features>
       </div>
+      <rr-marketing></rr-marketing>
     </rr-gradient-section>
   </article>
 </template>
