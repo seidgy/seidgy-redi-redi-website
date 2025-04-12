@@ -31,6 +31,7 @@
       </div>
       <rr-marketing></rr-marketing>
     </rr-gradient-section>
+    <rr-footer></rr-footer>
   </article>
 </template>
 
