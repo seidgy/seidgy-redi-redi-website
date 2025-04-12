@@ -85,6 +85,11 @@ html {
           --button-bg-color: var(--base-color);
           --button-font-color: var(--white-color);
         }
+      
+        .button[color="white"] {
+          --button-bg-color: var(--white-color);
+          --button-font-color: #2577B1;
+        }
 
     .hero-content {
         display: grid;
