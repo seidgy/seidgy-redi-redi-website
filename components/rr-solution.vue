@@ -1,7 +1,12 @@
 <template>
-    <section class="solucao">
+    <section class="solucao" id="solucao">
       <div class="center">
-        <h2 class="align-center">A solução de vendas completa com AI para sua loja vender pelo WhatsApp e redes sociais</h2>
+        <div class="header">
+          <h2 visuals="h1" class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
+          <p class="text--xl align-center">A plataforma completa para sua loja vender no WhatsApp e redes sociais. Você cadastra e gerencia produtos, clientes e pedidos, e compartilha tudo em segundos. Tudo em um só lugar. Simples, profissional e feito para sua loja vender mais.</p>
+        </div>
+        <img src="/images/system-ptbr.webp" alt="Catálogo digital" />
+        <!--<h2 class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
         <div class="solucao__grid">
           <div class="solucao-card">
             <div class="solucao-card__cta">
@@ -97,7 +102,7 @@
             </div>
           </div>
         </div>
-        <rr-trial-button></rr-trial-button>
+        <rr-trial-button></rr-trial-button>-->
       </div>
     </section>
 </template>
@@ -109,7 +114,7 @@
 <style scoped lang="scss">
 
 .solucao {
-    padding-block: 65px;
+    padding-block: 100px 0;
     & > .center {
       display: flex;
       flex-flow: column nowrap;

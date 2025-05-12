@@ -2,8 +2,8 @@
     <section class="resources">
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Cadastro automatizado </h3>
-                <p>Economize tempo com descrições e imagens geradas automaticamente.</p>
+                <h3>Cadastro de produtos</h3>
+                <p>Ganhe tempo: fotos, títulos e descrições prontas em segundos.</p>
             </div>
             <img src="/images/resource1.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
@@ -17,14 +17,14 @@
         <rr-resource-card>
             <div class="resources__info">
                 <h3>Gerador de QR Code </h3>
-                <p>Facilite o acesso ao seu catálogo com QR codes gerados para sua loja e produtos.</p>
+                <p>Imprima e cole na loja: seus clientes terão seu catálogo de produtos sempre à mão!</p>
             </div>
             <img src="/images/resource3.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
                 <h3>Cupons de desconto</h3>
-                <p>Fidelize clientes com cupons gerados automaticamente para você.</p>
+                <p>Crie cupons para gerar promoções e ativar o estoque com mais vendas.</p>
             </div>
             <img src="/images/resource4.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
@@ -32,14 +32,14 @@
         <rr-resource-card>
             <div class="resources__info">
                 <h3>Posts promocionais</h3>
-                <p>Solicite imagens e textos profissionais para promover produtos nas redes sociais.</p>
+                <p>Tenha posts prontos toda semana e mantenha sua loja sempre ativa nas redes.</p>
             </div>
             <img src="/images/resource5.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
                 <h3>Estatísticas inteligentes</h3>
-                <p>Tenha acesso a insights exclusivos e identifique os produtos mais lucrativos para seu negócio</p>
+                <p>Descubra os produtos mais clicados, mais vendidos e os que necessitam de atenção.</p>
             </div>
             <img src="/images/resource6.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
@@ -53,7 +53,7 @@
         <rr-resource-card>
             <div class="resources__info">
                 <h3>Aplicativo Mobile</h3>
-                <p>Gerencie sua loja de qualquer lugar com meu app para iOS e Android.</p>
+                <p>Gerencie sua loja de qualquer lugar com app para iOS e Android.</p>
             </div>
             <img src="/images/resource8.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>

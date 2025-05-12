@@ -49,7 +49,8 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Montserrat: [100, 200, 300, 400, 500, 600, 700, 900],
+      Inter : true,
+      'Plus Jakarta Sans': true
     }
   },
   generate: {

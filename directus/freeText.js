@@ -1,19 +1,14 @@
 import fs from "fs";
-import rimraf from "rimraf";
+import { rimraf } from "rimraf";
 import common from "./common.js";
 
-let files = await common.getDirectusAssets();
 
 const objectContructor = async (dir, fs) => {
-  let videos = await common.getDirectusData("filial");
+  let data = await common.getDirectusData("Free_Text");
   
-  videos.forEach(async (item, num) => {
+  data.forEach(async (item, num) => {
     let i = { ...item };
-    i.slug = common.slugify(item.nome);
-    await Promise.all(i.imagens.map(async (imagem, num) => {
-      const imagemUrl = await common.getImage(imagem.directus_files_id);
-      i.imagens[num].url = imagemUrl;
-    }));
+    i.slug = common.slugify(item.text);
     fs.writeFile(
       `${dir}/${i.slug}.json`,
       JSON.stringify(i),
@@ -21,13 +16,13 @@ const objectContructor = async (dir, fs) => {
         if (err) console.log("error", err);
       }
     );
-    console.log("ESCREVENDO FILIAL: ", i.slug + ".json");
+    console.log("ESCREVENDO FREE TEXT: ", i.slug + ".json");
   });
 }
 
-const getFiliais = async () => {
+const getTexts = async () => {
   
-  const dir = "./content/filiais";
+  const dir = "./content/texts";
   if (fs.existsSync(dir)) {
     rimraf(dir, async () => {
       if (!fs.existsSync(dir)) {
@@ -57,4 +52,4 @@ const getFiliais = async () => {
 }
 
 
-export default getFiliais
+export default getTexts

@@ -4,14 +4,21 @@
             <div class="marketing__mosaic">
                 <div class="mosaic mosaic--1"></div>
                 <div class="mosaic mosaic--2"></div>
-                <div class="mosaic mosaic--3"></div>
+                <div class="mosaic mosaic--3">
+                    <img src="/images/IA.webp" alt="Vamos vender mais juntos?">
+                </div>
                 <img src="/images/vector-grad-5.svg" class="vector vector--1" alt="Vector" aria-hidden="true" />
                 <img src="/images/vector-grad-6.svg" class="vector vector--2" alt="Vector" aria-hidden="true" />
             </div>
             <div class="marketing__info">
-                <h2>+20% de aumento na média de pedidos recebidos</h2>
-                <p>* Com a Redi você pode aumentar em 20% o número de pedidos da sua loja. Transformando catálogos em verdadeiras ferramentas de vendas com ajuda da nossa inteligência artificial e automações.</p>
-                <rr-trial-button color="white" size="sm"></rr-trial-button>
+                <div class="flex flex--col flex--start flex--44">
+                    <h2>+20% de aumento na média de pedidos recebidos*</h2>
+                    <p>* Lojas que usam a RediRedi e seguem nossas recomendações inteligentes aumentam, em média, 20% o número de pedidos.</p>
+                </div>
+                 <div class="flex flex--col flex-center flex--16">
+                    <rr-trial-button></rr-trial-button>
+                    <rr-store-buttons></rr-store-buttons>
+                </div>
             </div>
         </div>
     </section>
@@ -62,6 +69,12 @@
             .mosaic--3 {
                 background-image: url(/images/psychodelic3.png);
                 grid-column: span 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 80%;
+                }
             }
 
             .vector {

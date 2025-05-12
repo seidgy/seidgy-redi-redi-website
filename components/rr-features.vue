@@ -2,7 +2,7 @@
     <section class="features">
         <div>
             <div class="feature-card" style="background-image: url(/images/psychodelic1.png);" aria-hidden="true"></div>
-            <div class="feature-card" style="background-image: url(/images/psychodelic2.png);" aria-hidden="true">
+            <div class="feature-card" style="background: linear-gradient(270deg, #672197 -9.04%, #AD37FD 111.95%), linear-gradient(90deg, #AF37FF 0%, #502D95 140.79%);" aria-hidden="true">
                 <img src="/images/switch-redi.svg" alt="Switch">
             </div>
             <div class="feature-card" style="background-image: url(/images/petrol.png);">

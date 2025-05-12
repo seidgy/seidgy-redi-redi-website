@@ -2,7 +2,7 @@
     --primary-hsl: 136, 67%, 38%;
     --secondary-hsl: 189, 99%, 36%;
     --tertiary-hsl: 171, 73%, 36%;
-    --accent-hsl: 273, 64%, 52%;
+    --accent-hsl: 230, 23%, 25%;
     --base-hsl: 0, 0%, 13%;
     --white-hsl: 0, 0%, 99%;
     
@@ -25,8 +25,8 @@
 
     --accent-color: hsl(var(--accent-hsl), 1);
 
-    --body-font: 'Montserrat', sans-serif;	
-    --display-font: 'Montserrat', sans-serif;
+    --body-font: 'Plus Jakarta Sans', sans-serif;	
+    --display-font: 'Inter', sans-serif;
 
     --sec-gradient: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 100%);
 
@@ -41,6 +41,11 @@
 body {
     background-color: var(--white-color);
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -48,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, *[visuals=h1] {
-    font-size: 6.25em;
+    font-size: 4em;
     line-height: 1.1em;
     font-weight: 700;
 }
@@ -56,7 +61,7 @@ h1, *[visuals=h1] {
 h2, *[visuals=h2] {
     font-size: 3em;
     line-height: 1.1em;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 h3, *[visuals=h3] {
@@ -65,13 +70,136 @@ h3, *[visuals=h3] {
     font-weight: 700;
 }
 
-.base-text {
-    line-height: 1.5em;
+.text {
+    font-size: 1em;
+    @media (max-width: 800px) {
+        font-size: 0.875em;
+    }
+}
+
+.text--3xs {
+    font-size: 0.5em;
+}
+
+.text--2xs {
+    font-size: 0.625em;
+}
+
+.text--xs {
+    font-size: 0.75em;
+}
+
+.text--sm {
+    font-size: 0.875em;
+}
+
+.text--lg {
+    font-size: 1.125em;
+    @media (max-width: 800px) {
+        font-size: 1em;
+    }
+}
+
+.text--2lg {
+    font-size: 1.25em;
+}
+
+.text--xl {
+    font-size: 1.5em;
+}
+
+.text--2xl {
+    font-size: 1.625em;
+}
+
+.text--3xl {
+    font-size: 2em;
+}
+
+.text--4xl {
+    font-size: 4em;
+}
+
+.text--hl {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.text--i {
+    font-style: italic;
+}
+
+.text--eb {
+    font-weight: 900;
+}
+
+.text--b {
+    font-weight: 700;
+}
+
+.text--sb {
     font-weight: 600;
 }
 
-    .base-text--lg {
-        font-size: 1.25em;
-        line-height: 1.5em;
-        font-weight: 400;
+.text--medium {
+    font-weight: 500;
+}
+
+.text--light {
+    font-weight: 300;
+}
+
+.text--primary {
+    color: var(--primary-color);
+}
+
+.text--white {
+    color: var(--white-color);
+}
+
+.text--gray {
+    color: rgba(83, 83, 83, 1);
+}
+
+.text--dark-gray {
+    color: #5F5C6B;
+}
+
+.text--green {
+    color: #288740;
+    & > * {
+        color: #288740;
     }
+}
+
+.text--subtle {
+    color: #DDD;
+}
+
+.text--display {
+    font-family: var(--display-font);
+}
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+.text--underline {
+    text-decoration: underline;
+}
+
+.line-height--3 {
+    line-height: 3em;
+}
+
+.default-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.align-right {
+    text-align: right;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+}

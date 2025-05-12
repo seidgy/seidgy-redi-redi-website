@@ -11,9 +11,12 @@ const props = defineProps({
 <style scoped lang="scss">
     .rr-store {
         display: flex;
-        gap: 20px;
+        gap: 11px;
         a {
             text-decoration: none;
+            img {
+                width: 60px;
+            }
         }
     }
 </style>

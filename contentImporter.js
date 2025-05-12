@@ -1,10 +1,10 @@
 import chalk from 'chalk';
 
-import getPublicacoes from './directus/publicacao.js';
+import getTexts from './directus/freeText.js';
 
 console.log('');
 console.log(chalk.green('IMPORTANTO CONTEUDO DO DIRECTUS...'));
 console.log('');
-console.log(chalk.green('[PUBLICACOES]'));
+console.log(chalk.green('[TEXTOS]'));
 
-getPublicacoes();
+getTexts();

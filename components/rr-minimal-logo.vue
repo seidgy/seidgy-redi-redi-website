@@ -12,4 +12,7 @@
 <script setup>
 </script>
 <style scoped lang="scss">
+    .rr-logo path{
+        fill: attr(fill)
+    }
 </style>

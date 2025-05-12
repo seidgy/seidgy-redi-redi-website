@@ -12,8 +12,8 @@ html {
 
     .button {
         display: block;
-        padding: 14px 42px;
-        font-size: 1.5em;
+        padding: 16px 36px;
+        font-size: 1.125em;
         font-weight: 700;
         text-decoration: none;
         cursor: pointer;
@@ -92,21 +92,18 @@ html {
         }
 
     .hero-content {
-        display: grid;
-        grid-template-columns: 630px auto;
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        gap: 55px;
     }
 
-        .hero-content > :first-child {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: 32px;
-            align-items: flex-start;
-        }
+    
 
         .hero-content__info {
             display: flex;
             flex-flow: column nowrap;
-            gap: 24px;
+            gap: 0;
             padding-bottom: 20px;
         }
 
@@ -122,6 +119,61 @@ html {
         .align-right {
             text-align: right;
         }
+
+        .header {
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 24px;
+        }
+        
+            .header--sm {
+                max-width: 1000px;
+            }
+        
+            .header--xs {
+                max-width: 800px;
+            }
+
+.flex {
+    display: flex;
+}
+
+    .flex-center {
+        align-items: center;
+    }
+
+    .flex--start {
+        align-items: flex-start;
+    }
+
+    .flex--col {
+        flex-direction: column;
+    }
+
+    .flex--between {
+        justify-content: space-between;
+    }
+
+    .flex--3 {
+        gap: 3px;
+    }
+
+    .flex--16 {
+        gap: 16px;
+    }
+
+    .flex--22 {
+        gap: 22px;
+    }
+
+    .flex--44 {
+        gap: 44px;
+    }
+
+.base-section {
+    padding-block: 100px;
+}
+
 
 .base-link {
     display: flex;
