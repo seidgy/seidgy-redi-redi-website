@@ -179,9 +179,9 @@
             width: 20px;
         }
         @media (max-width: 1280px) {
-            top: 19.5%;
+            top: 10.5%;
             left: auto;
-            right: 10%;
+            right: 26%;
         }
     }
 
@@ -195,7 +195,7 @@
             width: 90%;
             left: 50%;
             bottom: auto;
-            top: 25%;
+            top: 12%;
         }
     }
     
@@ -209,6 +209,11 @@
         gap: 16px;
         justify-content: center;
         align-items: center;
+        @media (max-width: 1280px) {
+            width: 90%;
+            bottom: auto;
+            top: 45%;
+        }
         > * {
             position: relative;
         }
@@ -260,6 +265,9 @@
                 width: auto;
                 flex-shrink: 0;
                 gap: 14px;
+                @media (max-width: 1280px) {
+                    padding: 10px 14px;
+                }
                 .hero-try-content__card-tags {
                     display: flex;
                     flex-flow: row nowrap;
@@ -366,61 +374,109 @@
                 .pos--1 {
                     top: 32%;
                     right: 15%;
+                    @media (max-width: 1280px) {
+                        top: 90%;
+                        right: 29%;
+                    }
                 }
 
                 .pos--2 {
                     top: 42%;
                     right: 5%;
+                    @media (max-width: 1280px) {
+                        top: 85%;
+                        right: 54%;
+                    }
                 }
 
                 .pos--3 {
                     top: 47%;
                     right: 15%;
+                    @media (max-width: 1280px) {
+                        top: 71%;
+                        right: 45%;
+                    }
                 }
 
                 .pos--4 {
                     top: 60%;
                     right: 17%;
+                    @media (max-width: 1280px) {
+                        top: 80%;
+                        right: 95%;
+                    }
                 }
 
                 .pos--5 {
                     top: 60%;
                     right: 0%;
+                    @media (max-width: 1280px) {
+                        top: 75%;
+                        right: 25%;
+                    }
                 }
 
                 .pos--6 {
                     top: 71%;
                     right: 8%;
+                    @media (max-width: 1280px) {
+                        top: 75%;
+                        right: 73%;
+                    }
                 }
 
                 .pos--7 {
                     top: 82%;
                     right: 17%;
+                    @media (max-width: 1280px) {
+                        top: 89%;
+                        right: 78%;
+                    }
                 }
 
                 .pos--8 {
                     top: 77%;
                     right: 0%;
+                    @media (max-width: 1280px) {
+                        top: 85%;
+                        right: 34%;
+                    }
                 }
 
                 .pos--9 {
                     top: 90%;
                     right: 6%;
+                    @media (max-width: 1280px) {
+                        top: 92%;
+                        right: 63%;
+                    }
                 }
 
                 .pos--10 {
                     top: 93%;
                     right: 17%;
+                    @media (max-width: 1280px) {
+                        top: 94%;
+                        right: 92%;
+                    }
                 }
 
                 .pos--11 {
                     top: 91%;
                     right: 0%;
+                    @media (max-width: 1280px) {
+                        top: 93%;
+                        right: 13%;
+                    }
                 }
 
                 .pos--12 {
                     top: 94%;
                     right: 11%;
+                    @media (max-width: 1280px) {
+                        top: 95%;
+                        right: 78%;
+                    }
                 }
 
                 .pos--13 {

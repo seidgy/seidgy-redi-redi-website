@@ -169,6 +169,11 @@ html {
     .flex--44 {
         gap: 44px;
     }
+    @media (max-width: 36em) {
+        .sm-flex-center {
+                align-items: center;
+        }
+    }
 
 .base-section {
     padding-block: 100px;

@@ -149,7 +149,8 @@
 
   .catalog-list {
     @media (max-width: 36em) {
-        flex-direction: column;;
+        flex-flow:  row wrap;
+        justify-content: center;
     }
   }
 

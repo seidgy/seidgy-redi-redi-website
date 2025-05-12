@@ -1,7 +1,7 @@
 <template>
     <section class="text-image" :class="{'text-image--bg': bg, 'text-image--half': half}">
       <div class="center">
-        <div class="text-image__content flex flex--col flex--start">
+        <div class="text-image__content flex flex--col flex--start sm-flex-center">
             <slot></slot>
         </div>
         <img :src="image" alt="Image" class="text-image__image" aria-hidden="true" />
@@ -50,9 +50,9 @@ const props = defineProps({
     .text-image--half {
         & > .center {
             grid-template-columns: 1fr 1fr;
-        }
-        @media (max-width: 1240px) {
-            grid-template-columns: 1fr;
+            @media (max-width: 1240px) {
+                grid-template-columns: 1fr;
+            }
         }
     }
 
@@ -66,6 +66,9 @@ const props = defineProps({
         :deep(p),
         :deep(.cap-size) {
             max-width: 70%;
+            @media (max-width: 1240px) {
+                max-width: none;
+            }
         }
     }
 
