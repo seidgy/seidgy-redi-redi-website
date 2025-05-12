@@ -44,6 +44,19 @@
             grid-template-columns: 1fr 1fr 2fr;
             gap: 24px;
         }
+        @media (max-width: 36em) {
+            grid-template-rows: 1fr;
+            & > div {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            & > div:first-child {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
     }
 
         .feature-card {

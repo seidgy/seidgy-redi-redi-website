@@ -31,10 +31,16 @@
 
 <style scoped lang="scss">
     .marketing {
+        @media (max-width: 36em) {
+            overflow-x: hidden;
+        }
         & > .center{
             display: grid;
             grid-template-columns: auto auto;
             gap: 48px;
+            @media (max-width: 36em) {
+                grid-template-columns: 1fr;
+            }
         }
         padding-bottom: 145px;
     }
@@ -45,6 +51,10 @@
             grid-template-rows: 280px 216px;
             gap: 24px;
             position: relative;
+            @media (max-width: 36em) {
+                grid-template-columns: auto 40%;
+                grid-template-rows: 195px 185px;
+            }
         }
 
             .mosaic {
@@ -99,6 +109,9 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
+            @media (max-width: 36em) {
+                gap: 44px;
+            }
             h2, p {
                 color: var(--white-color);
             }

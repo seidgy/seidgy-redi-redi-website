@@ -3,7 +3,7 @@
         <div class="center">
             <div class="footer__header">
                 <div class="footer__identity">
-                    <nuxt-link :to="$localePath('/')">
+                    <nuxt-link target="_blank" to="https://rediredi.com/">
                         <img src="/images/redi-redi-negative.svg" alt="RediRedi">
                     </nuxt-link>
                     <rr-store-buttons></rr-store-buttons>
@@ -36,6 +36,9 @@
     footer {
         padding-bottom: 60px;
         background-color: #2577B1;
+            @media (max-width: 36em) {
+                display: none;
+            }
         & > .center {
             display: flex;
             flex-direction: column;

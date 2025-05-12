@@ -1,16 +1,16 @@
 <template>
     <div class="center">
         <nav class="rr-menu">
-            <nuxt-link :to="$localePath('/')">
+            <nuxt-link target="_blank" to="https://rediredi.com/">
                 <img src="/images/redi-redi.svg" alt="RediRedi">
             </nuxt-link>
             <div class="rr-menu__links">
                 <nav class="rr-menu__nav">
-                    <nuxt-link :to="$localePath('/')" class="rr-menu__nav-link">Funcionalidades</nuxt-link>
-                    <nuxt-link :to="$localePath('/')" class="rr-menu__nav-link">Marketplaces</nuxt-link>
-                    <nuxt-link :to="$localePath('/')" class="rr-menu__nav-link">Preço</nuxt-link>
-                    <nuxt-link :to="$localePath('/')" class="rr-menu__nav-link">Sobre nós</nuxt-link>
-                    <nuxt-link :to="$localePath('/')" class="rr-menu__nav-link">Contato</nuxt-link>
+                    <nuxt-link target="_blank" to="" class="rr-menu__nav-link">Funcionalidades</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">Marketplaces</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">Preço</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">Sobre nós</nuxt-link>
+                    <nuxt-link target="_blank" to="" class="rr-menu__nav-link">Contato</nuxt-link>
                 </nav>
                 <span class="rr-menu__separator"></span>
                 <nav class="rr-menu__nav rr-menu__nav--small">
@@ -33,6 +33,9 @@ const props = defineProps({
         justify-content: space-between;
         padding-block: 24px;
         margin-bottom: 80px;
+            @media (max-width: 36em) {
+                display: none;
+            }
     }
 
         .rr-menu__links {

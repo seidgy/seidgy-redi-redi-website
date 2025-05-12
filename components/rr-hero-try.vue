@@ -4,7 +4,8 @@
         <div class="logo-circle" aria-hidden="true">
             <rr-minimal-logo fill="var(--accent-color)"></rr-minimal-logo>
         </div>
-        <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone" aria-hidden="true" />
+        <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-mobile" aria-hidden="true" />
+        <img src="/images/hero-iphone-mobile-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-desktop" aria-hidden="true" />
         <div class="hero-try-content">
             <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--1" aria-hidden="true" />
             <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--2" aria-hidden="true" />
@@ -152,6 +153,12 @@
         flex-flow: column nowrap;
         align-items: center;
         gap: 15px;
+        @media (max-width: 1280px) {
+            aspect-ratio: 1/4;
+            background-image: url(/images/hero-curve-mobile.webp);
+            background-size: auto 80%;
+            background-position: center right;
+        }
     }
 
     .logo-circle {
@@ -171,6 +178,11 @@
         :deep(.rr-logo) {
             width: 20px;
         }
+        @media (max-width: 1280px) {
+            top: 19.5%;
+            left: auto;
+            right: 10%;
+        }
     }
 
     .iphone {
@@ -179,6 +191,12 @@
         position: absolute;
         bottom: 0;
         left: 13%;
+        @media (max-width: 1280px) {
+            width: 90%;
+            left: 50%;
+            bottom: auto;
+            top: 25%;
+        }
     }
     
     .hero-try-content {

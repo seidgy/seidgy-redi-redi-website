@@ -17,5 +17,9 @@ const props = defineProps({
         padding-block: 50px 0;
         background-size: cover;
         background-position: center;
+        overflow-x: hidden;
+        @media (max-width: 36em) {
+          background-position: center left;
+        }
     }
 </style>

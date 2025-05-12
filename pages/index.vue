@@ -19,7 +19,7 @@
         <p class="text--xl">Em poucos minutos, sua loja está pronta para vender no WhatsApp, no Instagram ou onde seus clientes estiverem.</p>
         <p class="flex flex--center row--16 text--sb">Veja exemplos de alguns de nossos catálogos <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
       </div> 
-      <div class="flex flex--16">
+      <div class="flex flex--16 catalog-list">
         <nuxt-link to="https://petshop.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
           <p class="text--2xs text--sb flex flex--3 flex-center">
             <img width="20px" src="/images/circle-brazil.svg" alt="Brazil" />
@@ -145,6 +145,12 @@
 
   .text-image--padding {
     padding-bottom: 46px;
+  }
+
+  .catalog-list {
+    @media (max-width: 36em) {
+        flex-direction: column;;
+    }
   }
 
 </style>
