@@ -31,6 +31,7 @@ const props = defineProps({
 
 .text-image {
     padding-block: 160px 0;
+    position: relative;
     & > .center {
       display: grid;
       grid-template-columns: auto 415px;

@@ -12,7 +12,8 @@
       </div>
     </rr-header>
     <rr-solution></rr-solution>
-    <rr-text-image :bg="true" image="/images/smartphone1-ptbr.webp">
+    <rr-text-image :bg="true" image="/images/hero-iphone-ptbr.webp">
+      <img src="/images/arch.webp" alt="Arch" class="text-image__arch" aria-hidden="true" />
       <div class="flex flex--col flex--22">
         <h2>O catálogo que valoriza seus produtos e atrai mais vendas</h2>
         <p class="text--xl">A RediRedi transforma sua vitrine em um catálogo profissional, bonito e fácil de atualizar direto do celular.</p>
@@ -72,7 +73,7 @@
         <rr-store-buttons></rr-store-buttons>
       </div>
     </rr-text-image>
-    <rr-text-image class="text-image--padding" :bg="true" :half="true" image="/images/smartphone2-ptbr.webp">
+    <rr-text-image class="text-image--padding" :bg="true" :half="true" image="/images/copiloto.webp">
       <div class="flex flex--col flex--22">
         <h2 class="cap-size">Redi: O Copiloto de vendas com iA</h2>
         <p class="text--xl">CoA Redi analisa o comportamento dos seus clientes, identifica padrões e mostra onde estão as melhores oportunidades de venda. </p>
@@ -151,6 +152,16 @@
     @media (max-width: 36em) {
         flex-flow:  row wrap;
         justify-content: center;
+    }
+  }
+
+  .text-image__arch {
+    position: absolute;
+    width: 48%;
+    left: 52%;
+    top: 25%;
+    @media (max-width: 1240px) {
+      display: none;
     }
   }
 
