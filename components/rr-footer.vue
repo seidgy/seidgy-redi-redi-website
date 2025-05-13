@@ -12,13 +12,13 @@
             </div>
             <div class="footer__links">
                 <nav class="footer__nav">
-                    <nuxt-link to="" class="footer__link">Funcionalidades</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Marketplace</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Preço</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Sobre nós</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Contato</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Política de privacidade</nuxt-link>
-                    <nuxt-link to="" class="footer__link">Termos e condições de uso</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="footer__link">Sobre</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="footer__link">Catálogo</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="footer__link">Blog</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="footer__link">Premium</nuxt-link>
+                    <nuxt-link target="_blank" to="https://help.rediredi.com/" class="footer__link">Central de Ajuda</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/politica-de-privacidade/" class="footer__link">Política de privacidade</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/termos-e-condicoes/" class="footer__link">Termos e condições de uso</nuxt-link>
                 </nav>
                 <span class="footer__separator"></span>
                 <p class="footer__rights">© 2025 RediRedi. Todos os Direitos Reservados</p>

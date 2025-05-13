@@ -9,11 +9,10 @@
             </button>
             <div class="rr-menu__links">
                 <nav class="rr-menu__nav">
-                    <nuxt-link target="_blank" to="" class="rr-menu__nav-link">Funcionalidades</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">Marketplaces</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">Preço</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">Sobre nós</nuxt-link>
-                    <nuxt-link target="_blank" to="" class="rr-menu__nav-link">Contato</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">Sobre</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">Catálogo</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="rr-menu__nav-link">Blog</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">Premium</nuxt-link>
                 </nav>
                 <span class="rr-menu__separator"></span>
                 <nav class="rr-menu__nav rr-menu__nav--small">
