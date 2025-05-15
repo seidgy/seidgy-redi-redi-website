@@ -159,6 +159,10 @@ html {
         gap: 3px;
     }
 
+    .flex--12 {
+        gap: 12px;
+    }
+
     .flex--16 {
         gap: 16px;
     }
@@ -167,13 +171,26 @@ html {
         gap: 22px;
     }
 
+    .flex--36 {
+        gap: 36px;
+    }
+
     .flex--44 {
         gap: 44px;
     }
+
+    .flex--60 {
+        gap: 60px;
+    }
+
     @media (max-width: 36em) {
         .sm-flex-center {
                 align-items: center;
         }
+    }
+
+    .mb-10 {
+        margin-bottom: 10px;
     }
 
 .base-section {

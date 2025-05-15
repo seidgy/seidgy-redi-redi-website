@@ -12,54 +12,60 @@
       </div>
     </rr-header>
     <rr-solution></rr-solution>
-    <rr-text-image :bg="true" image="/images/hero-iphone-ptbr.webp">
+    <rr-text-image :bg="true" image="/images/hero-iphone2-ptbr.webp" class="catalogo">
       <img src="/images/arch.webp" alt="Arch" class="text-image__arch" aria-hidden="true" />
-      <div class="flex flex--col flex--22">
-        <h2>O catálogo que valoriza seus produtos e atrai mais vendas</h2>
-        <p class="text--xl">A RediRedi transforma sua vitrine em um catálogo profissional, bonito e fácil de atualizar direto do celular.</p>
-        <p class="text--xl">Em poucos minutos, sua loja está pronta para vender no WhatsApp, no Instagram ou onde seus clientes estiverem.</p>
-        <p class="flex flex--center row--16 text--sb">Veja exemplos de alguns de nossos catálogos <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
+      <div class="flex flex--col flex--12">
+        <h2 class="catalogo__title">O catálogo que valoriza seus produtos e atrai mais vendas</h2>
+        <div class="flex flex--col flex--36">
+          <p class="text--xl text--1-4 catalogo__text">A RediRedi transforma sua vitrine em um catálogo profissional, bonito e fácil de atualizar direto do celular.</p>
+          <p class="text--xl text--1-4 catalogo__text">Em poucos minutos, sua loja está pronta para vender no WhatsApp, no Instagram ou onde seus clientes estiverem.</p>
+        </div>
       </div> 
-      <div class="flex flex--16 catalog-list">
-        <nuxt-link to="https://petshop.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
-          <p class="text--2xs text--sb flex flex--3 flex-center">
-            <img width="20px" src="/images/circle-brazil.svg" alt="Brazil" />
-            Pet shop
-          </p>
-          <img src="/images/dog.png" alt="Dog" />
-        </nuxt-link>
-        <nuxt-link to="https://cosmetico.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
-          <p class="text--2xs text--sb flex flex--3 flex-center">
-            <img width="20px" src="/images/circle-colombia.svg" alt="Colombia" />
-            Cosméticos
-          </p>
-          <img src="/images/lipstick.png" alt="Lipstick" />
-        </nuxt-link>
-        <nuxt-link to="https://moda.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
-          <p class="text--2xs text--sb flex flex--3 flex-center">
-            <img width="20px" src="/images/circle-mexico.svg" alt="Mexico" />
-            Moda
-          </p>
-          <img src="/images/shoe.png" alt="Shoe" />
-        </nuxt-link>
-        <nuxt-link to="https://supplements.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
-          <p class="text--2xs text--sb flex flex--3 flex-center">
-            <img width="20px" src="/images/circle-usa.svg" alt="USA" />
-            Suplementos
-          </p>
-          <img src="/images/whey.png" alt="Whey protein" />
-        </nuxt-link>
-        <nuxt-link to="https://eletronicos.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--3 flex--between">
-          <p class="text--2xs text--sb flex flex--3 flex-center">
-            <img width="20px" src="/images/circle-spain.svg" alt="Spain" />
-            Eletrônicos
-          </p>
-          <img src="/images/headphone.png" alt="Headphone" />
-        </nuxt-link>
-      </div>
-      <div class="flex flex--col flex-center flex--16">
-        <rr-trial-button label="Crie o catálogo da sua loja"></rr-trial-button>
-        <rr-store-buttons></rr-store-buttons>
+      <div class="flex flex--col flex--60 flex--start">
+        <div class="flex flex--col flex--44">
+          <p class="flex flex--center flex--16 text--sb">Veja exemplos de alguns de nossos catálogos <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
+          <div class="flex flex--16 catalog-list">
+            <nuxt-link to="https://petshop.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+              <p class="text--2xs text--sb flex flex--3 flex-center">
+                <img width="20px" src="/images/circle-brazil.svg" alt="Brazil" />
+                Pet shop
+              </p>
+              <img src="/images/dog.webp" alt="Dog" />
+            </nuxt-link>
+            <nuxt-link to="https://cosmetico.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+              <p class="text--2xs text--sb flex flex--3 flex-center">
+                <img width="20px" src="/images/circle-colombia.svg" alt="Colombia" />
+                Cosméticos
+              </p>
+              <img src="/images/lipstick.webp" alt="Lipstick" />
+            </nuxt-link>
+            <nuxt-link to="https://moda.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+              <p class="text--2xs text--sb flex flex--3 flex-center">
+                <img width="20px" src="/images/circle-mexico.svg" alt="Mexico" />
+                Moda
+              </p>
+              <img src="/images/shoe.webp" alt="Shoe" />
+            </nuxt-link>
+            <nuxt-link to="https://supplements.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+              <p class="text--2xs text--sb flex flex--3 flex-center">
+                <img width="20px" src="/images/circle-usa.svg" alt="USA" />
+                Suplementos
+              </p>
+              <img src="/images/whey.webp" alt="Whey protein" />
+            </nuxt-link>
+            <nuxt-link to="https://eletronicos.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+              <p class="text--2xs text--sb flex flex--3 flex-center">
+                <img width="20px" src="/images/circle-spain.svg" alt="Spain" />
+                Eletrônicos
+              </p>
+              <img src="/images/headphone.webp" alt="Headphone" />
+            </nuxt-link>
+          </div>
+        </div>
+        <div class="flex flex--col flex-center flex--16">
+          <rr-trial-button label="Crie o catálogo da sua loja"></rr-trial-button>
+          <rr-store-buttons></rr-store-buttons>
+        </div>
       </div>
     </rr-text-image>
     <rr-text-image image="/images/smartphone2-ptbr.webp">
@@ -149,8 +155,12 @@
     border-radius: 8px;
     box-shadow: 0px 0.89px 1.78px 0px hsla(222, 33%, 6%, 0.03);
     background: hsla(0, 0%, 95%, 1);
+    flex-shrink: 0;
     p {
       text-decoration: none;
+    }
+    & > img {
+      width: 120px;
     }
   }
 
@@ -170,6 +180,7 @@
     width: 48%;
     left: 52%;
     top: 25%;
+    max-width: 730px;
     @media (max-width: 1240px) {
       display: none;
     }

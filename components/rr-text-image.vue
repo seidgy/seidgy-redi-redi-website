@@ -62,7 +62,7 @@ const props = defineProps({
         width: 100%;
     }
     .text-image__content {
-        gap: 44px;
+        gap: 22px;
         padding-bottom: 48px;
         :deep(p),
         :deep(.cap-size) {

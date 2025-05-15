@@ -25,6 +25,7 @@
       align-items: center;
       img {
         margin-bottom: -20%;
+        max-width: 880px;
       }
     }
   }
