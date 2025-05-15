@@ -34,6 +34,7 @@
 
 <style scoped lang="scss">
     footer {
+        margin-top: -1px;
         padding-bottom: 60px;
         background-color: #2577B1;
         & > .center {

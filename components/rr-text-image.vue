@@ -66,7 +66,7 @@ const props = defineProps({
         padding-bottom: 48px;
         :deep(p),
         :deep(.cap-size) {
-            max-width: 70%;
+            max-width: 71%;
             @media (max-width: 1240px) {
                 max-width: none;
             }

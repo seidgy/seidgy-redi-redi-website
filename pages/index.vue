@@ -68,22 +68,28 @@
         </div>
       </div>
     </rr-text-image>
-    <rr-text-image image="/images/smartphone2-ptbr.webp">
-      <div class="flex flex--col flex--22">
-        <h2 class="cap-size">Conecte-se melhor com quem já compra de você</h2>
-        <p class="text--xl">Com o cadastro de clientes simples da RediRedi(CRM), você registra preferências, hábitos, datas especiais e até detalhes como “compra mensal” ou “cliente antigo”. </p>
-        <p class="text--xl">Tudo isso pra identificar quem está pronto pra comprar, e vender mais pra quem já conhece seus produtos e confia na sua loja.</p>
-      </div> 
-      <div class="flex flex--col flex-center flex--16">
-        <rr-trial-button></rr-trial-button>
-        <rr-store-buttons></rr-store-buttons>
+    <rr-text-image image="/images/smartphone2-ptbr.webp" class="conecte">
+      <div class="flex flex--col flex--44 flex--start">
+        <div class="flex flex--col flex--22">
+          <h2 class="cap-size">Conecte-se melhor com quem já compra de você</h2>
+          <div class="flex flex--col flex--36">
+            <p class="text--xl">Com o cadastro de clientes simples da RediRedi(CRM), você registra preferências, hábitos, datas especiais e até detalhes como “compra mensal” ou “cliente antigo”. </p>
+            <p class="text--xl">Tudo isso pra identificar quem está pronto pra comprar, e vender mais pra quem já conhece seus produtos e confia na sua loja.</p>
+          </div>
+        </div> 
+        <div class="flex flex--col flex-center flex--16">
+          <rr-trial-button></rr-trial-button>
+          <rr-store-buttons></rr-store-buttons>
+        </div>
       </div>
     </rr-text-image>
     <rr-text-image class="text-image--padding" :bg="true" :half="true" image="/images/copiloto.webp">
-      <div class="flex flex--col flex--22">
+      <div class="flex flex--col flex--12">
         <h2 class="cap-size">Redi: O Copiloto de vendas com iA</h2>
-        <p class="text--xl">CoA Redi analisa o comportamento dos seus clientes, identifica padrões e mostra onde estão as melhores oportunidades de venda. </p>
-        <p class="text--xl">Ela sugere ações simples, ajuda você a reativar quem sumiu e mantém seus clientes recorrentes no radar. Como um cérebro de vendas.</p>
+        <div class="flex flex--col flex--36">
+          <p class="text--xl">A Redi analisa o comportamento dos seus clientes, identifica padrões e mostra onde estão as melhores oportunidades de venda. </p>
+          <p class="text--xl">Ela sugere ações simples, ajuda você a reativar quem sumiu e mantém seus clientes recorrentes no radar. Como um cérebro de vendas.</p>
+        </div>
       </div> 
       <div class="flex flex--col flex-center flex--16">
         <rr-trial-button></rr-trial-button>
@@ -93,14 +99,18 @@
     <rr-cta>
       <p class="text--2xl text--sb text--white align-center">+20% de aumento na média de pedidos recebidos com a Redi* </p>
     </rr-cta>
-    <div class="base-section">
-      <div class="center flex flex--col flex-center flex--44">
-        <h2 class="align-center">Ferramentas para você potencializar seu marketing e vendas</h2>
-        <p class="text--xl align-center">A RediRedi cria artes profissionais para seus produtos em segundos, prontas para Stories, Reels, WhatsApp e outras redes. Inclui formatos para promoções, lançamentos e datas comemorativas. Você escolhe o produto, e em segundos já pode divulgar nos canais sociais da sua loja, ganhando tempo, visibilidade e aumentando suas vendas.</p>
-        <img src="/images/ferramentas.webp" alt="Ferramentas" aria-hidden="true">
-        <div class="flex flex--col flex-center flex--16">
-          <rr-trial-button></rr-trial-button>
-          <rr-store-buttons></rr-store-buttons>
+    <div class="base-section ferramentas">
+      <div class="center flex flex--col flex-center flex--90">
+        <div class="flex flex--col flex--55">
+          <h2 class="align-center ferramentas__title">Ferramentas para você potencializar seu marketing e vendas</h2>
+          <p class="text--xl align-center ferramentas__text">A RediRedi cria artes profissionais para seus produtos em segundos, prontas para Stories, Reels, WhatsApp e outras redes. Inclui formatos para promoções, lançamentos e datas comemorativas. Você escolhe o produto, e em segundos já pode divulgar nos canais sociais da sua loja, ganhando tempo, visibilidade e aumentando suas vendas.</p>
+        </div>
+        <div class="flex flex--col flex--22">
+          <img src="/images/ferramentas.webp" alt="Ferramentas" aria-hidden="true">
+          <div class="flex flex--col flex-center flex--16">
+            <rr-trial-button></rr-trial-button>
+            <rr-store-buttons></rr-store-buttons>
+          </div>
         </div>
       </div>
     </div>
@@ -165,7 +175,7 @@
   }
 
   .text-image--padding {
-    padding-bottom: 46px;
+    padding-block: 100px 34px;
   }
 
   .catalog-list {
@@ -184,6 +194,17 @@
     @media (max-width: 1240px) {
       display: none;
     }
+  }
+
+  .conecte {
+    :deep(.text-image__image) {
+      margin-bottom: -35%;
+    }
+  }
+
+  .ferramentas__title {
+    max-width: 900px;
+    margin: 0 auto;
   }
 
 </style>

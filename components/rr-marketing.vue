@@ -37,7 +37,7 @@
         & > .center{
             display: grid;
             grid-template-columns: auto auto;
-            gap: 48px;
+            gap: 70px;
             @media (max-width: 36em) {
                 grid-template-columns: 1fr;
             }
@@ -47,7 +47,7 @@
 
         .marketing__mosaic {
             display: grid;
-            grid-template-columns: 305px 259px;
+            grid-template-columns: 303px 259px;
             grid-template-rows: 280px 216px;
             gap: 24px;
             position: relative;

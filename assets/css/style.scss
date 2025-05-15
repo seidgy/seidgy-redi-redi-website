@@ -179,8 +179,16 @@ html {
         gap: 44px;
     }
 
+    .flex--55 {
+        gap: 55px;
+    }
+
     .flex--60 {
         gap: 60px;
+    }
+
+    .flex--90 {
+        gap: 90px;
     }
 
     @media (max-width: 36em) {
