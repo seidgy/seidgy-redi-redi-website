@@ -13,6 +13,7 @@
     .resource-card {
       background-color: #D9DBEB;
       border-radius: 16px;
+      gap: 9px;
       padding: 30px 40px;
       display: flex;
       align-items: center;

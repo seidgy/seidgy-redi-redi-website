@@ -82,7 +82,7 @@
             flex-direction: column;
             gap: 16px;
             h3 {
-                max-width: 200px;
+                max-width: 160px;
             }
         }
 
