@@ -42,7 +42,7 @@ const data = reactive({
         align-items: center;
         justify-content: space-between;
         padding-block: 24px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         @media (max-width: 36em) {
             padding-block: 0;
             padding-inline: 24px;

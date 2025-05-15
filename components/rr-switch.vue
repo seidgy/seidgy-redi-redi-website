@@ -8,7 +8,7 @@
 </script>
 <style scoped lang="scss">
     .switch-redi {
-        background: linear-gradient(90deg, rgba(140, 53, 211, 1) 0%, rgba(72, 27, 109, 1) 100%);
+        background: linear-gradient(90deg, #8C35D3 0.61%, #481B6D 177.74%);
         padding: 4px 4px 4px 8px;
         border-radius: 18.17px;
         display: flex;

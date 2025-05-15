@@ -4,8 +4,8 @@
       <div class="center">
         <section class="hero-content">
           <div class="hero-content__info">
-            <p class="text--xl text--display">Catálogo de Produtos + Gestão de clientes + Inteligência de vendas com IA:</p>
-            <h2>Aumente suas vendas em 20% vendendo mais para os clientes que você já tem.</h2>
+            <p class="text--xl text--display hero-content__brow">Catálogo de Produtos + Gestão de clientes + Inteligência de vendas com IA:</p>
+            <h2 class="hero-content__title">Aumente suas vendas em 20% vendendo mais para os clientes que você já tem.</h2>
           </div>
           <rr-hero-try></rr-hero-try>
         </section>
@@ -115,6 +115,16 @@
 </script>
 
 <style scoped lang="scss">
+  .hero-content__brow {
+    line-height: 2.4em;
+  }
+
+  .hero-content__title {
+    line-height: 1.2em;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
   .cta-text {
     text-align: center;
     font-size: 1.5em;

@@ -1,140 +1,142 @@
 <template>
     <div class="hero-try-section" aria-hidden="true">
         <rr-trial-button></rr-trial-button>
-        <div class="logo-circle" aria-hidden="true">
-            <rr-minimal-logo fill="var(--accent-color)"></rr-minimal-logo>
-        </div>
-        <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-mobile" aria-hidden="true" />
-        <img src="/images/hero-iphone-mobile-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-desktop" aria-hidden="true" />
-        <div class="hero-try-content">
-            <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--1" aria-hidden="true" />
-            <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--2" aria-hidden="true" />
-            <div class="hero-try__horizontal-content">
-                <div class="hero-try-content__card">
-                    <div class="hero-try-content__picture" style="background-image: url(/images/dog-food.webp)"></div>
-                    <div class="hero-try-content__info">
-                        <p class="text--xs text--b text--display">Porta-saquinho</p>
-                        <p class="text--2xs text--display text--medium">R$ 29,90</p>
+        <div class="hero-try-section__content">
+            <div class="logo-circle" aria-hidden="true">
+                <rr-minimal-logo fill="hsla(273, 64%, 52%, 1)"></rr-minimal-logo>
+            </div>
+            <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-mobile" aria-hidden="true" />
+            <img src="/images/hero-iphone-mobile-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-desktop" aria-hidden="true" />
+            <div class="hero-try-content">
+                <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--1" aria-hidden="true" />
+                <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--2" aria-hidden="true" />
+                <div class="hero-try__horizontal-content">
+                    <div class="hero-try-content__card">
+                        <div class="hero-try-content__picture" style="background-image: url(/images/dog-food.webp)"></div>
+                        <div class="hero-try-content__info">
+                            <p class="text--xs text--b text--display">Porta-saquinho</p>
+                            <p class="text--2xs text--display text--medium">R$ 29,90</p>
+                        </div>
+                    </div>
+                    <rr-switch></rr-switch>
+                    <div class="hero-try-content__card">
+                        <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
+                        <div class="hero-try-content__info">
+                            <p class="text--xs text--b text--display">Maria</p>
+                            <rr-stars></rr-stars>
+                            <p class="text--2xs text--display text--medium">Cliente qualificado</p>
+                        </div>
                     </div>
                 </div>
-                <rr-switch></rr-switch>
-                <div class="hero-try-content__card">
+                <div class="hero-try-content__card hero-try-content__card--horizontal">
                     <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
                     <div class="hero-try-content__info">
-                        <p class="text--xs text--b text--display">Maria</p>
-                        <rr-stars></rr-stars>
-                        <p class="text--2xs text--display text--medium">Cliente qualificado</p>
+                        <div class="hero-try-content__card-tags">
+                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Compra mensal</p>
+                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Possui cachorro</p>
+                        </div>
+                        <p class="text--xl text--b text--display">Maria</p>
+                        <rr-stars size="lg"></rr-stars>
+                        <p class="text--sm text--display">Cliente qualificado</p>
+                    </div>
+                    <div class="hero-try-content__info hero-try-content__info--padding">
+                        <div class="hero-try-content__picture hero-try-content__picture--square" style="background-image: url(/images/dog-food.webp)"></div>
+                        <p class="text text--3xs text--sb text--gray text--uppercase">Porta-Saquinho</p>
                     </div>
                 </div>
+                <div class="hero-try__horizontal-content hero-try-content__tags">
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Enviar mensagem</p>
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Criar promoção</p>
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Fechar venda</p>
+                </div>
             </div>
-            <div class="hero-try-content__card hero-try-content__card--horizontal">
+            <div class="hero-try-content__card hero-try-content__card--xs pos pos--1">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile2.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Davi</p>
+                    <rr-stars size="sm" :qt="3"></rr-stars>
+                </div>
+            </div>
+            <div class="hero-try-content__card hero-try-content__card--sm pos pos--2">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile3.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--2xs text--b text--display">João</p>
+                    <rr-stars size="md" :qt="4"></rr-stars>
+                </div>
+            </div>
+            <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--3">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile4.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--2xs text--b text--display">Rosa</p>
+                    <rr-stars size="md" :qt="2"></rr-stars>
+                </div>
+            </div>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--4">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile5.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Renato</p>
+                    <rr-stars size="sm" :qt="1"></rr-stars>
+                </div>
+            </div>
+            <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--5">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile6.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--2xs text--b text--display">Roberto</p>
+                    <rr-stars size="md" :qt="3"></rr-stars>
+                </div>
+            </div>
+            <div class="hero-try-content__card pos pos--6">
                 <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
                 <div class="hero-try-content__info">
-                    <div class="hero-try-content__card-tags">
-                        <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Compra mensal</p>
-                        <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Possui cachorro</p>
-                    </div>
-                    <p class="text--xl text--b text--display">Maria</p>
-                    <rr-stars size="lg"></rr-stars>
-                    <p class="text--sm text--display">Cliente qualificado</p>
-                </div>
-                <div class="hero-try-content__info hero-try-content__info--padding">
-                    <div class="hero-try-content__picture hero-try-content__picture--square" style="background-image: url(/images/dog-food.webp)"></div>
-                    <p class="text text--3xs text--sb text--gray text--uppercase">Porta-Saquinho</p>
+                    <p class="text--xs text--b text--display">Maria</p>
+                    <rr-stars size="lg" :qt="5"></rr-stars>
+                    <p class="text--2xs text--b text--display">Cliente qualificado</p>
                 </div>
             </div>
-            <div class="hero-try__horizontal-content hero-try-content__tags">
-                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Enviar mensagem</p>
-                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Criar promoção</p>
-                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Fechar venda</p>
+            <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--7">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile7.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--2xs text--b text--display">Rosana</p>
+                    <rr-stars size="md" :qt="3"></rr-stars>
+                </div>
             </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs pos pos--1">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile2.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Davi</p>
-                <rr-stars size="sm" :qt="3"></rr-stars>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--8">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile8.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Danielle</p>
+                    <rr-stars size="sm" :qt="3"></rr-stars>
+                </div>
             </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--sm pos pos--2">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile3.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--2xs text--b text--display">João</p>
-                <rr-stars size="md" :qt="4"></rr-stars>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--9">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile9.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Poli</p>
+                    <rr-stars size="sm" :qt="3"></rr-stars>
+                </div>
             </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--3">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile4.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--2xs text--b text--display">Rosa</p>
-                <rr-stars size="md" :qt="2"></rr-stars>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--10">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile10.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">José</p>
+                    <rr-stars size="sm" :qt="1"></rr-stars>
+                </div>
             </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--4">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile5.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Renato</p>
-                <rr-stars size="sm" :qt="1"></rr-stars>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--11">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile11.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Angela</p>
+                    <rr-stars size="sm" :qt="1"></rr-stars>
+                </div>
             </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--5">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile6.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--2xs text--b text--display">Roberto</p>
-                <rr-stars size="md" :qt="3"></rr-stars>
+            <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--12">
+                <div class="hero-try-content__picture" style="background-image: url(/images/smile12.png)"></div>
+                <div class="hero-try-content__info">
+                    <p class="text--3xs text--b text--display">Mirian</p>
+                    <rr-stars size="sm" :qt="1"></rr-stars>
+                </div>
             </div>
+            <nuxt-link to="#solucao" class="pos pos--13 chevron"><img src="/images/chevron-down.svg" alt="Rolar para baixo" /></nuxt-link>
         </div>
-        <div class="hero-try-content__card pos pos--6">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--xs text--b text--display">Maria</p>
-                <rr-stars size="lg" :qt="5"></rr-stars>
-                <p class="text--2xs text--b text--display">Cliente qualificado</p>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--7">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile7.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--2xs text--b text--display">Rosana</p>
-                <rr-stars size="md" :qt="3"></rr-stars>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--8">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile8.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Danielle</p>
-                <rr-stars size="sm" :qt="3"></rr-stars>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--9">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile9.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Poli</p>
-                <rr-stars size="sm" :qt="3"></rr-stars>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--10">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile10.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">José</p>
-                <rr-stars size="sm" :qt="1"></rr-stars>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--11">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile11.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Angela</p>
-                <rr-stars size="sm" :qt="1"></rr-stars>
-            </div>
-        </div>
-        <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--12">
-            <div class="hero-try-content__picture" style="background-image: url(/images/smile12.png)"></div>
-            <div class="hero-try-content__info">
-                <p class="text--3xs text--b text--display">Mirian</p>
-                <rr-stars size="sm" :qt="1"></rr-stars>
-            </div>
-        </div>
-        <nuxt-link to="#solucao" class="pos pos--13 chevron"><img src="/images/chevron-down.svg" alt="Rolar para baixo" /></nuxt-link>
     </div>
 </template>
 <script setup>
@@ -142,6 +144,13 @@
 </script>
 <style lang="scss" scoped>
     .hero-try-section {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .hero-try-section__content {
         position: relative;
         width: 100%;
         aspect-ratio: 16/9;
@@ -149,16 +158,14 @@
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        gap: 15px;
+        margin-top: -18%;
         @media (max-width: 1280px) {
             aspect-ratio: 1/4;
             background-image: url(/images/hero-curve-mobile.webp);
             background-size: auto 80%;
             background-position: center right;
         }
+
     }
 
     .logo-circle {
@@ -174,7 +181,7 @@
         justify-content: center;
         flex-flow: row nowrap;
         border: 1px solid var(--white-color);
-        background: linear-gradient(to right, rgba(233, 200, 255, 1) 0%, rgba(236, 236, 236, 0) 100%);
+        background: linear-gradient(112.83deg, #E9C8FF 0%, rgba(236, 236, 236, 0) 110.84%);
         :deep(.rr-logo) {
             width: 20px;
         }
@@ -265,6 +272,7 @@
                 width: auto;
                 flex-shrink: 0;
                 gap: 14px;
+                box-shadow: 0px 0.97px 18.79px 0px hsla(0, 0%, 0%, 0.1);
                 @media (max-width: 1280px) {
                     padding: 10px 14px;
                 }
