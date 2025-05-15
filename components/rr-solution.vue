@@ -1,108 +1,11 @@
 <template>
     <section class="solucao" id="solucao">
       <div class="center">
-        <div class="header">
+        <div class="header header--sm">
           <h2 visuals="h1" class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
           <p class="text--xl align-center">A plataforma completa para sua loja vender no WhatsApp e redes sociais. Você cadastra e gerencia produtos, clientes e pedidos, e compartilha tudo em segundos. Tudo em um só lugar. Simples, profissional e feito para sua loja vender mais.</p>
         </div>
         <img src="/images/system-ptbr.webp" alt="Catálogo digital" />
-        <!--<h2 class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
-        <div class="solucao__grid">
-          <div class="solucao-card">
-            <div class="solucao-card__cta">
-              <img src="/images/profile1.png" alt="Gestão de catálogo" class="solucao-card__profile" aria-hidden="true" />
-              <div>
-                <p class="solucao-card__cta-title">Gestão de catálogo:</p>
-                <p class="solucao-card__cta-text">Inclua um produto no meu catálogo</p>
-              </div>
-            </div>
-            <rr-decor-card aria-hidden="true">
-              <div class="product-div product-div--1">
-                <img src="/images/vector-grad-1.svg" alt="Vector" class="product-div__vector product-div__vector--sm" />
-                <img src="/images/vector-grad-2.svg" alt="Vector" class="product-div__vector product-div__vector--md" />
-                <img src="/images/vector-grad-3.svg" alt="Vector" class="product-div__vector product-div__vector--lg" />
-                <img src="/images/switch-redi.svg" alt="Switch" class="product-div__images product-div__switch" />
-                <img src="/images/product-image1.png" alt="Product" class="product-div__images product-div__product" />
-                <img src="/images/chat.svg" alt="Chat" class="product-div__images product-div__chat" />
-                <img src="/images/image.svg" alt="Chat" class="product-div__images product-div__image-icon" />
-                <div class="product-div__images product-div__images--text">sualoja.com</div>
-              </div>
-            </rr-decor-card>
-            <div class="solucao-card__info">
-              <h3>Gerenciamento de catálogo fácil e rápido</h3>
-              <p>Precisa cadastrar novos produtos? Em segundos, nosso copiloto de IA gera descrições otimizadas e encontra imagens profissionais. Um catálogo de produtos organizado atrai mais clientes e aumenta suas vendas.</p>
-            </div>
-          </div>
-          <div class="solucao-card">
-            <div class="solucao-card__cta">
-              <img src="/images/profile2.png" alt="Gestão de catálogo" class="solucao-card__profile" aria-hidden="true" />
-              <div>
-                <p class="solucao-card__cta-title">Promoções:</p>
-                <p class="solucao-card__cta-text">Crie uma campanha de liquidação</p>
-              </div>
-            </div>
-            <rr-decor-card aria-hidden="true">
-              <div class="product-div product-div--2">
-                <img src="/images/vector-grad-1.svg" alt="Vector" class="product-div__vector product-div__vector--sm" />
-                <img src="/images/vector-grad-2.svg" alt="Vector" class="product-div__vector product-div__vector--md" />
-                <img src="/images/vector-grad-3.svg" alt="Vector" class="product-div__vector product-div__vector--lg" />
-                <img src="/images/switch-redi.svg" alt="Switch" class="product-div__images product-div__switch" />
-                <img src="/images/discount.svg" alt="Chat" class="product-div__images product-div__discount" />
-                <div class="product-div__images product-div__images--text">Criar img <rr-minimal-logo></rr-minimal-logo></div>
-                <div class="product-div__images product-div__images--text product-div__images--text-alt">seucupom</div>
-              </div>
-            </rr-decor-card>
-            <div class="solucao-card__info">
-              <h3>Promoções que atraem</h3>
-              <p>Precisa de uma promoção agora? Peça para a Redi, nossa copiloto de IA, que ela cria cupons, imagens para campanhas promocionais e textos para redes sociais, tudo prontinho para atrair novos clientes rapidamente.</p>
-            </div>
-          </div>
-          <div class="solucao-card">
-            <div class="solucao-card__cta">
-              <img src="/images/profile3.png" alt="Gestão de catálogo" class="solucao-card__profile" aria-hidden="true" />
-              <div>
-                <p class="solucao-card__cta-title">Análise de concorrência:</p>
-                <p class="solucao-card__cta-text">Me ajuda a precificar este produto</p>
-              </div>
-            </div>
-            <rr-decor-card aria-hidden="true">
-              <div class="product-div product-div--3">
-                <img src="/images/vector-grad-2.svg" alt="Vector" class="product-div__vector product-div__vector--md" />
-                <img src="/images/switch-redi.svg" alt="Switch" class="product-div__images product-div__switch" />
-                <img src="/images/product-image2.png" alt="Product" class="product-div__images product-div__product" />
-                <div class="product-div__images product-div__images--text"><span class="number">R$ 1.240,50</span><span>-</span><span class="number">R$ 1.340,90</span><img src="/images/discount-alt.svg" alt="Discount"></div>
-                <div class="product-div__images product-div__images--text product-div__images--tag">Alterar preço</div>
-              </div>
-            </rr-decor-card>
-            <div class="solucao-card__info">
-              <h3>Precificação estratégica</h3>
-              <p>Quer saber o preço ideal para seus produtos? Eu analiso o mercado em plataformas como Amazon e Google e sugiro preços competitivos para você aumentar seu ticket médio de forma inteligente.</p>
-            </div>
-          </div>
-          <div class="solucao-card">
-            <div class="solucao-card__cta">
-              <img src="/images/profile4.png" alt="Gestão de catálogo" class="solucao-card__profile" aria-hidden="true" />
-              <div>
-                <p class="solucao-card__cta-title">Relatórios:</p>
-                <p class="solucao-card__cta-text">Relatório das vendas de ontem</p>
-              </div>
-            </div>
-            <rr-decor-card aria-hidden="true">
-              <div class="product-div product-div--4">
-                <img src="/images/vector-grad-4.svg" alt="Vector" class="product-div__vector product-div__vector--md" />
-                <img src="/images/switch-redi.svg" alt="Switch" class="product-div__images product-div__switch" />
-                <img src="/images/product-image3.png" alt="Product" class="product-div__images product-div__product" />
-                <div class="product-div__images product-div__images--text"><span>Total de vendas</span><span class="number">R$49.345,34</span></div>
-                <div class="product-div__images product-div__images--text product-div__images--text2"><span>Produto mais vendido</span><span class="number">Fone sem fio</span></div>
-              </div>
-            </rr-decor-card>
-            <div class="solucao-card__info">
-              <h3>Dados e insights práticos</h3>
-              <p>Quer saber sobre pedidos, vendas ou estoque? Basta perguntar! Eu organizo todas as informações relevantes, entregando insights claros e úteis para maximizar seus resultados.</p>
-            </div>
-          </div>
-        </div>
-        <rr-trial-button></rr-trial-button>-->
       </div>
     </section>
 </template>
@@ -114,12 +17,15 @@
 <style scoped lang="scss">
 
 .solucao {
-    padding-block: 100px 0;
+    padding-block: 95px 0;
     & > .center {
       display: flex;
       flex-flow: column nowrap;
-      gap: 80px;
+      gap: 47px;
       align-items: center;
+      img {
+        margin-bottom: -20%;
+      }
     }
   }
 

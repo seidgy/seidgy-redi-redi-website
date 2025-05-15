@@ -56,6 +56,8 @@ h1, *[visuals=h1] {
     font-size: 4em;
     line-height: 1.1em;
     font-weight: 700;
+    line-height: 1em;
+    max-width: 1020px;
     @media (max-width: 36em) {
         font-size: 3em;
     }

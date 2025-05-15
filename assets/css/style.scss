@@ -95,7 +95,7 @@ html {
         display: flex;
         flex-flow: column nowrap;
         text-align: center;
-        gap: 55px;
+        gap: 50px;
     }
 
     
@@ -123,11 +123,12 @@ html {
         .header {
           display: flex;
           flex-flow: column nowrap;
-          gap: 24px;
+          gap: 20px;
+          align-items: center;
         }
         
             .header--sm {
-                max-width: 1000px;
+                max-width: 1080px;
             }
         
             .header--xs {
