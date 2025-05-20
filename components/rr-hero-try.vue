@@ -5,6 +5,7 @@
             <div class="logo-circle" aria-hidden="true">
                 <rr-minimal-logo fill="hsla(273, 64%, 52%, 1)"></rr-minimal-logo>
             </div>
+            <img src="/images/base.svg" alt="Sua base de clientes" class="base-clientes">
             <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-mobile" aria-hidden="true" />
             <img src="/images/hero-iphone-mobile-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-desktop" aria-hidden="true" />
             <div class="hero-try-content">
@@ -194,6 +195,13 @@
             left: auto;
             right: 26%;
         }
+    }
+
+    .base-clientes {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 73%;
+        left: 80%;
     }
 
     .iphone {
