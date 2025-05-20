@@ -17,7 +17,6 @@
                 </div>
                  <div class="flex flex--col flex-center flex--16">
                     <rr-trial-button></rr-trial-button>
-                    <rr-store-buttons></rr-store-buttons>
                 </div>
             </div>
         </div>
@@ -38,6 +37,7 @@
             display: grid;
             grid-template-columns: auto auto;
             gap: 70px;
+            align-items: center;
             @media (max-width: 36em) {
                 grid-template-columns: 1fr;
             }
@@ -107,7 +107,7 @@
         .marketing__info {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 57px;
             align-items: flex-start;
             @media (max-width: 36em) {
                 gap: 44px;

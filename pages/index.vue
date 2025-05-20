@@ -64,12 +64,11 @@
         </div>
         <div class="flex flex--col flex-center flex--16">
           <rr-trial-button label="Crie o catálogo da sua loja"></rr-trial-button>
-          <rr-store-buttons></rr-store-buttons>
         </div>
       </div>
     </rr-text-image>
     <rr-text-image image="/images/smartphone2-ptbr.webp" class="conecte">
-      <div class="flex flex--col flex--44 flex--start">
+      <div class="flex flex--col flex--44 flex--start pb-80">
         <div class="flex flex--col flex--22">
           <h2 class="cap-size">Conecte-se melhor com quem já compra de você</h2>
           <div class="flex flex--col flex--36">
@@ -79,11 +78,10 @@
         </div> 
         <div class="flex flex--col flex-center flex--16">
           <rr-trial-button></rr-trial-button>
-          <rr-store-buttons></rr-store-buttons>
         </div>
       </div>
     </rr-text-image>
-    <rr-text-image class="text-image--padding" :bg="true" :half="true" image="/images/copiloto.webp">
+    <rr-text-image class="text-image--padding copiloto" :bg="true" :half="true" image="/images/copiloto.webp">
       <div class="flex flex--col flex--12">
         <h2 class="cap-size">Redi: O Copiloto de vendas com iA</h2>
         <div class="flex flex--col flex--36">
@@ -93,7 +91,6 @@
       </div> 
       <div class="flex flex--col flex-center flex--16">
         <rr-trial-button></rr-trial-button>
-        <rr-store-buttons></rr-store-buttons>
       </div>
     </rr-text-image>
     <rr-cta>
@@ -109,7 +106,6 @@
           <img src="/images/ferramentas.webp" alt="Ferramentas" aria-hidden="true">
           <div class="flex flex--col flex-center flex--16">
             <rr-trial-button></rr-trial-button>
-            <rr-store-buttons></rr-store-buttons>
           </div>
         </div>
       </div>
@@ -118,7 +114,7 @@
       <div class="center recursos">
         <h2>Vários recursos para deixar seus produtos profissionais</h2>
         <rr-resources></rr-resources>
-        <nuxt-link class="button" visuals="primary" color="white">Veja todas as funcionalidades </nuxt-link>
+        <nuxt-link class="button" visuals="primary" color="white" size="lg">Veja todas as funcionalidades </nuxt-link>
         <rr-features></rr-features>
       </div>
       <rr-marketing></rr-marketing>
@@ -166,6 +162,7 @@
     box-shadow: 0px 0.89px 1.78px 0px hsla(222, 33%, 6%, 0.03);
     background: hsla(0, 0%, 95%, 1);
     flex-shrink: 0;
+    text-decoration: none;
     p {
       text-decoration: none;
     }
@@ -189,7 +186,7 @@
     position: absolute;
     width: 48%;
     left: 52%;
-    top: 25%;
+    top: 12%;
     max-width: 730px;
     @media (max-width: 1240px) {
       display: none;
@@ -205,6 +202,17 @@
   .ferramentas__title {
     max-width: 900px;
     margin: 0 auto;
+  }
+
+  .ferramentas__text {
+    max-width: 1126px;
+    margin: 0 auto;
+  }
+
+  .copiloto {
+    :deep(.text-image__content p) {
+      max-width: 80%;
+    }
   }
 
 </style>

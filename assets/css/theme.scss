@@ -1,9 +1,166 @@
+/* Plus Jakarta Sans */
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../../public/fonts/Plus_Jakarta_Sans/PlusJakartaSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Inter */
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../public/fonts/Inter/Inter_18pt-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
 *, :root, ::before, ::after {
     --primary-hsl: 136, 67%, 38%;
     --secondary-hsl: 189, 99%, 36%;
     --tertiary-hsl: 171, 73%, 36%;
     --accent-hsl: 230, 23%, 25%;
-    --base-hsl: 0, 0%, 13%;
+    --base-hsl: 230, 23%, 25%;
     --white-hsl: 0, 0%, 99%;
     
 
@@ -25,8 +182,8 @@
 
     --accent-color: hsl(var(--accent-hsl), 1);
 
-    --body-font: 'Plus Jakarta Sans', sans-serif;	
-    --display-font: 'Inter', sans-serif;
+    --body-font: 'Inter', sans-serif;	
+    --display-font: 'Plus Jakarta Sans', sans-serif;
 
     --sec-gradient: linear-gradient(to right, var(--secondary-color) 0%, var(--tertiary-color) 100%);
 

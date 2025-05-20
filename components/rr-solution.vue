@@ -2,7 +2,7 @@
     <section class="solucao" id="solucao">
       <div class="center">
         <div class="header header--sm">
-          <h2 visuals="h1" class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
+          <h2 class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
           <p class="text--xl align-center">A plataforma completa para sua loja vender no WhatsApp e redes sociais. Você cadastra e gerencia produtos, clientes e pedidos, e compartilha tudo em segundos. Tudo em um só lugar. Simples, profissional e feito para sua loja vender mais.</p>
         </div>
         <img src="/images/system-ptbr.webp" alt="Catálogo digital" />
@@ -21,12 +21,15 @@
     & > .center {
       display: flex;
       flex-flow: column nowrap;
-      gap: 47px;
+      gap: 80px;
       align-items: center;
       img {
-        margin-bottom: -20%;
+        margin-bottom: -14%;
         max-width: 880px;
       }
+    }
+    h2 {
+      max-width: 930px;
     }
   }
 

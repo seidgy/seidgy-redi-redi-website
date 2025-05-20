@@ -30,7 +30,7 @@ const props = defineProps({
 <style scoped lang="scss">
 
 .text-image {
-    padding-block: 160px 0;
+    padding-block: 120px 0;
     position: relative;
     & > .center {
       display: grid;
@@ -63,10 +63,10 @@ const props = defineProps({
     }
     .text-image__content {
         gap: 22px;
-        padding-bottom: 48px;
+        padding-bottom: 123px;
         :deep(p),
         :deep(.cap-size) {
-            max-width: 71%;
+            max-width: 69%;
             @media (max-width: 1240px) {
                 max-width: none;
             }

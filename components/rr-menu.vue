@@ -1,21 +1,23 @@
 <template>
     <div class="center">
         <nav class="rr-menu" :class="{'rr-menu--active': data.menuActive}">
-            <nuxt-link target="_blank" to="https://rediredi.com/">
-                <img src="/images/redi-redi.svg" alt="RediRedi">
-            </nuxt-link>
-            <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
-                <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
-            </button>
-            <div class="rr-menu__links">
-                <nav class="rr-menu__nav">
+            <div class="flex flex--60 flex-center">
+                <nuxt-link target="_blank" to="https://rediredi.com/">
+                    <img src="/images/redi-redi.svg" alt="RediRedi">
+                </nuxt-link>
+                <nav class="rr-menu__nav not-mobile">
                     <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">Sobre</nuxt-link>
                     <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">Catálogo</nuxt-link>
                     <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="rr-menu__nav-link">Blog</nuxt-link>
                     <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">Premium</nuxt-link>
                 </nav>
-                <span class="rr-menu__separator"></span>
+            </div>
+            <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
+                <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
+            </button>
+            <div class="rr-menu__links">
                 <nav class="rr-menu__nav rr-menu__nav--small">
+                    <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small" visuals="secondary" color="w-primary">Entrar</nuxt-link>
                     <rr-trial-button size="sm"></rr-trial-button>
                 </nav>
                 <div class="rr-menu-header not-desktop">
@@ -113,7 +115,8 @@ const data = reactive({
             .rr-menu__nav-link {
                 font-size: 1em;
                 text-decoration: none;
-                font-weight: 500;
+                font-weight: 600;
+                font-family: var(--display-font);
                 @media (max-width: 36em) {
                     font-size: 2em;
                     color: var(--white-color);

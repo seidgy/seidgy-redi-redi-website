@@ -14,7 +14,7 @@ const props = defineProps({
 </script>
 <style scoped lang="scss">
     .rr-header {
-        padding-block: 50px 0;
+        padding-block: 20px 0;
         background-size: cover;
         background-position: center;
         overflow-x: hidden;

@@ -15,7 +15,7 @@ const props = defineProps({
         a {
             text-decoration: none;
             img {
-                width: 60px;
+                width: 76px;
             }
         }
     }

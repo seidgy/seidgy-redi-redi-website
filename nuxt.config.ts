@@ -41,17 +41,11 @@ export default defineNuxtConfig({
     ]
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/i18n', '@nuxtjs/google-fonts'],
+  modules: ['@nuxt/content', '@nuxtjs/i18n'],
   i18n: {
     lazy: true,
     locales,
     defaultLocale: 'pt-br'
-  },
-  googleFonts: {
-    families: {
-      Inter : true,
-      'Plus Jakarta Sans': true
-    }
   },
   generate: {
     routes: [

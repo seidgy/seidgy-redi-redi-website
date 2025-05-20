@@ -148,6 +148,10 @@
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        .button {
+            position: relative;
+            z-index: 1;
+        }
     }
 
     .hero-try-section__content {
@@ -158,7 +162,7 @@
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
-        margin-top: -18%;
+        margin-top: -10%;
         @media (max-width: 1280px) {
             aspect-ratio: 1/4;
             background-image: url(/images/hero-curve-mobile.webp);
@@ -193,7 +197,7 @@
     }
 
     .iphone {
-        width: 23%;
+        width: 40%;
         transform: translateX(-50%);
         position: absolute;
         bottom: 0;
