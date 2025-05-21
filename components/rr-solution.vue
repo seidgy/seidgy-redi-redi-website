@@ -2,8 +2,8 @@
     <section class="solucao" id="solucao">
       <div class="center">
         <div class="header header--sm">
-          <h2 class="align-center">A solução de vendas para o micro e pequeno empresário</h2>
-          <p class="text--xl align-center">A plataforma completa para sua loja vender no WhatsApp e redes sociais. Você cadastra e gerencia produtos, clientes e pedidos, e compartilha tudo em segundos. Tudo em um só lugar. Simples, profissional e feito para sua loja vender mais.</p>
+          <h2 class="align-center">{{ content.textObj['section2 title'] }}</h2>
+          <p class="text--xl align-center">{{ content.textObj['section2 subtitle'] }}</p>
         </div>
         <img src="/images/system-ptbr.webp" alt="Catálogo digital" />
       </div>
@@ -11,6 +11,11 @@
 </template>
 
 <script setup>
+const props = defineProps({
+    content: {
+        type: Object
+    }
+})
 </script>
 
 

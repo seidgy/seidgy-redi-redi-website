@@ -2,58 +2,58 @@
     <section class="resources">
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Cadastro de produtos</h3>
-                <p>Ganhe tempo: fotos, títulos e descrições prontas em segundos.</p>
+                <h3>{{ content.textObj['cadastro de produtos'] }}</h3>
+                <p>{{ content.textObj['cadastro de produtos subtitle'] }}</p>
             </div>
             <img src="/images/resource1.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Promoções no catálogo </h3>
-                <p>Crie promoções personalizadas que destacam produtos e atraem clientes.</p>
+                <h3>{{ content.textObj['promocoes no catalogo'] }}</h3>
+                <p>{{ content.textObj['promocoes no catalogo subtitle'] }}</p>
             </div>
             <img src="/images/resource2.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Gerador de QR Code </h3>
-                <p>Imprima e cole na loja: seus clientes terão seu catálogo de produtos sempre à mão!</p>
+                <h3>{{ content.textObj['gerador de QR code'] }}</h3>
+                <p>{{ content.textObj['gerador de QR code subtitle'] }}</p>
             </div>
             <img src="/images/resource3.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Cupons de desconto</h3>
-                <p>Crie cupons para gerar promoções e ativar o estoque com mais vendas.</p>
+                <h3>{{ content.textObj['cupons de desconto'] }}</h3>
+                <p>{{ content.textObj['cupons de desconto subtitle'] }}</p>
             </div>
             <img src="/images/resource4.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <div class="resources__center"></div>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Posts promocionais</h3>
-                <p>Tenha posts prontos toda semana e mantenha sua loja sempre ativa nas redes.</p>
+                <h3>{{ content.textObj['posts promocionais'] }}</h3>
+                <p>{{ content.textObj['posts promocionais subtitle'] }}</p>
             </div>
             <img src="/images/resource5.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Estatísticas inteligentes</h3>
-                <p>Descubra os produtos mais clicados, mais vendidos e os que necessitam de atenção.</p>
+                <h3>{{ content.textObj['estatisticas inteligentes'] }}</h3>
+                <p>{{ content.textObj['estatisticas inteligentes subtitle'] }}</p>
             </div>
             <img src="/images/resource6.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Integração com Google e Meta </h3>
-                <p>Integração com Google Analytics e Meta Pixel Monitore métricas detalhadas e otimize suas campanhas.</p>
+                <h3>{{ content.textObj['integracao google meta'] }}</h3>
+                <p>{{ content.textObj['integracao google meta subtitle'] }}</p>
             </div>
             <img src="/images/resource7.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
-                <h3>Aplicativo Mobile</h3>
-                <p>Gerencie sua loja de qualquer lugar com app para iOS e Android.</p>
+                <h3>{{ content.textObj['aplicativo mobile'] }}</h3>
+                <p>{{ content.textObj['aplicativo mobile subtitle'] }}</p>
             </div>
             <img src="/images/resource8.svg" alt="Resource" aria-hidden="true">
         </rr-resource-card>
@@ -61,7 +61,11 @@
 </template>
 
 <script setup>
-
+const props = defineProps({
+    content: {
+        type: Object
+    }
+})
 </script>   
 
 

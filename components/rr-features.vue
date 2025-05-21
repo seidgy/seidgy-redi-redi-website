@@ -6,25 +6,29 @@
                 <img src="/images/switch-redi.svg" alt="Switch">
             </div>
             <div class="feature-card" style="background-image: url(/images/petrol.png);">
-                <p>Confiado por empresas ao redor do mundo</p>
+                <p>{{ content.textObj['confiado por empresas'] }}</p>
             </div>
         </div>
         <div>
             <div class="feature-card" style="background-image: url(/images/flags.png);">
-                <p>15+ países usando a RediRedi</p>
+                <p>{{ content.textObj['15 paises'] }}</p>
             </div>
             <div class="feature-card" style="background-image: url(/images/smartphone.png);">
-                <p>170 mil catálogos criados</p>
+                <p>{{ content.textObj['170 mil catalogos'] }}</p>
             </div>
             <div class="feature-card" style="background-image: url(/images/fractal.png);">
-                <p>98% de clientes satisfeitos</p>
+                <p>{{ content.textObj['clientes satisfeitos'] }}</p>
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-
+const props = defineProps({
+    content: {
+        type: Object
+    }
+})
 </script>   
 
 

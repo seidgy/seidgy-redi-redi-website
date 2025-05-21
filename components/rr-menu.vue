@@ -6,10 +6,10 @@
                     <img src="/images/redi-redi.svg" alt="RediRedi">
                 </nuxt-link>
                 <nav class="rr-menu__nav not-mobile">
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">Sobre</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">Catálogo</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="rr-menu__nav-link">Blog</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">Premium</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
                 </nav>
             </div>
             <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
@@ -17,8 +17,8 @@
             </button>
             <div class="rr-menu__links">
                 <nav class="rr-menu__nav rr-menu__nav--small">
-                    <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small" visuals="secondary" color="w-primary">Entrar</nuxt-link>
-                    <rr-trial-button size="sm"></rr-trial-button>
+                    <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
+                    <rr-trial-button size="sm" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
                 </nav>
                 <div class="rr-menu-header not-desktop">
                     <img src="/images/redi-redi-negative.svg" alt="RediRedi" />
@@ -32,6 +32,7 @@
 </template>
 <script setup>
 const { locale, locales } = useI18n()
+const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
 import { reactive } from 'vue';
 const data = reactive({
     menuActive: false

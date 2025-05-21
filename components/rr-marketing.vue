@@ -12,11 +12,11 @@
             </div>
             <div class="marketing__info">
                 <div class="flex flex--col flex--start flex--44">
-                    <h2>+20% de aumento na média de pedidos recebidos*</h2>
-                    <p>* Lojas que usam a RediRedi e seguem nossas recomendações inteligentes aumentam, em média, 20% o número de pedidos.</p>
+                    <h2>{{ content.textObj['footer title'] }}</h2>
+                    <p>{{ content.textObj['footer subtitle'] }}</p>
                 </div>
                  <div class="flex flex--col flex-center flex--16">
-                    <rr-trial-button></rr-trial-button>
+                    <rr-trial-button :label="content.textObj['botao experimente']"></rr-trial-button>
                 </div>
             </div>
         </div>
@@ -24,7 +24,11 @@
 </template>
 
 <script setup>
-
+const props = defineProps({
+    content: {
+        type: Object
+    }
+})
 </script>   
 
 

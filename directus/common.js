@@ -10,17 +10,30 @@ const directus = createDirectus(process.env.DIRECTUS_BASE_URL)
 
 // get content from directus
 const getDirectusData = async (collectionName, junctionFields=undefined) => {
-  const content = await directus.request(readItems(collectionName, {
-    fields: junctionFields ? [`*.*`, ...junctionFields] : ['*.*'],
-    limit: -1,
-    filter: {
-      "status": {
-        "_in" : CONTENT_STATUS
-      }
+  try {
+    const filter = {};
+    
+    // Lista de coleções que sabemos que têm o campo status
+    const collectionsWithStatus = ['pages', 'posts', 'events']; // Adicione outras coleções conforme necessário
+    
+    // Se a coleção estiver na lista de coleções com status, adiciona o filtro
+    if (collectionsWithStatus.includes(collectionName)) {
+      filter.status = {
+        "_in": CONTENT_STATUS
+      };
     }
-  }));
 
-  return content;
+    const content = await directus.request(readItems(collectionName, {
+      fields: junctionFields ? [`*.*`, ...junctionFields] : ['*.*'],
+      limit: -1,
+      filter
+    }));
+
+    return content;
+  } catch (error) {
+    console.error(`Erro ao buscar dados da coleção ${collectionName}:`, error);
+    throw error;
+  }
 }
 
 const getDirectusAssets = async () => {

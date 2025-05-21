@@ -45,7 +45,7 @@ export default defineNuxtConfig({
   i18n: {
     lazy: true,
     locales,
-    defaultLocale: 'pt-br'
+    defaultLocale: 'pt'
   },
   generate: {
     routes: [

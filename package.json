@@ -7,10 +7,10 @@
     "node": "18.x"
   },
   "scripts": {
-    "dev": "nuxt dev --host",
-    "start": "nuxt start",
-    "generate": "nuxt build",
-    "preview": "nuxt preview"
+    "dev": "node contentImporter.js && nuxt dev",
+    "start": "node contentImporter.js && nuxt start",
+    "generate": "node contentImporter.js && nuxt build",
+    "preview": "node contentImporter.js && nuxt preview"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",

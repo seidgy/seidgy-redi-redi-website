@@ -4,126 +4,129 @@
       <div class="center">
         <section class="hero-content">
           <div class="hero-content__info">
-            <p class="text--xl text--display hero-content__brow">Catálogo de Produtos + Gestão de clientes + Inteligência de vendas com IA:</p>
-            <h2 class="hero-content__title">Aumente suas vendas em 20% vendendo mais para os clientes que você já tem.</h2>
+            <p class="text--xl text--display hero-content__brow">{{ pageContent.textObj['hero subtitle'] }}</p>
+            <h2 class="hero-content__title">{{ pageContent.textObj['hero title'] }}</h2>
           </div>
-          <rr-hero-try></rr-hero-try>
+          <rr-hero-try :content="pageContent"></rr-hero-try>
         </section>
       </div>
     </rr-header>
-    <rr-solution></rr-solution>
+    <rr-solution :content="pageContent"></rr-solution>
     <rr-text-image :bg="true" image="/images/hero-iphone2-ptbr.webp" class="catalogo">
       <img src="/images/arch.webp" alt="Arch" class="text-image__arch" aria-hidden="true" />
       <div class="flex flex--col flex--12">
-        <h2 class="catalogo__title">O catálogo que valoriza seus produtos e atrai mais vendas</h2>
+        <h2 class="catalogo__title">{{ pageContent.textObj['section3 title'] }}</h2>
         <div class="flex flex--col flex--36">
-          <p class="text--xl text--1-4 catalogo__text">A RediRedi transforma sua vitrine em um catálogo profissional, bonito e fácil de atualizar direto do celular.</p>
-          <p class="text--xl text--1-4 catalogo__text">Em poucos minutos, sua loja está pronta para vender no WhatsApp, no Instagram ou onde seus clientes estiverem.</p>
+          <p class="text--xl text--1-4 catalogo__text">{{ pageContent.textObj['section3 paragraph 1'] }}</p>
+          <p class="text--xl text--1-4 catalogo__text">{{ pageContent.textObj['section3 paragraph2'] }}</p>
         </div>
       </div> 
       <div class="flex flex--col flex--60 flex--start">
         <div class="flex flex--col flex--44">
-          <p class="flex flex--center flex--16 text--sb">Veja exemplos de alguns de nossos catálogos <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
+          <p class="flex flex--center flex--16 text--sb">{{ pageContent.textObj['veja exemplos catalogo'] }} <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
           <div class="flex flex--16 catalog-list">
             <nuxt-link to="https://petshop.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
               <p class="text--2xs text--sb flex flex--3 flex-center">
                 <img width="20px" src="/images/circle-brazil.svg" alt="Brazil" />
-                Pet shop
+                {{ pageContent.textObj['pet shop'] }}
               </p>
               <img src="/images/dog.webp" alt="Dog" />
             </nuxt-link>
             <nuxt-link to="https://cosmetico.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
               <p class="text--2xs text--sb flex flex--3 flex-center">
                 <img width="20px" src="/images/circle-colombia.svg" alt="Colombia" />
-                Cosméticos
+                {{ pageContent.textObj['cosmeticos'] }}
               </p>
               <img src="/images/lipstick.webp" alt="Lipstick" />
             </nuxt-link>
             <nuxt-link to="https://moda.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
               <p class="text--2xs text--sb flex flex--3 flex-center">
                 <img width="20px" src="/images/circle-mexico.svg" alt="Mexico" />
-                Moda
+                {{ pageContent.textObj['moda'] }}
               </p>
               <img src="/images/shoe.webp" alt="Shoe" />
             </nuxt-link>
             <nuxt-link to="https://supplements.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
               <p class="text--2xs text--sb flex flex--3 flex-center">
                 <img width="20px" src="/images/circle-usa.svg" alt="USA" />
-                Suplementos
+                {{ pageContent.textObj['suplementos'] }}
               </p>
               <img src="/images/whey.webp" alt="Whey protein" />
             </nuxt-link>
             <nuxt-link to="https://eletronicos.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
               <p class="text--2xs text--sb flex flex--3 flex-center">
                 <img width="20px" src="/images/circle-spain.svg" alt="Spain" />
-                Eletrônicos
+                {{ pageContent.textObj['eletronicos'] }}
               </p>
               <img src="/images/headphone.webp" alt="Headphone" />
             </nuxt-link>
           </div>
         </div>
         <div class="flex flex--col flex-center flex--16">
-          <rr-trial-button label="Crie o catálogo da sua loja"></rr-trial-button>
+          <rr-trial-button :label="pageContent.textObj['crie o catalogo']"></rr-trial-button>
         </div>
       </div>
     </rr-text-image>
     <rr-text-image image="/images/smartphone2-ptbr.webp" class="conecte">
       <div class="flex flex--col flex--44 flex--start pb-80">
         <div class="flex flex--col flex--22">
-          <h2 class="cap-size">Conecte-se melhor com quem já compra de você</h2>
+          <h2 class="cap-size">{{ pageContent.textObj['section4 title'] }}</h2>
           <div class="flex flex--col flex--36">
-            <p class="text--xl">Com o cadastro de clientes simples da RediRedi(CRM), você registra preferências, hábitos, datas especiais e até detalhes como “compra mensal” ou “cliente antigo”. </p>
-            <p class="text--xl">Tudo isso pra identificar quem está pronto pra comprar, e vender mais pra quem já conhece seus produtos e confia na sua loja.</p>
+            <p class="text--xl">{{ pageContent.textObj['section4 paragraph1'] }}</p>
+            <p class="text--xl">{{ pageContent.textObj['section4 paragraph2'] }}</p>
           </div>
         </div> 
         <div class="flex flex--col flex-center flex--16">
-          <rr-trial-button></rr-trial-button>
+          <rr-trial-button :label="pageContent.textObj['botao experimente']"></rr-trial-button>
         </div>
       </div>
     </rr-text-image>
     <rr-text-image class="text-image--padding copiloto" :bg="true" :half="true" image="/images/copiloto.webp">
       <div class="flex flex--col flex--12">
-        <h2 class="cap-size">Redi: O Copiloto de vendas com iA</h2>
+        <h2 class="cap-size">{{ pageContent.textObj['section5 title'] }}</h2>
         <div class="flex flex--col flex--36">
-          <p class="text--xl">A Redi analisa o comportamento dos seus clientes, identifica padrões e mostra onde estão as melhores oportunidades de venda. </p>
-          <p class="text--xl">Ela sugere ações simples, ajuda você a reativar quem sumiu e mantém seus clientes recorrentes no radar. Como um cérebro de vendas.</p>
+          <p class="text--xl">{{ pageContent.textObj['section5 paragraph1'] }}</p>
+          <p class="text--xl">{{ pageContent.textObj['section5 paragraph2'] }}</p>
         </div>
       </div> 
       <div class="flex flex--col flex-center flex--16">
-        <rr-trial-button></rr-trial-button>
+        <rr-trial-button :label="pageContent.textObj['botao experimente']"></rr-trial-button>
       </div>
     </rr-text-image>
     <rr-cta>
-      <p class="text--2xl text--sb text--white align-center">+20% de aumento na média de pedidos recebidos com a Redi* </p>
+      <p class="text--2xl text--sb text--white align-center">{{ pageContent.textObj['20% de aumento'] }}</p>
     </rr-cta>
     <div class="base-section ferramentas">
-      <div class="center flex flex--col flex-center flex--90">
-        <div class="flex flex--col flex--55">
-          <h2 class="align-center ferramentas__title">Ferramentas para você potencializar seu marketing e vendas</h2>
-          <p class="text--xl align-center ferramentas__text">A RediRedi cria artes profissionais para seus produtos em segundos, prontas para Stories, Reels, WhatsApp e outras redes. Inclui formatos para promoções, lançamentos e datas comemorativas. Você escolhe o produto, e em segundos já pode divulgar nos canais sociais da sua loja, ganhando tempo, visibilidade e aumentando suas vendas.</p>
+      <div class="center flex flex--col flex-center flex--36">
+        <div class="flex flex--col flex--22">
+          <h2 class="align-center ferramentas__title">{{ pageContent.textObj['section6 title'] }}</h2>
+          <p class="text--xl align-center ferramentas__text">{{ pageContent.textObj['section6 paragraph1'] }} {{ pageContent.textObj['section6 paragraph2'] }}</p>
         </div>
         <div class="flex flex--col flex--22">
           <img src="/images/ferramentas.webp" alt="Ferramentas" aria-hidden="true">
           <div class="flex flex--col flex-center flex--16">
-            <rr-trial-button></rr-trial-button>
+            <rr-trial-button :label="pageContent.textObj['botao experimente']"></rr-trial-button>
           </div>
         </div>
       </div>
     </div>
     <rr-gradient-section>
       <div class="center recursos">
-        <h2>Vários recursos para deixar seus produtos profissionais</h2>
-        <rr-resources></rr-resources>
-        <nuxt-link class="button" visuals="primary" color="white" size="lg">Veja todas as funcionalidades </nuxt-link>
-        <rr-features></rr-features>
+        <h2>{{ pageContent.textObj['section7 title'] }}</h2>
+        <rr-resources :content="pageContent"></rr-resources>
+        <nuxt-link to="https://rediredi.com/br/sobre-br/" target="_blank" class="button" visuals="primary" color="white" size="lg">{{ pageContent.textObj['veja todas as funcionalidades'] }}</nuxt-link>
+        <rr-features :content="pageContent"></rr-features>
       </div>
-      <rr-marketing></rr-marketing>
+      <rr-marketing :content="pageContent"></rr-marketing>
     </rr-gradient-section>
     <rr-footer></rr-footer>
   </article>
 </template>
 
 <script setup>
+const { locale } = useI18n()
+const localePath = useLocalePath()
+const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
 </script>
 
 <style scoped lang="scss">

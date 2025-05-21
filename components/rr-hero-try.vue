@@ -1,6 +1,6 @@
 <template>
     <div class="hero-try-section" aria-hidden="true">
-        <rr-trial-button></rr-trial-button>
+        <rr-trial-button  :label="content.textObj['botao experimente']"></rr-trial-button>
         <div class="hero-try-section__content">
             <div class="logo-circle" aria-hidden="true">
                 <rr-minimal-logo fill="hsla(273, 64%, 52%, 1)"></rr-minimal-logo>
@@ -15,8 +15,8 @@
                     <div class="hero-try-content__card">
                         <div class="hero-try-content__picture" style="background-image: url(/images/dog-food.webp)"></div>
                         <div class="hero-try-content__info">
-                            <p class="text--xs text--b text--display">Porta-saquinho</p>
-                            <p class="text--2xs text--display text--medium">R$ 29,90</p>
+                            <p class="text--xs text--b text--display">{{ content.textObj['porta saquinho'] }}</p>
+                            <p class="text--2xs text--display text--medium">{{ content.textObj['valor 29,90'] }}</p>
                         </div>
                     </div>
                     <rr-switch></rr-switch>
@@ -25,7 +25,7 @@
                         <div class="hero-try-content__info">
                             <p class="text--xs text--b text--display">Maria</p>
                             <rr-stars></rr-stars>
-                            <p class="text--2xs text--display text--medium">Cliente qualificado</p>
+                            <p class="text--2xs text--display text--medium">{{ content.textObj['cliente qualificado'] }}</p>
                         </div>
                     </div>
                 </div>
@@ -33,22 +33,22 @@
                     <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
                     <div class="hero-try-content__info">
                         <div class="hero-try-content__card-tags">
-                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Compra mensal</p>
-                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">Possui cachorro</p>
+                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['compra mensal'] }}</p>
+                            <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['possui cachorro'] }}</p>
                         </div>
                         <p class="text--xl text--b text--display">Maria</p>
                         <rr-stars size="lg"></rr-stars>
-                        <p class="text--sm text--display">Cliente qualificado</p>
+                        <p class="text--sm text--display">{{ content.textObj['cliente qualificado'] }}</p>
                     </div>
                     <div class="hero-try-content__info hero-try-content__info--padding">
                         <div class="hero-try-content__picture hero-try-content__picture--square" style="background-image: url(/images/dog-food.webp)"></div>
-                        <p class="text text--3xs text--sb text--gray text--uppercase">Porta-Saquinho</p>
+                        <p class="text text--3xs text--sb text--gray text--uppercase">{{ content.textObj['porta saquinho'] }}</p>
                     </div>
                 </div>
                 <div class="hero-try__horizontal-content hero-try-content__tags">
-                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Enviar mensagem</p>
-                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Criar promoção</p>
-                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">Fechar venda</p>
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['enviar mensagem'] }}</p>
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['criar promocao'] }}</p>
+                    <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['fechar venda'] }}</p>
                 </div>
             </div>
             <div class="hero-try-content__card hero-try-content__card--xs pos pos--1">
@@ -91,7 +91,7 @@
                 <div class="hero-try-content__info">
                     <p class="text--xs text--b text--display">Maria</p>
                     <rr-stars size="lg" :qt="5"></rr-stars>
-                    <p class="text--2xs text--b text--display">Cliente qualificado</p>
+                    <p class="text--2xs text--b text--display">{{ content.textObj['cliente qualificado'] }}</p>
                 </div>
             </div>
             <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--7">
@@ -141,7 +141,11 @@
     </div>
 </template>
 <script setup>
-
+const props = defineProps({
+    content: {
+        type: Object
+    }
+})
 </script>
 <style lang="scss" scoped>
     .hero-try-section {
