@@ -60,10 +60,11 @@ const getDirectusAsset = async (id) => {
 
 // getImageUrl
 const getImage = async (imageId) => {
-  //return `${ process.env.DIRECTUS_IMAGE_BASE_URL }/assets/${ imageId }`;
-  const image = await getDirectusAsset(imageId);
-  
-  return `/images/directus/${ image.filename_disk }`;
+  if(imageId) {
+    return `${ process.env.DIRECTUS_BASE_URL }assets/${ imageId }`;
+  } else {
+    return null;
+  }
 }
 
 const replaceImageUrls = async (text) => {

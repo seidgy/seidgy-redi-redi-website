@@ -5,8 +5,8 @@
             <div class="logo-circle" aria-hidden="true">
                 <rr-minimal-logo fill="hsla(273, 64%, 52%, 1)"></rr-minimal-logo>
             </div>
-            <img src="/images/base.svg" alt="Sua base de clientes" class="base-clientes">
-            <img src="/images/hero-iphone-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-mobile" aria-hidden="true" />
+            <img :src="content.imageObj['sua base de clientes'].url" :alt="content.imageObj['sua base de clientes'].alt" class="base-clientes">
+            <img :src="content.imageObj['hero smartphone'].url" :alt="content.imageObj['hero smartphone'].alt" class="iphone not-mobile" aria-hidden="true" />
             <img src="/images/hero-iphone-mobile-ptbr.webp" alt="Exemplo display IPhone" class="iphone not-desktop" aria-hidden="true" />
             <div class="hero-try-content">
                 <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--1" aria-hidden="true" />
@@ -23,7 +23,7 @@
                     <div class="hero-try-content__card">
                         <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
                         <div class="hero-try-content__info">
-                            <p class="text--xs text--b text--display">Maria</p>
+                            <p class="text--xs text--b text--display">{{ content.textObj['maria'] }}</p>
                             <rr-stars></rr-stars>
                             <p class="text--2xs text--display text--medium">{{ content.textObj['cliente qualificado'] }}</p>
                         </div>
@@ -36,7 +36,7 @@
                             <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['compra mensal'] }}</p>
                             <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['possui cachorro'] }}</p>
                         </div>
-                        <p class="text--xl text--b text--display">Maria</p>
+                        <p class="text--xl text--b text--display">{{ content.textObj['maria'] }}</p>
                         <rr-stars size="lg"></rr-stars>
                         <p class="text--sm text--display">{{ content.textObj['cliente qualificado'] }}</p>
                     </div>
@@ -61,7 +61,7 @@
             <div class="hero-try-content__card hero-try-content__card--sm pos pos--2">
                 <div class="hero-try-content__picture" style="background-image: url(/images/smile3.png)"></div>
                 <div class="hero-try-content__info">
-                    <p class="text--2xs text--b text--display">João</p>
+                    <p class="text--2xs text--b text--display">{{ content.textObj['joao'] }}</p>
                     <rr-stars size="md" :qt="4"></rr-stars>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--4">
                 <div class="hero-try-content__picture" style="background-image: url(/images/smile5.png)"></div>
                 <div class="hero-try-content__info">
-                    <p class="text--3xs text--b text--display">Renato</p>
+                    <p class="text--3xs text--b text--display">{{ content.textObj['renato'] }}</p>
                     <rr-stars size="sm" :qt="1"></rr-stars>
                 </div>
             </div>
@@ -89,7 +89,7 @@
             <div class="hero-try-content__card pos pos--6">
                 <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
                 <div class="hero-try-content__info">
-                    <p class="text--xs text--b text--display">Maria</p>
+                    <p class="text--xs text--b text--display">{{ content.textObj['maria'] }}</p>
                     <rr-stars size="lg" :qt="5"></rr-stars>
                     <p class="text--2xs text--b text--display">{{ content.textObj['cliente qualificado'] }}</p>
                 </div>
@@ -209,7 +209,7 @@ const props = defineProps({
     }
 
     .iphone {
-        width: 40%;
+        width: 27%;
         transform: translateX(-50%);
         position: absolute;
         bottom: 0;

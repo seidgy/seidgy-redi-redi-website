@@ -5,7 +5,7 @@
                 <div class="mosaic mosaic--1"></div>
                 <div class="mosaic mosaic--2"></div>
                 <div class="mosaic mosaic--3">
-                    <img src="/images/IA.webp" alt="Vamos vender mais juntos?">
+                    <img :src="content.imageObj['vendemos mais'].url" :alt="content.imageObj['vendemos mais'].alt">
                 </div>
                 <img src="/images/vector-grad-5.svg" class="vector vector--1" alt="Vector" aria-hidden="true" />
                 <img src="/images/vector-grad-6.svg" class="vector vector--2" alt="Vector" aria-hidden="true" />

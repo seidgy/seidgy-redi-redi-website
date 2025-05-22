@@ -12,7 +12,7 @@
       </div>
     </rr-header>
     <rr-solution :content="pageContent"></rr-solution>
-    <rr-text-image :bg="true" image="/images/hero-iphone2-ptbr.webp" class="catalogo">
+    <rr-text-image :bg="true" :image="pageContent.imageObj['catalogo smartphone'].url" class="catalogo">
       <img src="/images/arch.webp" alt="Arch" class="text-image__arch" aria-hidden="true" />
       <div class="flex flex--col flex--12">
         <h2 class="catalogo__title">{{ pageContent.textObj['section3 title'] }}</h2>
@@ -67,7 +67,7 @@
         </div>
       </div>
     </rr-text-image>
-    <rr-text-image image="/images/smartphone2-ptbr.webp" class="conecte">
+    <rr-text-image :image="pageContent.imageObj['perfil smartphone'].url" class="conecte">
       <div class="flex flex--col flex--44 flex--start pb-80">
         <div class="flex flex--col flex--22">
           <h2 class="cap-size">{{ pageContent.textObj['section4 title'] }}</h2>
@@ -81,7 +81,7 @@
         </div>
       </div>
     </rr-text-image>
-    <rr-text-image class="text-image--padding copiloto" :bg="true" :half="true" image="/images/copiloto.webp">
+    <rr-text-image class="text-image--padding copiloto" :bg="true" :half="true" :image="pageContent.imageObj['IA copiloto'].url">
       <div class="flex flex--col flex--12">
         <h2 class="cap-size">{{ pageContent.textObj['section5 title'] }}</h2>
         <div class="flex flex--col flex--36">
@@ -103,7 +103,7 @@
           <p class="text--xl align-center ferramentas__text">{{ pageContent.textObj['section6 paragraph1'] }} {{ pageContent.textObj['section6 paragraph2'] }}</p>
         </div>
         <div class="flex flex--col flex--22">
-          <img src="/images/ferramentas.webp" alt="Ferramentas" aria-hidden="true">
+          <img :src="pageContent.imageObj['ferramentas'].url" :alt="pageContent.imageObj['ferramentas'].alt" aria-hidden="true">
           <div class="flex flex--col flex-center flex--16">
             <rr-trial-button :label="pageContent.textObj['botao experimente']"></rr-trial-button>
           </div>

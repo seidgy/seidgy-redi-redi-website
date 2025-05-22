@@ -2,22 +2,25 @@ import fs from "fs";
 import {rimraf} from "rimraf";
 import common from "./common.js";
 
-const organizeTextsByLanguage = (texts) => {
+const organizeTextsByLanguage = (texts, pageTexts) => {
   const organizedTexts = {
     'pt-BR': {},
     'en-US': {},
     'es-ES': {}
   };
 
-  texts.forEach(text => {
+  // Filtra apenas os textos que estão vinculados à página
+  const filteredTexts = texts.filter(text => 
+    pageTexts.some(pageText => pageText.Free_Text_id === text.Free_Text_id.id)
+  );
+
+  filteredTexts.forEach(text => {
     const langCode = text.languages_code.code;
     const alias = text.Free_Text_id.alias;
     const portugueseText = text.Free_Text_id.Text;
     
-    // Adiciona o texto em português
     organizedTexts['pt-BR'][alias] = portugueseText;
     
-    // Adiciona a tradução para o idioma correspondente
     if (!organizedTexts[langCode]) {
       organizedTexts[langCode] = {};
     }
@@ -27,18 +30,66 @@ const organizeTextsByLanguage = (texts) => {
   return organizedTexts;
 };
 
+const organizeImagesByLanguage = async (images, imageTranslations, pageImages) => {
+  const organizedImages = {
+    'pt-BR': {},
+    'en-US': {},
+    'es-ES': {}
+  };
+
+  // Filtra apenas as imagens que estão vinculadas à página
+  const filteredImages = images.filter(image => 
+    pageImages.some(pageImage => pageImage.image_id === image.id)
+  );
+
+  // Primeiro, organizamos as imagens em português
+  for (const image of filteredImages) {
+    const alias = image.alias;
+    organizedImages['pt-BR'][alias] = {
+      url: await common.getImage(image.imagem.id),
+      alt: image.alt
+    };
+  }
+
+  // Depois, adicionamos as traduções apenas para as imagens filtradas
+  const filteredTranslations = imageTranslations.filter(translation => 
+    filteredImages.some(image => image.id === translation.image_id.id)
+  );
+
+  for (const translation of filteredTranslations) {
+    const langCode = translation.languages_code.code;
+    const alias = translation.image_id.alias;
+    
+    if (!organizedImages[langCode]) {
+      organizedImages[langCode] = {};
+    }
+    
+    organizedImages[langCode][alias] = {
+      url: await common.getImage(translation.imagem.id),
+      alt: translation.alt
+    };
+  }
+
+  return organizedImages;
+};
+
 const objectContructor = async (dir, fs) => {
   let page = await common.getDirectusData("homepage");
   let texts = await common.getDirectusData("Free_Text");
-  let translations = await common.getDirectusData("Free_Text_translations");
+  let images = await common.getDirectusData("image");
+  let textTranslations = await common.getDirectusData("Free_Text_translations");
+  let imageTranslations = await common.getDirectusData("image_translations");
+
   
-  // Organizar textos por idioma
-  const organizedTexts = organizeTextsByLanguage(translations);
+  // Organizar textos e imagens por idioma, passando os IDs vinculados à página
+  const organizedTexts = organizeTextsByLanguage(textTranslations, page.Textos);
+  const organizedImages = await organizeImagesByLanguage(images, imageTranslations, page.imagens);
   
   // Criar objeto base da página
   let basePage = { ...page };
   basePage.slug = 'homepage';
   basePage.textObj = organizedTexts['pt-BR'];
+  basePage.imageObj = organizedImages['pt-BR'];
 
   // Criar diretórios de idiomas
   const languages = ['en', 'es'];
@@ -63,6 +114,7 @@ const objectContructor = async (dir, fs) => {
     const langCode = lang === 'en' ? 'en-US' : 'es-ES';
     const langPage = { ...basePage };
     langPage.textObj = organizedTexts[langCode];
+    langPage.imageObj = organizedImages[langCode];
     
     fs.writeFile(
       `${dir}/${lang}/${basePage.slug}.json`,

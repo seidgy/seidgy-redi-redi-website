@@ -5,28 +5,28 @@
                 <h3>{{ content.textObj['cadastro de produtos'] }}</h3>
                 <p>{{ content.textObj['cadastro de produtos subtitle'] }}</p>
             </div>
-            <img src="/images/resource1.svg" alt="Resource" aria-hidden="true">
+            <img :src="content.imageObj['registro de produtos'].url" :alt="content.imageObj['registro de produtos'].alt" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
                 <h3>{{ content.textObj['promocoes no catalogo'] }}</h3>
                 <p>{{ content.textObj['promocoes no catalogo subtitle'] }}</p>
             </div>
-            <img src="/images/resource2.svg" alt="Resource" aria-hidden="true">
+            <img :src="content.imageObj['promocoes no catalogo'].url" :alt="content.imageObj['promocoes no catalogo'].alt" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
                 <h3>{{ content.textObj['gerador de QR code'] }}</h3>
                 <p>{{ content.textObj['gerador de QR code subtitle'] }}</p>
             </div>
-            <img src="/images/resource3.svg" alt="Resource" aria-hidden="true">
+            <img :src="content.imageObj['gerador de QR code'].url" :alt="content.imageObj['gerador de QR code'].alt" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">
                 <h3>{{ content.textObj['cupons de desconto'] }}</h3>
                 <p>{{ content.textObj['cupons de desconto subtitle'] }}</p>
             </div>
-            <img src="/images/resource4.svg" alt="Resource" aria-hidden="true">
+            <img :src="content.imageObj['cupons de desconto'].url" :alt="content.imageObj['cupons de desconto'].alt" aria-hidden="true">
         </rr-resource-card>
         <div class="resources__center"></div>
         <rr-resource-card>
@@ -41,7 +41,7 @@
                 <h3>{{ content.textObj['estatisticas inteligentes'] }}</h3>
                 <p>{{ content.textObj['estatisticas inteligentes subtitle'] }}</p>
             </div>
-            <img src="/images/resource6.svg" alt="Resource" aria-hidden="true">
+            <img :src="content.imageObj['estatisticas inteligentes'].url" :alt="content.imageObj['estatisticas inteligentes'].alt" aria-hidden="true">
         </rr-resource-card>
         <rr-resource-card>
             <div class="resources__info">

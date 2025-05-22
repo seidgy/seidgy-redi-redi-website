@@ -5,7 +5,7 @@
           <h2 class="align-center">{{ content.textObj['section2 title'] }}</h2>
           <p class="text--xl align-center">{{ content.textObj['section2 subtitle'] }}</p>
         </div>
-        <img src="/images/system-ptbr.webp" alt="Catálogo digital" />
+        <img :src="content.imageObj['solucao de vendas'].url" :alt="content.imageObj['solucao de vendas'].alt" />
       </div>
     </section>
 </template>
