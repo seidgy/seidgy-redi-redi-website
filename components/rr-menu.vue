@@ -19,6 +19,10 @@
                 <nav class="rr-menu__nav rr-menu__nav--small">
                     <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
                     <rr-trial-button size="sm" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
+                    <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5" :class="{'language-selector--active': data.languageActive}"><img src="/images/world.svg" alt="Change language" /><img src="/images/chevron-down.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
+                    <ul class="language-select" v-if="data.languageActive">
+                        <li v-for="loc in locales"><SwitchLocalePathLink @click="data.languageActive = false" class="locale" :class="{'locale--active': loc.code == locale}" :locale="loc.code">{{ loc.name }}</SwitchLocalePathLink></li>
+                    </ul>
                 </nav>
                 <div class="rr-menu-header not-desktop">
                     <img src="/images/redi-redi-negative.svg" alt="RediRedi" />
@@ -32,11 +36,15 @@
 </template>
 <script setup>
 const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath();
 const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
 import { reactive } from 'vue';
+
 const data = reactive({
-    menuActive: false
+    menuActive: false,
+    languageActive: false
 })
+
 </script>
 <style scoped lang="scss">
 
@@ -78,6 +86,47 @@ const data = reactive({
             }
         }
 
+        .language-selector {
+            cursor: pointer;
+        }
+
+        .chevron {
+            transition: transform 0.2s ease-out;
+        }
+
+        .language-selector--active .chevron {
+
+            transform: rotateX(180deg);
+        }
+
+        .language-select {
+            position: absolute;
+            top: 60px;
+            right: 0;
+            padding-block: 20px;
+            padding-inline: 0;
+            border-radius: 16px;
+            background-color: var(--white-color);
+            display: flex;
+            flex-flow: column;
+            box-shadow: 0px 0.97px 18.79px 0px hsla(0, 0%, 0%, 0.1);
+            li {
+                list-style: none;
+                :deep(a) {
+                    font-size: 1.125em;
+                    font-weight: 500;
+                    padding-block: 10px;
+                    padding-inline: 20px;
+                    display: block;
+                    text-decoration: none;
+                    &:hover,
+                    &.locale--active {
+                        background: hsla(207, 31%, 89%, 1);
+                    }
+                }
+            }
+        }
+
         .rr-menu__trigger {
             border: none;
             background: none;
@@ -107,11 +156,16 @@ const data = reactive({
         .rr-menu__nav {
             display: flex;
             align-items: center;
-            gap: 36px;
+            gap: 28px;
+            position: relative;
             @media (max-width: 36em) {
                 flex-direction: column;
             }
         }
+
+            .rr-menu__nav--small {
+                gap: 14px;
+            }
 
             .rr-menu__nav-link {
                 font-size: 1em;

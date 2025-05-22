@@ -8,7 +8,7 @@
                     </nuxt-link>
                     <rr-store-buttons></rr-store-buttons>
                 </div>
-                <rr-socials></rr-socials>
+                <rr-socials :content="pageContent"></rr-socials>
             </div>
             <div class="footer__links">
                 <nav class="footer__nav">
