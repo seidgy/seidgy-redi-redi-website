@@ -1,7 +1,7 @@
 <template>
     <div class="hero-try-section" aria-hidden="true">
         <rr-trial-button  :label="content.textObj['botao experimente']"></rr-trial-button>
-        <div class="hero-try-section__content">
+        <div class="hero-try-section__content not-mobile">
             <div class="logo-circle" aria-hidden="true">
                 <rr-minimal-logo fill="hsla(273, 64%, 52%, 1)"></rr-minimal-logo>
             </div>
@@ -138,6 +138,173 @@
             </div>
             <nuxt-link to="#solucao" class="pos pos--13 chevron"><img src="/images/chevron-down.svg" alt="Rolar para baixo" /></nuxt-link>
         </div>
+        <div class="hero-try-section__content not-desktop">
+            <img src="/images/hero-curve.webp" alt="Curva" class="hero-try-section__content-mobile-curve" aria-hidden="true">
+            <div class="hero-try-section__content-mobile flex flex--30">
+                <div class="hero-try-section__content-mobile-card flex flex--col flex--22">
+                    <div class="hero-try-section__content-mobile-card-content">
+                        <img class="hero-try-section__content-mobile-smartphone" :src="content.imageObj['hero smartphone mobile'].url" :alt="content.imageObj['hero smartphone mobile'].alt">
+                    </div>
+                    <div class="flex flex--col flex--16">
+                        <h3 class="align-left">{{ content.textObj['mobile hero card 1 title'] }}</h3>
+                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 1 subtitle'] }}</p>
+                    </div>
+                </div>
+                <div class="hero-try-section__content-mobile-card flex flex--col flex--22">
+                    <div class="hero-try-section__content-mobile-card-content">
+                        <div class="hero-try-content hero-try-content hero-try-content--card2">
+                            <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--1" aria-hidden="true" />
+                            <img src="/images/vector-grad-vertical.svg" alt="Gradient" class="hero-try-content__grad hero-try-content__grad--2" aria-hidden="true" />
+                            <div class="hero-try__horizontal-content">
+                                <div class="hero-try-content__card">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/dog-food.webp)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--xs text--b text--display">{{ content.textObj['porta saquinho'] }}</p>
+                                        <p class="text--2xs text--display text--medium">{{ content.textObj['valor 29,90'] }}</p>
+                                    </div>
+                                </div>
+                                <rr-switch></rr-switch>
+                                <div class="hero-try-content__card">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--xs text--b text--display">{{ content.textObj['maria'] }}</p>
+                                        <rr-stars></rr-stars>
+                                        <p class="text--2xs text--display text--medium">{{ content.textObj['cliente qualificado'] }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-try-content__card hero-try-content__card--horizontal">
+                                <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
+                                <div class="hero-try-content__info">
+                                    <div class="hero-try-content__card-tags">
+                                        <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['compra mensal'] }}</p>
+                                        <p class="text--3xs text--display text--b text--white hero-try-content__card-tag">{{ content.textObj['possui cachorro'] }}</p>
+                                    </div>
+                                    <p class="text--xl text--b text--display">{{ content.textObj['maria'] }}</p>
+                                    <rr-stars size="lg"></rr-stars>
+                                    <p class="text--sm text--display">{{ content.textObj['cliente qualificado'] }}</p>
+                                </div>
+                                <div class="hero-try-content__info hero-try-content__info--padding">
+                                    <div class="hero-try-content__picture hero-try-content__picture--square" style="background-image: url(/images/dog-food.webp)"></div>
+                                    <p class="text text--3xs text--sb text--gray text--uppercase">{{ content.textObj['porta saquinho'] }}</p>
+                                </div>
+                            </div>
+                            <div class="hero-try__horizontal-content hero-try-content__tags">
+                                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['enviar mensagem'] }}</p>
+                                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['criar promocao'] }}</p>
+                                <p class="text--2xs text--display text--sb text--white hero-try-content__tag">{{ content.textObj['fechar venda'] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex--col flex--16">
+                        <h3 class="align-left">{{ content.textObj['mobile hero card 2 title'] }}</h3>
+                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 2 subtitle'] }}</p>
+                    </div>
+                </div>
+                <div class="hero-try-section__content-mobile-card flex flex--col flex--22">
+                    <div class="hero-try-section__content-mobile-card-content">
+                        <div class="hero-try-section__content-mobile-card-content">
+                            <div class="hero-try-content hero-try-content--card3">
+                                <div class="hero-try-content__card hero-try-content__card--xs pos pos--1">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile2.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">Davi</p>
+                                        <rr-stars size="sm" :qt="3"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--sm pos pos--2">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile3.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--2xs text--b text--display">{{ content.textObj['joao'] }}</p>
+                                        <rr-stars size="md" :qt="4"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--3">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile4.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--2xs text--b text--display">Rosa</p>
+                                        <rr-stars size="md" :qt="2"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--4">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile5.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">{{ content.textObj['renato'] }}</p>
+                                        <rr-stars size="sm" :qt="1"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--5">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile6.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--2xs text--b text--display">Roberto</p>
+                                        <rr-stars size="md" :qt="3"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card pos pos--6">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile1.webp)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--xs text--b text--display">{{ content.textObj['maria'] }}</p>
+                                        <rr-stars size="lg" :qt="5"></rr-stars>
+                                        <p class="text--2xs text--b text--display">{{ content.textObj['cliente qualificado'] }}</p>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--sm hero-try-content__card--transparent pos pos--7">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile7.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--2xs text--b text--display">Rosana</p>
+                                        <rr-stars size="md" :qt="3"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--8">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile8.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">Danielle</p>
+                                        <rr-stars size="sm" :qt="3"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--9">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile9.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">Poli</p>
+                                        <rr-stars size="sm" :qt="3"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--10">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile10.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">José</p>
+                                        <rr-stars size="sm" :qt="1"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--11">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile11.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">Angela</p>
+                                        <rr-stars size="sm" :qt="1"></rr-stars>
+                                    </div>
+                                </div>
+                                <div class="hero-try-content__card hero-try-content__card--xs hero-try-content__card--transparent pos pos--12">
+                                    <div class="hero-try-content__picture" style="background-image: url(/images/smile12.png)"></div>
+                                    <div class="hero-try-content__info">
+                                        <p class="text--3xs text--b text--display">Mirian</p>
+                                        <rr-stars size="sm" :qt="1"></rr-stars>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex--col flex--16">
+                        <h3 class="align-left">{{ content.textObj['mobile hero card 3 title'] }}</h3>
+                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 3 subtitle'] }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-try-section__content-mobile-nav" aria-hidden="true">
+                <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(0)"></button>
+                <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(1)"></button>
+                <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(2)"></button>
+            </div>
+        </div>
     </div>
 </template>
 <script setup>
@@ -146,6 +313,17 @@ const props = defineProps({
         type: Object
     }
 })
+
+const scrollToCard = (index) => {
+    const container = document.querySelector('.hero-try-section__content-mobile')
+    const cards = document.querySelectorAll('.hero-try-section__content-mobile-card')
+    if (container && cards[index]) {
+        container.scrollTo({
+            left: cards[index].offsetLeft,
+            behavior: 'smooth'
+        })
+    }
+}
 </script>
 <style lang="scss" scoped>
     .hero-try-section {
@@ -156,6 +334,9 @@ const props = defineProps({
         .button {
             position: relative;
             z-index: 1;
+        }
+        @media (max-width: 1280px) {
+            gap: 112px;
         }
     }
 
@@ -168,14 +349,74 @@ const props = defineProps({
         background-repeat: no-repeat;
         background-position: center;
         margin-top: -10%;
+        padding-bottom: 85px;
         @media (max-width: 1280px) {
-            aspect-ratio: 1/4;
-            background-image: url(/images/hero-curve-mobile.webp);
+            aspect-ratio: auto;
+            margin-top: 0;
+            background: none;
             background-size: auto 80%;
             background-position: center right;
         }
 
     }
+
+        .hero-try-section__content-mobile {
+            overflow-x: auto;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+            padding-inline: 20px;
+        }
+
+        .hero-try-section__content-mobile-curve {
+            position: absolute;
+            top: 0;
+            left: -37.5%;
+            max-width: none;
+            width: 175%;
+        }
+
+        .hero-try-section__content-mobile-card {
+            scroll-snap-align: center;
+            width: 80vw;
+            flex-shrink: 0;
+        }
+
+        .hero-try-section__content-mobile-card-content {
+            width: 100%;
+            position: relative;
+            & > * {
+                position: relative;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 275px;
+                border-radius: 24px;
+                background-color: hsla(0, 0%, 92%, 1);
+                transform: translateY(-50%);
+            }
+
+        }
+
+            .hero-try-section__content-mobile-card-content--relative {
+                padding: 10px;
+                &::before {
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    transform: translateY(0);
+                    height: initial;
+                }
+            }
+
+        .hero-try-section__content-mobile-smartphone {
+            width: auto;
+            height: 300px;
+        }
 
     .logo-circle {
         transform: translate(-50%, -50%);
@@ -233,9 +474,9 @@ const props = defineProps({
         justify-content: center;
         align-items: center;
         @media (max-width: 1280px) {
-            width: 90%;
-            bottom: auto;
-            top: 45%;
+            width: 100%;
+            position: static;
+            transform: translateY(0);
         }
         > * {
             position: relative;
@@ -244,6 +485,16 @@ const props = defineProps({
             align-self: flex-end;
         }
     }
+
+        .hero-try-content--card2,
+        .hero-try-content--card3 {
+            aspect-ratio: initial;
+            position: relative;
+            left: 0;
+            top: 0;
+            height: 300px;
+            gap: 8px;
+        }
 
         .hero-try__horizontal-content {
             display: flex;
@@ -273,12 +524,23 @@ const props = defineProps({
             border-image-source: radial-gradient(126.38% 126.38% at 50% 50%, rgba(114, 55, 153, 0.02) 0%, rgba(190, 92, 255, 0.02) 100%);
             background-color: var(--white-color);
             border-radius: 20px;
-            width: 111px;
+            width: 63px;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            @media (max-width: 1280px) {
+                padding: 5px;
+                border-radius: 12px;
+                gap: 4px;
+                .text--xs {
+                    font-size: 0.475em;
+                }
+                .text--2xs {
+                    font-size: 0.3em;
+                }
+            }
         }
 
             .hero-try-content__card--horizontal{
@@ -307,6 +569,9 @@ const props = defineProps({
                     flex-flow: column nowrap;
                     gap: 8px;
                     align-items: flex-start;
+                    @media (max-width: 1280px) {
+                        gap: 4px;
+                    }
                 }
                     .hero-try-content__info--padding {
                         padding-left: 24px;
@@ -327,6 +592,10 @@ const props = defineProps({
                 background-position: center;
                 border-radius: 50%;
                 outline: 1px solid var(--white-color);
+                @media (max-width: 1280px) {
+                    width: 40px;
+                    height: 40px;
+                }
             }
 
                 .hero-try-content__picture--square {
@@ -347,9 +616,22 @@ const props = defineProps({
                 width: 74px;
                 gap: 7px;
                 border-radius: 14px;
+                @media (max-width: 1280px) {
+                    width: 43px;
+                    padding: 5px 0;
+                }
                 .hero-try-content__picture {
                     width: 48px;
                     height: 48px;
+                    @media (max-width: 1280px) {
+                        width: 29px;
+                        height: 29px;
+                    }
+                }
+                .hero-try-content__info {
+                    @media (max-width: 1280px) {
+                        gap: 3px;
+                    }
                 }
             }
 
@@ -361,9 +643,16 @@ const props = defineProps({
                 .hero-try-content__picture {
                     width: 32px;
                     height: 32px;
+                    @media (max-width: 1280px) {
+                        width: 24px;
+                        height: 24px;
+                    }
                 }
                 .hero-try-content__info {
                     gap: 3px;
+                    @media (max-width: 1280px) {
+                        gap: 2px;
+                    }
                 }
             }
 
@@ -388,19 +677,27 @@ const props = defineProps({
                     background: rgba(242, 79, 130, 1);
                     padding: 4px 10px;
                     border-radius: 5px;
+                    @media (max-width: 1280px) {
+                        padding: 2px 6px;
+                        font-size: 0.375em;
+                    }
                 }
 
             .pos {
                 position: absolute;
                 transform: translate(50%, -50%);
+                @media (max-width: 1280px) {
+                   transform: translate(0);
+                }
             }
 
                 .pos--1 {
                     top: 32%;
                     right: 15%;
                     @media (max-width: 1280px) {
-                        top: 90%;
-                        right: 29%;
+                        top: 0;
+                        right: auto;
+                        left: 25%;
                     }
                 }
 
@@ -408,8 +705,9 @@ const props = defineProps({
                     top: 42%;
                     right: 5%;
                     @media (max-width: 1280px) {
-                        top: 85%;
-                        right: 54%;
+                        top: 8%;
+                        right: auto;
+                        left: 50%;
                     }
                 }
 
@@ -417,8 +715,9 @@ const props = defineProps({
                     top: 47%;
                     right: 15%;
                     @media (max-width: 1280px) {
-                        top: 71%;
-                        right: 45%;
+                        top: 20%;
+                        right: auto;
+                        left: 25%;
                     }
                 }
 
@@ -426,8 +725,9 @@ const props = defineProps({
                     top: 60%;
                     right: 17%;
                     @media (max-width: 1280px) {
-                        top: 80%;
-                        right: 95%;
+                        top: 15%;
+                        right: auto;
+                        left: 7%;
                     }
                 }
 
@@ -435,8 +735,9 @@ const props = defineProps({
                     top: 60%;
                     right: 0%;
                     @media (max-width: 1280px) {
-                        top: 75%;
-                        right: 25%;
+                        top: 32%;
+                        right: auto;
+                        left: 65%;
                     }
                 }
 
@@ -444,8 +745,9 @@ const props = defineProps({
                     top: 71%;
                     right: 8%;
                     @media (max-width: 1280px) {
-                        top: 75%;
-                        right: 73%;
+                        top: 55%;
+                        right: 50%;
+                        transform: translate(50%, -50%);
                     }
                 }
 
@@ -453,8 +755,9 @@ const props = defineProps({
                     top: 82%;
                     right: 17%;
                     @media (max-width: 1280px) {
-                        top: 89%;
-                        right: 78%;
+                        top: 61%;
+                        right: auto;
+                        left: 25%;
                     }
                 }
 
@@ -462,8 +765,9 @@ const props = defineProps({
                     top: 77%;
                     right: 0%;
                     @media (max-width: 1280px) {
-                        top: 85%;
-                        right: 34%;
+                        top: 58%;
+                        right: auto;
+                        left: 59%;
                     }
                 }
 
@@ -471,8 +775,9 @@ const props = defineProps({
                     top: 90%;
                     right: 6%;
                     @media (max-width: 1280px) {
-                        top: 92%;
-                        right: 63%;
+                        top: 71%;
+                        right: auto;
+                        left: 46%;
                     }
                 }
 
@@ -480,8 +785,9 @@ const props = defineProps({
                     top: 93%;
                     right: 17%;
                     @media (max-width: 1280px) {
-                        top: 94%;
-                        right: 92%;
+                        top: 82%;
+                        right: auto;
+                        left: 31%;
                     }
                 }
 
@@ -489,8 +795,9 @@ const props = defineProps({
                     top: 91%;
                     right: 0%;
                     @media (max-width: 1280px) {
-                        top: 93%;
-                        right: 13%;
+                        top: 83%;
+                        right: auto;
+                        left: 60%;
                     }
                 }
 
@@ -498,8 +805,9 @@ const props = defineProps({
                     top: 94%;
                     right: 11%;
                     @media (max-width: 1280px) {
-                        top: 95%;
-                        right: 78%;
+                        left: 64%;
+                        right: auto;
+                        top: 0%;
                     }
                 }
 
@@ -507,4 +815,24 @@ const props = defineProps({
                     bottom: 1%;
                     right: 50%;
                 }
+
+    .hero-try-section__content-mobile-nav {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .hero-try-section__content-mobile-nav-btn {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: hsla(0, 0%, 92%, 1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        &:hover {
+            background: hsla(171, 73%, 36%, 1);
+        }
+    }
 </style>

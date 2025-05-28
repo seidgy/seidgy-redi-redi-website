@@ -25,6 +25,9 @@ const props = defineProps({
         align-items: center;
         justify-content: center;
         gap: 2px;
+        > div {
+            display: flex;
+        }
     }
 
         .stars--sm {
@@ -40,13 +43,30 @@ const props = defineProps({
             img {
                 width: 7px;
             }
+            @media (max-width: 1280px) {
+                gap: 1.3px;
+                height: 4.5px;
+                > div {
+                    height: 4.5px;
+                }
+                img {
+                    width: 4.5px;
+                }
+            }
         }
 
         .stars--lg {
             gap: 4px;
             height: 12px;
+            @media (max-width: 1280px) {
+                gap: 2px;
+                height: 7px;
+            }
             img {
                 width: 12px;
+                @media (max-width: 1280px) {
+                    width: 7px;
+                }
             }
         }
 </style>

@@ -38,6 +38,9 @@ const props = defineProps({
       align-items: flex-end;
         @media (max-width: 1240px) {
             grid-template-columns: 1fr;
+            :deep(.button-container) {
+                width: 100%;
+            }
         }
     }
 }

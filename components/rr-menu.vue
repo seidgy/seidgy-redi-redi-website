@@ -56,7 +56,6 @@ const data = reactive({
         margin-bottom: 30px;
         @media (max-width: 36em) {
             padding-block: 0;
-            padding-inline: 24px;
             :deep(img) {
                 max-width: 140px;
             }

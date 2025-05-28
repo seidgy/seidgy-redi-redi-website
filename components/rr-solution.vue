@@ -31,6 +31,7 @@ const props = defineProps({
       img {
         margin-bottom: -14%;
         max-width: 880px;
+        width: 100%;
       }
     }
     h2 {

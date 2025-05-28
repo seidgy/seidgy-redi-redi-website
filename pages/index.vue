@@ -3,9 +3,13 @@
     <rr-header image="/images/hero-bg.webp">
       <div class="center">
         <section class="hero-content">
-          <div class="hero-content__info">
+          <div class="hero-content__info not-mobile">
             <p class="text--xl text--display hero-content__brow">{{ pageContent.textObj['hero subtitle'] }}</p>
             <h2 class="hero-content__title">{{ pageContent.textObj['hero title'] }}</h2>
+          </div>
+          <div class="hero-content__info not-desktop">
+            <p class="text--xl text--display hero-content__brow align-left">{{ pageContent.textObj['mobile hero subtitle'] }}</p>
+            <h2 class="hero-content__title align-left">{{ pageContent.textObj['mobile hero title'] }}</h2>
           </div>
           <rr-hero-try :content="pageContent"></rr-hero-try>
         </section>
@@ -62,7 +66,7 @@
             </nuxt-link>
           </div>
         </div>
-        <div class="flex flex--col flex-center flex--16">
+        <div class="flex flex--col flex-center flex--16 button-container">
           <rr-trial-button :label="pageContent.textObj['crie o catalogo']"></rr-trial-button>
         </div>
       </div>
@@ -76,7 +80,7 @@
             <p class="text--xl">{{ pageContent.textObj['section4 paragraph2'] }}</p>
           </div>
         </div> 
-        <div class="flex flex--col flex-center flex--16">
+        <div class="flex flex--col flex-center flex--16 button-container">
           <rr-trial-button :label="pageContent.textObj['botao experimente']"></rr-trial-button>
         </div>
       </div>
@@ -130,14 +134,31 @@ const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${
 </script>
 
 <style scoped lang="scss">
+  .hero-content__info {
+    @media (max-width: 1240px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 17px;
+    }
+  }
+
   .hero-content__brow {
     line-height: 2.4em;
+    @media (max-width: 1240px) {
+      text-align: left;
+      font-size: 0.75em;
+      line-height: 1em;
+    }
   }
 
   .hero-content__title {
     line-height: 1.2em;
     max-width: 1080px;
     margin: 0 auto;
+    @media (max-width: 1240px) {
+      color: var(--base-color);
+      line-height: 0.975em;
+    }
   }
 
   .cta-text {

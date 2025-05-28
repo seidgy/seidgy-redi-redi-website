@@ -193,6 +193,9 @@
     font-family: var(--body-font);
     line-height: 1.2em;
     color: var(--base-color-90);
+    @media (max-width: 36em) {
+        color: var(--base-color);
+    }
 }
 
 body {
@@ -225,7 +228,7 @@ h2, *[visuals=h2] {
     line-height: 1.1em;
     font-weight: 700;
     @media (max-width: 36em) {
-        font-size: 2em;
+        font-size: 2.625em;
     }
 }
 
@@ -391,6 +394,10 @@ h3, *[visuals=h3] {
 
 .align-right {
     text-align: right;
+}
+
+.align-left {
+    text-align: left;
 }
 
 ul, ol {
