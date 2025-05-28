@@ -31,6 +31,14 @@ html {
             border-radius: 8px;
             font-family: var(--display-font);
         }
+
+        .button--xs {
+            padding: 3px 5px;
+            font-size: 0.5em;
+            font-weight: 500;
+            border-radius: 3.5px;
+            font-family: var(--display-font);
+        }
       
         .button--icon {
           display: flex;
@@ -164,6 +172,10 @@ html {
 
     .flex--3 {
         gap: 3px;
+    }
+
+    .flex--4 {
+        gap: 4px;
     }
 
     .flex--5 {

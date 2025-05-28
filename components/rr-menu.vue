@@ -12,20 +12,33 @@
                     <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
                 </nav>
             </div>
-            <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
-                <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
-            </button>
+            <div class="flex flex-center flex--4">
+                <rr-trial-button class="not-desktop" size="xs" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
+                <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
+                    <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
+                </button>
+            </div>
             <div class="rr-menu__links">
                 <nav class="rr-menu__nav rr-menu__nav--small">
-                    <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
-                    <rr-trial-button size="sm" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
-                    <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5" :class="{'language-selector--active': data.languageActive}"><img src="/images/world.svg" alt="Change language" /><img src="/images/chevron-down.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
-                    <ul class="language-select" v-if="data.languageActive">
+                    <nuxt-link target="_blank" to="https://app.rediredi.com/pt-BR/signin" class="button button--small not-mobile" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
+                    <rr-trial-button class="not-mobile" size="sm" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
+                    <rr-trial-button class="not-desktop" size="xs" :label="pageContent.textObj['botao experimente']"></rr-trial-button> 
+                    <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5 not-mobile" :class="{'language-selector--active': data.languageActive}"><img src="/images/world.svg" alt="Change language" /><img src="/images/chevron-down.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
+                    <ul class="language-select not-mobile" v-if="data.languageActive">
                         <li v-for="loc in locales"><SwitchLocalePathLink @click="data.languageActive = false" class="locale" :class="{'locale--active': loc.code == locale}" :locale="loc.code">{{ loc.name }}</SwitchLocalePathLink></li>
                     </ul>
                 </nav>
+                <nav class="rr-menu__nav not-desktop">
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                </nav>
                 <div class="rr-menu-header not-desktop">
-                    <img src="/images/redi-redi-negative.svg" alt="RediRedi" />
+                    <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5" :class="{'language-selector--active': data.languageActive}"><img src="/images/world-negative.svg" alt="Change language" /><img src="/images/chevron-down-negative.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
+                    <ul class="language-select not-desktop" v-if="data.languageActive">
+                        <li v-for="loc in locales"><SwitchLocalePathLink @click="data.languageActive = false" class="locale" :class="{'locale--active': loc.code == locale}" :locale="loc.code">{{ loc.name }}</SwitchLocalePathLink></li>
+                    </ul>
                     <button class="rr-menu__trigger not-desktop" @click="data.menuActive = false">
                         <img src="/images/close.svg" alt="Fechar menu" aria-hidden="true" />
                     </button>
@@ -124,6 +137,11 @@ const data = reactive({
                     }
                 }
             }
+            @media (max-width: 36em) {
+                right: auto;
+                left: 20px;
+                width: 170px;
+            }
         }
 
         .rr-menu__trigger {
@@ -138,15 +156,14 @@ const data = reactive({
                 position: fixed;
                 top: 0;
                 left: 0;
-                right: 0;
-                bottom: 20%;
+                width: 170px;
                 flex-direction: column-reverse;
                 gap: 24px;
-                background: linear-gradient(90deg, #AF37FF 0%, #EC56C6 140.79%);
+                background: hsla(216, 34%, 23%, 1);
                 z-index: 99;
                 justify-content: space-between;
-                padding: 30px 20px 100px;
-                border-radius: 0 0 30px 30px;
+                padding: 15px 20px 40px;
+                border-radius: 0 0 8px 0;
                 transform: translateY(-120%);
                 transition: 0.6s ease-out transform;
             }
@@ -159,11 +176,15 @@ const data = reactive({
             position: relative;
             @media (max-width: 36em) {
                 flex-direction: column;
+                gap: 24px;
             }
         }
 
             .rr-menu__nav--small {
                 gap: 14px;
+                @media (max-width: 36em) {
+                    padding-top: 30px;
+                }
             }
 
             .rr-menu__nav-link {
@@ -172,9 +193,11 @@ const data = reactive({
                 font-weight: 600;
                 font-family: var(--display-font);
                 @media (max-width: 36em) {
-                    font-size: 2em;
+                    font-size: 1.125em;
                     color: var(--white-color);
-                    font-weight: 700;
+                    font-weight: 500;
+                    text-align: left;
+                    width: 100%;
                 }
             }
 
