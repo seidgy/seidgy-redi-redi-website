@@ -147,7 +147,7 @@
                     </div>
                     <div class="flex flex--col flex--16">
                         <h3 class="align-left">{{ content.textObj['mobile hero card 1 title'] }}</h3>
-                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 1 subtitle'] }}</p>
+                        <p class="text--sm align-left">{{ content.textObj['mobile hero card 1 subtitle'] }}</p>
                     </div>
                 </div>
                 <div class="hero-try-section__content-mobile-card flex flex--col flex--22">
@@ -198,7 +198,7 @@
                     </div>
                     <div class="flex flex--col flex--16">
                         <h3 class="align-left">{{ content.textObj['mobile hero card 2 title'] }}</h3>
-                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 2 subtitle'] }}</p>
+                        <p class="text--sm align-left">{{ content.textObj['mobile hero card 2 subtitle'] }}</p>
                     </div>
                 </div>
                 <div class="hero-try-section__content-mobile-card flex flex--col flex--22">
@@ -295,12 +295,12 @@
                     </div>
                     <div class="flex flex--col flex--16">
                         <h3 class="align-left">{{ content.textObj['mobile hero card 3 title'] }}</h3>
-                        <p class="text--xs align-left">{{ content.textObj['mobile hero card 3 subtitle'] }}</p>
+                        <p class="text--sm align-left">{{ content.textObj['mobile hero card 3 subtitle'] }}</p>
                     </div>
                 </div>
             </div>
             <div class="hero-try-section__content-mobile-nav" aria-hidden="true">
-                <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(0)"></button>
+                <button class="hero-try-section__content-mobile-nav-btn active" @click="scrollToCard(0)"></button>
                 <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(1)"></button>
                 <button class="hero-try-section__content-mobile-nav-btn" @click="scrollToCard(2)"></button>
             </div>
@@ -317,7 +317,15 @@ const props = defineProps({
 const scrollToCard = (index) => {
     const container = document.querySelector('.hero-try-section__content-mobile')
     const cards = document.querySelectorAll('.hero-try-section__content-mobile-card')
+    const buttons = document.querySelectorAll('.hero-try-section__content-mobile-nav-btn')
+    
     if (container && cards[index]) {
+        // Remove a classe active de todos os botões
+        buttons.forEach(button => button.classList.remove('active'))
+        
+        // Adiciona a classe active ao botão clicado
+        buttons[index].classList.add('active')
+        
         container.scrollTo({
             left: cards[index].offsetLeft,
             behavior: 'smooth'
@@ -336,7 +344,7 @@ const scrollToCard = (index) => {
             z-index: 1;
         }
         @media (max-width: 1280px) {
-            gap: 112px;
+            gap: 60px;
         }
     }
 
@@ -365,6 +373,9 @@ const scrollToCard = (index) => {
             padding-bottom: 20px;
             scroll-snap-type: x mandatory;
             padding-inline: 20px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
 
         .hero-try-section__content-mobile-curve {
@@ -831,7 +842,12 @@ const scrollToCard = (index) => {
         cursor: pointer;
         transition: all 0.3s ease;
         border: none;
+        
         &:hover {
+            background: hsla(171, 73%, 36%, 1);
+        }
+        
+        &.active {
             background: hsla(171, 73%, 36%, 1);
         }
     }
