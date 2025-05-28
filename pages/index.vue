@@ -237,6 +237,9 @@ const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${
     :deep(.text-image__content p) {
       max-width: 80%;
     }
+    :deep(.text-image__image) {
+      width: 100%;
+    }
   }
 
 </style>

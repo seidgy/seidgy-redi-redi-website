@@ -63,6 +63,11 @@ const props = defineProps({
 
     .text-image__image{
         width: 100%;
+        @media (max-width: 1240px) {
+            width: 60%;
+            margin: 0 auto;
+        }
+        
     }
     .text-image__content {
         gap: 22px;
