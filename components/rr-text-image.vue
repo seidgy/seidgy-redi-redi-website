@@ -72,6 +72,9 @@ const props = defineProps({
     .text-image__content {
         gap: 22px;
         padding-bottom: 123px;
+        @media (max-width: 1240px) {
+            padding-bottom: 60px;
+        }
         :deep(p),
         :deep(.cap-size) {
             max-width: 69%;

@@ -95,5 +95,8 @@ const props = defineProps({
             background-image: url(/images/psychodelic1.png);
             background-size: cover;
             background-position: center;
+            @media (max-width: 36em) {
+                height: 200px;
+            }
         }
 </style>

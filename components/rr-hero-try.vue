@@ -535,7 +535,7 @@ const scrollToCard = (index) => {
             border-image-source: radial-gradient(126.38% 126.38% at 50% 50%, rgba(114, 55, 153, 0.02) 0%, rgba(190, 92, 255, 0.02) 100%);
             background-color: var(--white-color);
             border-radius: 20px;
-            width: 63px;
+            width: 115px;
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
@@ -544,6 +544,7 @@ const scrollToCard = (index) => {
             @media (max-width: 1280px) {
                 padding: 5px;
                 border-radius: 12px;
+                width: 63px;
                 gap: 4px;
                 .text--xs {
                     font-size: 0.475em;

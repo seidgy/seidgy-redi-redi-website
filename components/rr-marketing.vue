@@ -15,7 +15,7 @@
                     <h2>{{ content.textObj['footer title'] }}</h2>
                     <p>{{ content.textObj['footer subtitle'] }}</p>
                 </div>
-                 <div class="flex flex--col flex-center flex--16">
+                 <div class="flex flex--col flex-center flex--16 button-div">
                     <rr-trial-button :label="content.textObj['botao experimente']"></rr-trial-button>
                 </div>
             </div>
@@ -36,6 +36,10 @@ const props = defineProps({
     .marketing {
         @media (max-width: 36em) {
             overflow-x: hidden;
+            padding-bottom: 30px;
+            .button-div {
+                width: 100%;
+            }
         }
         & > .center{
             display: grid;

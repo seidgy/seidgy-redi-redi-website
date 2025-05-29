@@ -49,6 +49,7 @@ const props = defineProps({
             gap: 24px;
         }
         @media (max-width: 36em) {
+            padding-top: 0;
             grid-template-rows: 1fr;
             & > div {
                 display: grid;
