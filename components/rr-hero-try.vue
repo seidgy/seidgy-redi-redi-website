@@ -308,6 +308,8 @@
     </div>
 </template>
 <script setup>
+import { onMounted, onUnmounted } from 'vue'
+
 const props = defineProps({
     content: {
         type: Object
@@ -332,6 +334,57 @@ const scrollToCard = (index) => {
         })
     }
 }
+
+// Nova função para detectar a rolagem
+const handleScroll = () => {
+    const container = document.querySelector('.hero-try-section__content-mobile')
+    const cards = document.querySelectorAll('.hero-try-section__content-mobile-card')
+    const buttons = document.querySelectorAll('.hero-try-section__content-mobile-nav-btn')
+    
+    if (!container || !cards.length) return
+    
+    const containerWidth = container.offsetWidth
+    const scrollPosition = container.scrollLeft
+    
+    // Encontra o card mais visível
+    let mostVisibleCard = 0
+    let maxVisibility = 0
+    
+    cards.forEach((card, index) => {
+        const cardLeft = card.offsetLeft
+        const cardRight = cardLeft + card.offsetWidth
+        const visibleLeft = Math.max(0, cardLeft - scrollPosition)
+        const visibleRight = Math.min(containerWidth, cardRight - scrollPosition)
+        const visibility = Math.max(0, visibleRight - visibleLeft)
+        
+        if (visibility > maxVisibility) {
+            maxVisibility = visibility
+            mostVisibleCard = index
+        }
+    })
+    
+    // Atualiza os botões
+    buttons.forEach((button, index) => {
+        button.classList.remove('active')
+        button.classList.toggle('active', index === mostVisibleCard)
+    })
+}
+
+// Adiciona o listener de rolagem quando o componente é montado
+onMounted(() => {
+    const container = document.querySelector('.hero-try-section__content-mobile')
+    if (container) {
+        container.addEventListener('scroll', handleScroll)
+    }
+})
+
+// Remove o listener quando o componente é desmontado
+onUnmounted(() => {
+    const container = document.querySelector('.hero-try-section__content-mobile')
+    if (container) {
+        container.removeEventListener('scroll', handleScroll)
+    }
+})
 </script>
 <style lang="scss" scoped>
     .hero-try-section {
@@ -831,22 +884,18 @@ const scrollToCard = (index) => {
     .hero-try-section__content-mobile-nav {
         display: flex;
         justify-content: center;
-        gap: 8px;
+        gap: 16px;
         margin-top: 16px;
     }
 
     .hero-try-section__content-mobile-nav-btn {
-        width: 8px;
-        height: 8px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
         background: hsla(0, 0%, 92%, 1);
         cursor: pointer;
         transition: all 0.3s ease;
         border: none;
-        
-        &:hover {
-            background: hsla(171, 73%, 36%, 1);
-        }
         
         &.active {
             background: hsla(171, 73%, 36%, 1);

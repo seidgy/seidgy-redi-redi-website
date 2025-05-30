@@ -13,7 +13,6 @@
                 </nav>
             </div>
             <div class="flex flex-center flex--4">
-                <rr-trial-button class="not-desktop" size="xs" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
                 <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
                     <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
                 </button>
@@ -167,8 +166,8 @@ const data = reactive({
                 justify-content: space-between;
                 padding: 15px 20px 40px;
                 border-radius: 0 0 8px 0;
-                transform: translateY(-120%);
-                transition: 0.6s ease-out transform;
+                transform: translateX(-120%);
+                transition: 0.3s ease-out transform;
             }
         }
 

@@ -34,6 +34,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
     .marketing {
+        padding-bottom: 145px;
         @media (max-width: 36em) {
             overflow-x: hidden;
             padding-bottom: 30px;
@@ -50,7 +51,6 @@ const props = defineProps({
                 grid-template-columns: 1fr;
             }
         }
-        padding-bottom: 145px;
     }
 
         .marketing__mosaic {

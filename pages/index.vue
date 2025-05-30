@@ -214,7 +214,11 @@ const country = countryData.value?.country
     top: 12%;
     max-width: 730px;
     @media (max-width: 1240px) {
-      display: none;
+      top: auto;
+      width: 98%;
+      bottom: -79px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
