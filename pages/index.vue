@@ -129,8 +129,10 @@
 
 <script setup>
 const { locale } = useI18n()
-const localePath = useLocalePath()
 const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
+const { data: countryData } = await useFetch('/api/country')
+const country = countryData.value?.country
+console.log('COUNTRY: ', countryData)
 </script>
 
 <style scoped lang="scss">
