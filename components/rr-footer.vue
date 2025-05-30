@@ -3,7 +3,7 @@
         <div class="center">
             <div class="footer__header">
                 <div class="footer__identity">
-                    <nuxt-link target="_blank" to="https://rediredi.com/">
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'home')">
                         <img src="/images/redi-redi-negative.svg" alt="RediRedi">
                     </nuxt-link>
                     <rr-store-buttons></rr-store-buttons>
@@ -12,13 +12,13 @@
             </div>
             <div class="footer__links">
                 <nav class="footer__nav">
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/sobre-br/" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/catalogo-online/" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/blog-br/" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/premium-br/" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://help.rediredi.com/" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/politica-de-privacidade/" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
-                    <nuxt-link target="_blank" to="https://rediredi.com/br/termos-e-condicoes/" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'home')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
                 </nav>
                 <div class="flex flex--22">
                     <span class="footer__separator"></span>
@@ -32,6 +32,9 @@
 <script setup>
 const { locale } = useI18n()
 const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
+import { getCountryLink } from '~/utils/useCountryLinks'
+const { data: countryData } = await useFetch('/api/country')
+const country = countryData.value?.country
 </script>   
 
 

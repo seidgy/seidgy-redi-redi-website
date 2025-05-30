@@ -118,7 +118,7 @@
       <div class="center recursos">
         <h2>{{ pageContent.textObj['section7 title'] }}</h2>
         <rr-resources :content="pageContent"></rr-resources>
-        <nuxt-link to="https://rediredi.com/br/sobre-br/" target="_blank" class="button" visuals="primary" color="primary">{{ pageContent.textObj['veja todas as funcionalidades'] }}</nuxt-link>
+        <nuxt-link :to="getCountryLink(country, 'sobre')" target="_blank" class="button" visuals="primary" color="primary">{{ pageContent.textObj['veja todas as funcionalidades'] }}</nuxt-link>
         <rr-features :content="pageContent"></rr-features>
       </div>
       <rr-marketing :content="pageContent"></rr-marketing>
@@ -132,7 +132,6 @@ const { locale } = useI18n()
 const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
 const { data: countryData } = await useFetch('/api/country')
 const country = countryData.value?.country
-console.log('COUNTRY: ', countryData)
 </script>
 
 <style scoped lang="scss">
