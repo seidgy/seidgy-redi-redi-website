@@ -10,7 +10,10 @@ export const useUserCountry = async (event: H3Event) => {
     const res = await $fetch(`https://ipinfo.io/${resolvedIP}/json?token=c5dcb76c0a809b`)
     console.log('Resposta da API IPAPI:', res)
 
-    return res?.country || null
+    return {
+      country: res?.country || null,
+      ip: resolvedIP
+    }
   } catch (error) {
     console.error('Erro ao buscar país:', error)
     return null

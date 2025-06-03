@@ -2,6 +2,6 @@
 import { useUserCountry } from '../../composables/useUserCountry'
 
 export default defineEventHandler(async (event) => {
-  const country = await useUserCountry(event)
-  return { country }
+  const obj = await useUserCountry(event)
+  return obj
 })
