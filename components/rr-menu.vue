@@ -12,7 +12,8 @@
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
                 </nav>
             </div>
-            <div class="flex flex-center flex--4">
+            <div class="flex flex-center flex--8">
+                <nuxt-link target="_blank" :to="getCountryLink(country, 'entrar')" class="button button--xs not-desktop" size="xs" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
                 <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
                     <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
                 </button>
