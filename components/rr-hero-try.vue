@@ -452,7 +452,6 @@ onUnmounted(() => {
                 position: relative;
             }
             &::before {
-                content: '';
                 position: absolute;
                 top: 50%;
                 left: 0;
