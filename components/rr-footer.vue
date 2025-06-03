@@ -16,7 +16,7 @@
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'home')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
+                    <nuxt-link target="_blank" :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
                     <nuxt-link target="_blank" :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
                 </nav>
