@@ -4,7 +4,7 @@ type CountryCode =
 
 type LinkType =
   | 'home' | 'sobre' | 'catalogo' | 'blog' | 'premium' | 'entrar'
-  | 'politica' | 'termos' | 'ajuda'
+  | 'politica' | 'termos' | 'ajuda' | 'registro'
 
 const countries: Record<CountryCode, Record<LinkType, string>> = {
   AR: {
@@ -16,7 +16,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/ar/politica-de-privacidad/',
     termos: 'https://rediredi.com/ar/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   BR: {
     home: 'https://rediredi.com/br/',
@@ -27,7 +28,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/br/politica-de-privacidade/',
     termos: 'https://rediredi.com/br/termos-e-condicoes/',
     ajuda: 'https://help.rediredi.com/pt-BR/',
-    entrar: 'https://app.rediredi.com/pt-BR/signin'
+    entrar: 'https://app.rediredi.com/pt-BR/signin',
+    registro: 'https://app.rediredi.com/pt-BR/signup'
   },
   CL: {
     home: 'https://rediredi.com/cl/',
@@ -38,7 +40,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/cl/politica-de-privacidad/',
     termos: 'https://rediredi.com/cl/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   CO: {
     home: 'https://rediredi.com/co/',
@@ -49,7 +52,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/co/politica-de-privacidad/',
     termos: 'https://rediredi.com/co/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   EC: {
     home: 'https://rediredi.com/ec/',
@@ -60,7 +64,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/ec/politica-de-privacidad/',
     termos: 'https://rediredi.com/ec/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   ES: {
     home: 'https://rediredi.com/es/',
@@ -71,7 +76,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/es/politica-de-privacidad/',
     termos: 'https://rediredi.com/es/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   IN: {
     home: 'https://rediredi.com/in/',
@@ -82,7 +88,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/in/privacy-policy/',
     termos: 'https://rediredi.com/in/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
-    entrar: 'https://app.rediredi.com/en/signin'
+    entrar: 'https://app.rediredi.com/en/signin',
+    registro: 'https://app.rediredi.com/en/signup'
   },
   MX: {
     home: 'https://rediredi.com/mx/',
@@ -93,7 +100,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/mx/politica-de-privacidad/',
     termos: 'https://rediredi.com/mx/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   NG: {
     home: 'https://rediredi.com/ng/',
@@ -104,7 +112,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/ng/privacy-policy/',
     termos: 'https://rediredi.com/ng/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
-    entrar: 'https://app.rediredi.com/en/signin'
+    entrar: 'https://app.rediredi.com/en/signin',
+    registro: 'https://app.rediredi.com/en/signup'
   },
   PY: {
     home: 'https://rediredi.com/py/',
@@ -115,7 +124,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/py/politica-de-privacidad/',
     termos: 'https://rediredi.com/py/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   PE: {
     home: 'https://rediredi.com/pe/',
@@ -126,7 +136,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/pe/politica-de-privacidad/',
     termos: 'https://rediredi.com/pe/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   },
   US: {
     home: 'https://rediredi.com/us/',
@@ -137,7 +148,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/us/privacy-policy/',
     termos: 'https://rediredi.com/us/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
-    entrar: 'https://app.rediredi.com/en/signin'
+    entrar: 'https://app.rediredi.com/en/signin',
+    registro: 'https://app.rediredi.com/en/signup'
   },
   UK: {
     home: 'https://rediredi.com/uk/',
@@ -148,7 +160,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/uk/privacy-policy/',
     termos: 'https://rediredi.com/uk/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
-    entrar: 'https://app.rediredi.com/en/signin'
+    entrar: 'https://app.rediredi.com/en/signin',
+    registro: 'https://app.rediredi.com/en/signup'
   },
   UY: {
     home: 'https://rediredi.com/uy/',
@@ -159,7 +172,8 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     politica: 'https://rediredi.com/uy/politica-de-privacidad/',
     termos: 'https://rediredi.com/uy/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
-    entrar: 'https://app.rediredi.com/es/signin'
+    entrar: 'https://app.rediredi.com/es/signin',
+    registro: 'https://app.rediredi.com/es/signup'
   }
 }
 
