@@ -132,6 +132,23 @@ const { locale } = useI18n()
 const pageContent = await queryContent(locale.value !== 'pt' ? `paginas-fixas/${locale.value}` : 'paginas-fixas', 'homepage').findOne();
 const { data: countryData } = await useFetch('/api/country')
 const country = countryData.value?.country
+const seoTitle = pageContent.textObj['seo title']
+const seoDescription = pageContent.textObj['seo description']
+const seoImage = pageContent.imageObj['home OG'].url
+useHead({
+    title: seoTitle,
+    meta: [
+      { property: 'og:title',  content: seoTitle},
+      { name: "description", content: seoDescription  },
+      { property: 'og:description',  content: seoDescription},
+      { name: 'twitter:description', content: seoDescription },
+      { property: 'og:site_name',  content: seoTitle},
+      { property: 'og:image',  content: seoImage},
+      { property: 'og:image:alt',  content: seoTitle},
+      { name: 'twitter:image',  content: seoImage},
+      { name: 'twitter:image:alt',  content: seoTitle},
+    ]
+})
 </script>
 
 <style scoped lang="scss">
