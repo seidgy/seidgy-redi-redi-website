@@ -37,6 +37,35 @@
             <p class="text--2xl text--sb text--white align-center" v-if="pageData.cta">{{ pageData.cta }}</p>
         </rr-cta>
         <rr-section v-for="secao in pageData.secoes" :content="secao"></rr-section>
+        <footer class="footer">
+            <div class="center" size="wide">
+                <div class="footer__header">
+                    <div class="lp-hero__logos">
+                        <nuxt-link v-for="logo in pageData.logos"
+                            target="_blank"
+                            :to="logo.url"
+                            class="lp-hero__logo"
+                            >
+                            <img :src="logo.negativa" :alt="logo.alt" />
+                        </nuxt-link>
+                    </div>
+                    <rr-socials :content="pageContent"></rr-socials>
+                </div>
+                <div class="footer__header">
+                    <nav class="footer__nav">
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
+                        <nuxt-link target="_blank" :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
+                    </nav>
+                    <p class="text--white">© 2025 RediRedi. Todos os Direitos Reservados</p>
+                </div>
+                <p class="footer__cta">* Lojas que usam a RediRedi e seguem nossas recomendações inteligentes aumentam, em média, 20% o número de pedidos.</p>
+            </div>
+        </footer>
     </article>
 </template>
 <script setup>
@@ -49,6 +78,8 @@ const country = countryData.value?.country
 const pageData = await queryContent('lps').where({
     slug: route.params.slug
 }).findOne();
+const pageContent = await queryContent('paginas-fixas', 'homepage').findOne();
+
 
 const seoTitle = pageData.title
 const seoDescription = pageData.description
@@ -70,6 +101,9 @@ useHead({
 
 </script>
 <style lang="scss" scoped>
+article {
+    background: #2577B1;
+}
 .lp-hero {
     background-image: url('/images/hero-bg.webp');
     background-size: cover;
@@ -135,4 +169,49 @@ useHead({
     :deep(.rr-cta) {
         transform: translateY(-100%);
     }
+
+    .footer {
+        background-color: #2577B1;
+        padding-block: 38px 32px;
+        .lp-hero__logo {
+            img{
+                max-height: 34px;
+            }
+            &:not(:last-child) {
+                border-color: #FFF;
+            }
+        }
+    }
+
+        .footer__header {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 24px;
+        }
+
+            .footer__header + .footer__header {
+                border-bottom: 1px solid var(--white-color);
+            }
+
+        .footer__nav {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer__link {
+            font-size: 0.875em;
+            opacity: 0.7;
+            color: var(--white-color);
+            text-decoration: none;
+        }
+
+        .footer__cta {
+            padding-top: 24px;
+            text-align: center;
+            color: var(--white-color);
+        }
 </style>

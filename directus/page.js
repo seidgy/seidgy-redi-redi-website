@@ -9,6 +9,7 @@ const objectContructor = async (dir, fs) => {
   let logos = await common.getDirectusData("logo");
   let icones = await common.getDirectusData("icone");
   let contentSections = await common.getDirectusData("content_section");
+  let depoimentos = await common.getDirectusData("depoimento");
   
 
   let logosArray = [];
@@ -24,6 +25,7 @@ const objectContructor = async (dir, fs) => {
       const foundLogo = logos.find(l => l.id === logo.logo_id);
       const logoObj = {
         imagem: await common.getImage(foundLogo.imagem?foundLogo.imagem.imagem:''),
+        negativa: await common.getImage(foundLogo.negativa?foundLogo.negativa.imagem:''),
         url: foundLogo.url,
         alt: foundLogo.alias
       }
@@ -40,9 +42,6 @@ const objectContructor = async (dir, fs) => {
     });
     basePage.icones = iconesArray;
     
-    // Adicionar logs para debug
-    console.log("Page data:", page);
-    console.log("Content Sections:", contentSections);
     
     // Atribuir as seções da página antes de processá-las
     basePage.secoes = page.secoes || [];
@@ -53,13 +52,13 @@ const objectContructor = async (dir, fs) => {
         console.log("Seção não encontrada:", secao.content_section_id);
         continue;
       }
-      let sectionIconsArray = []
       if(foundSection.imagem) {
         foundSection.imagem = await common.getImage(foundSection.imagem.imagem)
       }
       if(foundSection.imagem_fundo) {
         foundSection.imagem_fundo = await common.getImage(foundSection.imagem_fundo.id)
       }
+      let sectionIconsArray = []
       for (const icone of foundSection.icones) {
         const foundIcone = icones.find(i => i.id === icone.icone_id);
         const iconeObj = {
@@ -69,10 +68,15 @@ const objectContructor = async (dir, fs) => {
         sectionIconsArray.push(iconeObj)
       }
       foundSection.icones = sectionIconsArray;
+      let sectionDepoimentosArray = []
+      for (const dp of foundSection.depoimentos) {
+        const foundDp = depoimentos.find(i => i.id === dp.depoimento_id);
+        sectionDepoimentosArray.push(foundDp)
+      }
+      foundSection.depoimentos = sectionDepoimentosArray;
       sectionsArray.push(foundSection)
     }
     basePage.secoes = sectionsArray;
-    //console.log(basePage);
 
 
     // Salvar arquivo na raiz (pt-BR)
