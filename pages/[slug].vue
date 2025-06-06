@@ -49,9 +49,9 @@ const pageData = await queryContent('lps').where({
     slug: route.params.slug
 }).findOne();
 
-const seoTitle = pageContent.title
-const seoDescription = pageContent.description
-const seoImage = pageContent.imagem_OG?pageContent.imagem_OG:'/OG.jpg'
+const seoTitle = pageData.title
+const seoDescription = pageData.description
+const seoImage = pageData.imagem_OG?pageData.imagem_OG:'/OG.jpg'
 useHead({
     title: seoTitle,
     meta: [
