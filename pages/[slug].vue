@@ -49,6 +49,24 @@ const pageData = await queryContent('lps').where({
     slug: route.params.slug
 }).findOne();
 
+const seoTitle = pageContent.title
+const seoDescription = pageContent.description
+const seoImage = pageContent.imagem_OG?pageContent.imagem_OG:'/OG.jpg'
+useHead({
+    title: seoTitle,
+    meta: [
+      { property: 'og:title',  content: seoTitle},
+      { name: "description", content: seoDescription  },
+      { property: 'og:description',  content: seoDescription},
+      { name: 'twitter:description', content: seoDescription },
+      { property: 'og:site_name',  content: seoTitle},
+      { property: 'og:image',  content: seoImage},
+      { property: 'og:image:alt',  content: seoTitle},
+      { name: 'twitter:image',  content: seoImage},
+      { name: 'twitter:image:alt',  content: seoTitle},
+    ]
+})
+
 </script>
 <style lang="scss" scoped>
 .lp-hero {
