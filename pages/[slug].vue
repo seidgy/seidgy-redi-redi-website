@@ -21,7 +21,7 @@
                 </div>
                 <div class="lp-hero__content">
                     <div class="lp-hero__info">
-                        <div class="lp-hero__text">
+                        <div class="lp-hero__text prose-content">
                             <div v-html="pageData.conteudo"></div>
                         </div>
                         <rr-trial-button :label="pageData.conteudo_button_label"></rr-trial-button>
@@ -36,6 +36,7 @@
         <rr-cta>
             <p class="text--2xl text--sb text--white align-center" v-if="pageData.cta">{{ pageData.cta }}</p>
         </rr-cta>
+        <rr-section v-for="secao in pageData.secoes" :content="secao"></rr-section>
     </article>
 </template>
 <script setup>
@@ -122,17 +123,6 @@ useHead({
         gap: 66px;
         align-items: flex-start;
         padding-top: 30px;
-    }
-
-    .lp-hero__text {
-        :deep(h2) {
-            margin-bottom: 37px;
-        }
-        :deep(p) {
-            font-size: 1.5em;
-            font-family: var(--display-font);
-            line-height: 1.5;
-        }
     }
 
     .lp-hero__icons {

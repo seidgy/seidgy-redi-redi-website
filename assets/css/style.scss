@@ -244,6 +244,22 @@ html {
     }
 }
 
+
+
+.prose-content {
+    h2:not(:last-child) {
+        margin-bottom: 37px;
+    }
+    p {
+        font-size: 1.5em;
+        font-family: var(--display-font);
+        line-height: 1.5;
+    }
+    * + * {
+        margin-top: 1em;
+    }
+}
+
 .base-link {
     display: flex;
     flex-flow: row nowrap;

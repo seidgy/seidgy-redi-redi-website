@@ -8,10 +8,12 @@ const objectContructor = async (dir, fs) => {
   let pages = await common.getDirectusData("Page");
   let logos = await common.getDirectusData("logo");
   let icones = await common.getDirectusData("icone");
+  let contentSections = await common.getDirectusData("content_section");
   
 
   let logosArray = [];
   let iconesArray = [];
+  let sectionsArray = [];
   // Criar objeto base da página
   pages.forEach(async (page) => {
     let basePage = { ...page };
@@ -37,7 +39,40 @@ const objectContructor = async (dir, fs) => {
       iconesArray.push(iconeObj)
     });
     basePage.icones = iconesArray;
-    console.log(basePage);
+    
+    // Adicionar logs para debug
+    console.log("Page data:", page);
+    console.log("Content Sections:", contentSections);
+    
+    // Atribuir as seções da página antes de processá-las
+    basePage.secoes = page.secoes || [];
+    
+    for (const secao of basePage.secoes) {
+      const foundSection = contentSections.find(i => i.id === secao.content_section_id);
+      if (!foundSection) {
+        console.log("Seção não encontrada:", secao.content_section_id);
+        continue;
+      }
+      let sectionIconsArray = []
+      if(foundSection.imagem) {
+        foundSection.imagem = await common.getImage(foundSection.imagem.imagem)
+      }
+      if(foundSection.imagem_fundo) {
+        foundSection.imagem_fundo = await common.getImage(foundSection.imagem_fundo.id)
+      }
+      for (const icone of foundSection.icones) {
+        const foundIcone = icones.find(i => i.id === icone.icone_id);
+        const iconeObj = {
+          imagem: await common.getImage(foundIcone.icone.id),
+          alt: foundIcone.texto
+        }
+        sectionIconsArray.push(iconeObj)
+      }
+      foundSection.icones = sectionIconsArray;
+      sectionsArray.push(foundSection)
+    }
+    basePage.secoes = sectionsArray;
+    //console.log(basePage);
 
 
     // Salvar arquivo na raiz (pt-BR)

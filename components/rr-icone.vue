@@ -1,5 +1,5 @@
 <template>
-    <div class="rr-icone">
+    <div :class="`rr-icone rr-icone--${estilo}`">
         <div class="rr-icone__icon">
             <img :src="icone.imagem" :alt="icone.alt" />
         </div>
@@ -12,7 +12,7 @@ const props = defineProps({
         type: Object,
         required: true
     },
-    style: {
+    estilo: {
         type: String,
         default: ''
     }
@@ -24,7 +24,7 @@ const props = defineProps({
     flex-flow: row nowrap;
     align-items: center;
     gap: 10px;
-    &__icon {
+    .rr-icone__icon {
         width: 47px;
         height: 47px;
         background-color: #A7C9C7;
@@ -38,4 +38,15 @@ const props = defineProps({
         line-height: 1em;
     }
 }
+
+    .rr-icone--lg {
+        gap: 14px;
+        .rr-icone__icon {
+            width: 58px;
+            height: 58px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+    }
 </style>
