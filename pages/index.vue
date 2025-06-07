@@ -147,7 +147,10 @@ useHead({
       { property: 'og:image:alt',  content: seoTitle},
       { name: 'twitter:image',  content: seoImage},
       { name: 'twitter:image:alt',  content: seoTitle},
-    ]
+    ],
+    htmlAttrs: {
+        lang: 'pt-br'
+    },
 })
 </script>
 

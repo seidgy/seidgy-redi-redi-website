@@ -96,14 +96,14 @@ useHead({
       { property: 'og:image:alt',  content: seoTitle},
       { name: 'twitter:image',  content: seoImage},
       { name: 'twitter:image:alt',  content: seoTitle},
-    ]
+    ],
+    htmlAttrs: {
+        lang: 'pt-br'
+    },
 })
 
 </script>
 <style lang="scss" scoped>
-article {
-    background: #2577B1;
-}
 .lp-hero {
     background-image: url('/images/hero-bg.webp');
     background-size: cover;
@@ -171,6 +171,7 @@ article {
     }
 
     .footer {
+        position: relative;
         background-color: #2577B1;
         padding-block: 38px 32px;
         .lp-hero__logo {
@@ -180,6 +181,16 @@ article {
             &:not(:last-child) {
                 border-color: #FFF;
             }
+        }
+        &::before {
+            content: '';
+            top: -48px;
+            left: 0;
+            right: 0;
+            position: absolute;
+            height: 48px;
+            z-index: 0;
+            background-color: #2577B1;
         }
     }
 

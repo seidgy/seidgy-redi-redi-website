@@ -38,13 +38,14 @@ const getBackground = () => {
 </script>
 <style scoped lang="scss">
 .rr-section {
-    background-color: #FFF;
     background-size: cover;
     background-position: center;
     padding-block: 80px 0;
     display: flex;
     flex-direction: column;
     gap: 34px;
+    position: relative;
+    z-index: 1;
     &:last-of-type {
         border-radius: 0 0 24px 24px;
     }
