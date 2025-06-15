@@ -1,20 +1,20 @@
 <template>
-    <article>
+    <article class="lp">
         <div class="lp-hero">
             <div class="center" size="wide">
                 <div class="lp-hero__nav">
                     <div class="lp-hero__logos">
                         <nuxt-link v-for="logo in pageData.logos"
-                            target="_blank"
+                            
                             :to="logo.url"
                             class="lp-hero__logo"
                             >
                             <img :src="logo.imagem" :alt="logo.alt" />
                         </nuxt-link>
                     </div>
-                        <nuxt-link target="_blank" 
+                        <nuxt-link  
                             :to="pageData.button_url?pageData.button_url:getCountryLink(country, 'registro')" 
-                            class="button button--small" color="primary" visuals="primary"
+                            class="button button--small lp-hero__nav-try-button" color="primary" visuals="primary"
                         >
                             {{ pageData.button_label }}
                         </nuxt-link>
@@ -42,7 +42,7 @@
                 <div class="footer__header">
                     <div class="lp-hero__logos">
                         <nuxt-link v-for="logo in pageData.logos"
-                            target="_blank"
+                            
                             :to="logo.url"
                             class="lp-hero__logo"
                             >
@@ -53,13 +53,13 @@
                 </div>
                 <div class="footer__header">
                     <nav class="footer__nav">
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
-                        <nuxt-link target="_blank" :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
+                        <nuxt-link  :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
                     </nav>
                     <p class="text--white">© 2025 RediRedi. Todos os Direitos Reservados</p>
                 </div>
@@ -81,9 +81,9 @@ const pageData = await queryContent('lps').where({
 const pageContent = await queryContent('paginas-fixas', 'homepage').findOne();
 
 
-const seoTitle = pageData.title
-const seoDescription = pageData.description
-const seoImage = pageData.imagem_OG?pageData.imagem_OG:'/OG.jpg'
+const seoTitle = pageData?.title
+const seoDescription = pageData?.description
+const seoImage = pageData.imagem_OG?pageData?.imagem_OG:'/OG.jpg'
 useHead({
     title: seoTitle,
     meta: [
@@ -115,6 +115,14 @@ useHead({
         display: flex;
         flex-direction: column;
         gap: 74px;
+        @media(max-width: 36em) {
+            gap: 17px;
+        }
+    }
+    @media(max-width: 36em) {
+        :deep(h2){
+            margin-bottom: 18px;
+        }
     }
 }
 
@@ -124,6 +132,12 @@ useHead({
         justify-content: space-between;
         align-items: center;
         padding-bottom: 24px;
+        @media(max-width: 36em) {
+            justify-content: center;
+            .lp-hero__nav-try-button {
+                display: none;
+            }
+        }
     }
 
         .lp-hero__logos {
@@ -135,13 +149,22 @@ useHead({
         .lp-hero__logo {
             img{
                 max-height: 36px;
+                @media(max-width: 36em) {
+                    max-height: 23px;
+                }
             }
             &:not(:last-child) {
                 padding-right: 34px;
                 border-right: 1px solid #5A8986;
+                @media(max-width: 36em) {
+                    padding-right: 22px;
+                }
             }
             &:not(:first-child) {
                 padding-left: 34px;
+                @media(max-width: 36em) {
+                    padding-left: 22px;
+                }
             }
         }
 
@@ -149,6 +172,9 @@ useHead({
         display: grid;
         grid-template-columns: auto 47%;
         gap: 47px;
+        @media(max-width: 36em) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .lp-hero__info {
@@ -157,6 +183,10 @@ useHead({
         gap: 66px;
         align-items: flex-start;
         padding-top: 30px;
+        @media(max-width: 36em) {
+            padding-top: 0;
+            gap: 38px;
+        }
     }
 
     .lp-hero__icons {
@@ -164,6 +194,13 @@ useHead({
         flex-flow: row nowrap;
         align-items: center;
         gap: 70px;
+        @media(max-width: 36em) {
+            flex-direction: column;
+            width: 90%;
+            max-width: 234px;
+            margin: 0 auto;
+            gap: 18px;
+        }
     }
 
     :deep(.rr-cta) {
@@ -177,6 +214,9 @@ useHead({
         .lp-hero__logo {
             img{
                 max-height: 34px;
+                @media(max-width: 36em) {
+                    max-height: 27px;
+                }
             }
             &:not(:last-child) {
                 border-color: #FFF;
@@ -200,6 +240,14 @@ useHead({
             justify-content: space-between;
             align-items: center;
             padding-bottom: 24px;
+            @media(max-width: 36em) {
+                flex-direction: column;
+                gap: 47px;
+                padding-bottom: 52px;
+                p {
+                    font-size: 0.875em;
+                }
+            }
         }
 
             .footer__header + .footer__header {
@@ -211,6 +259,9 @@ useHead({
             flex-flow: row nowrap;
             align-items: center;
             gap: 16px;
+            @media(max-width: 36em) {
+                flex-direction: column;
+            }
         }
 
         .footer__link {
@@ -224,5 +275,35 @@ useHead({
             padding-top: 24px;
             text-align: center;
             color: var(--white-color);
+            @media(max-width: 36em) {
+                padding-top: 37px;
+                font-size: 0.875em;
+            }
         }
+
+@media(max-width: 36em) {
+    .lp {
+        :deep(h2), :deep([visual=h2]) {
+            font-size: 1.875em;
+            line-height: 1em;
+            text-align: center;
+        }
+        :deep(.button) {
+            font-weight: 500;
+            font-size: 0.75em;
+            line-height: 1.4em;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-inline: auto;
+        }
+        :deep(.rr-cta) {
+            transform: translateY(0);
+            p {
+                font-size: 1.125em;
+                font-weight: 600;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
 </style>

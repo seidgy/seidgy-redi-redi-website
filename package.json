@@ -1,20 +1,28 @@
 {
-  "name": "Redi Redi Website",
+  "name": "rediredi-website",
   "version": "1.0.0",
   "description": "Nuxt Directus Boilerplate",
   "type": "module",
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "scripts": {
+    "lint": "eslint . || true",
+    "lint:fix": "eslint . --fix",
     "dev": "node contentImporter.js && nuxt dev",
     "start": "node contentImporter.js && nuxt start",
     "generate": "node contentImporter.js && nuxt build",
     "preview": "node contentImporter.js && nuxt preview"
   },
   "devDependencies": {
+    "@dargmuesli/nuxt-cookie-control": "^9.0.5",
+    "@nuxt/devtools": "^2.5.0",
+    "@nuxt/eslint": "^1.4.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^9.5.3",
+    "@nuxtjs/sitemap": "^7.3.1",
+    "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
+    "eslint": "^9.28.0",
     "nuxt": "^3.0.0-rc.11"
   },
   "dependencies": {

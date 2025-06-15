@@ -46,8 +46,9 @@ const getBackground = () => {
     gap: 34px;
     position: relative;
     z-index: 1;
-    &:last-of-type {
-        border-radius: 0 0 24px 24px;
+    border-radius: 0 0 24px 24px;
+    @media(max-width: 36em) {
+        padding-top: 50px;
     }
 
 }
@@ -58,6 +59,9 @@ const getBackground = () => {
             grid-template-columns: 1fr 1fr;
             align-items: flex-end;
             gap: 24px;
+            @media(max-width: 36em) {
+                grid-template-columns: 1fr;
+            }
         }
         .rr-section__content {
             padding-bottom: 45px;
@@ -68,6 +72,9 @@ const getBackground = () => {
         & > .center {
             align-items: center;
             padding-bottom: 100px;
+            @media(max-width: 36em) {
+                padding-bottom: 80px;
+            }
         }
     }
 
@@ -82,6 +89,12 @@ const getBackground = () => {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        @media(max-width: 36em) {
+            gap: 18px;
+            width: 90%;
+            max-width: 288px;
+            margin-inline: auto;
+        }
     }
 
 .rr-section--statement {
@@ -95,6 +108,9 @@ const getBackground = () => {
             margin-inline: auto;
         }
     }
+    @media(max-width: 36em) {
+        padding-bottom: 67px;
+    }
 }
 
     .rr-section__depoimentos {
@@ -103,6 +119,9 @@ const getBackground = () => {
         gap: 40px;
         max-width: 1080px;
         margin: 0 auto;
+        @media(max-width: 36em) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .rr-section--vertical {
@@ -124,6 +143,7 @@ const getBackground = () => {
         img {
             max-width: 1080px;
             margin-inline: auto;
+            width: 100%;
         }
     }
 </style>

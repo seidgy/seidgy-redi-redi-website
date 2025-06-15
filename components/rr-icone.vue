@@ -36,6 +36,14 @@ const props = defineProps({
     }
     p {
         line-height: 1em;
+        min-width: 120px;
+    }
+    @media(max-width: 36em) {
+        width: 100%;
+        gap: 9px;
+        p {
+            flex-grow: 1;
+        }
     }
 }
 
@@ -44,9 +52,22 @@ const props = defineProps({
         .rr-icone__icon {
             width: 58px;
             height: 58px;
+            img {
+                width: 20px;
+            }
         }
         p {
             font-size: 1.5em;
+        }
+        @media(max-width: 36em) {
+            gap: 8px;
+            .rr-icone__icon {
+                width: 38px;
+                height: 38px;
+            }
+            p {
+                font-size: 0.875em;
+            }
         }
     }
 </style>

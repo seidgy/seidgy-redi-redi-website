@@ -3,22 +3,22 @@
         <div class="center">
             <div class="footer__header">
                 <div class="footer__identity">
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'home')">
+                    <nuxt-link  :to="getCountryLink(country, 'home')">
                         <img src="/images/redi-redi-negative.svg" alt="RediRedi">
                     </nuxt-link>
-                    <rr-store-buttons></rr-store-buttons>
+                    <rr-store-buttons :appStore="getCountryLink(country, 'app_store')" :playStore="getCountryLink(country, 'play_store')"></rr-store-buttons>
                 </div>
                 <rr-socials :content="pageContent"></rr-socials>
             </div>
             <div class="footer__links">
                 <nav class="footer__nav">
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'sobre')" class="footer__link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'catalogo')" class="footer__link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'blog')" class="footer__link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'premium')" class="footer__link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'ajuda')" class="footer__link">{{ pageContent.textObj['central de ajuda'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'politica')" class="footer__link">{{ pageContent.textObj['politica de privacidade'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'termos')" class="footer__link">{{ pageContent.textObj['termos e condicoes'] }}</nuxt-link>
                 </nav>
                 <div class="flex flex--22">
                     <span class="footer__separator"></span>

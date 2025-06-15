@@ -32,6 +32,10 @@ const props = defineProps({
         flex-flow: column;
         background-color: white;
         gap: 24px;
+        @media(max-width: 36em) {
+            padding: 20px;
+            gap: 15px;
+        }
     }
 
         .depoimento__info {
@@ -51,10 +55,17 @@ const props = defineProps({
         .depoimento__name {
             font-size: 1.125em;
             font-weight: 600;
+            @media(max-width: 36em) {
+                font-size: 0.75em;
+            }
         }
         .depoimento__quotes {
             width: 60px;
             height: 60px;
+            @media(max-width: 36em) {
+                width: 38px;
+                height: 38px;
+            }
         }
 
         .depoimento__stars {
@@ -62,10 +73,24 @@ const props = defineProps({
             flex-flow: row nowrap;
             gap: 4px;
             padding-top: 10px;
+            @media(max-width: 36em) {
+                gap: 2px;
+                padding-top: 8px;
+            }
         }
 
         .depoimento__star {
             width: 14px;
             height: 14px;
+            @media(max-width: 36em) {
+                width: 9px;
+                height: 9px;
+            }
+        }
+        
+        @media(max-width: 36em) {
+            .depoimento__text {
+                font-size: 0.675em;
+            }
         }
 </style>

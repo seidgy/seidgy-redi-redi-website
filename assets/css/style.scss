@@ -249,11 +249,18 @@ html {
 .prose-content {
     h2:not(:last-child) {
         margin-bottom: 37px;
+        @media(max-width: 36em) {
+            margin-bottom: 50px;
+        }
     }
     p {
         font-size: 1.5em;
         font-family: var(--display-font);
         line-height: 1.5;
+        @media(max-width: 36em) {
+            font-size: 0.875em;
+            text-align: center;
+        }
     }
     * + * {
         margin-top: 1em;
@@ -511,4 +518,13 @@ html {
 
 .limiter {
     overflow: hidden;
+}
+
+
+//COOKIES CONSENT
+.cookieControl__Bar, .cookieControl__ModalContent {
+    border-radius: 16px;
+    button {
+        border-radius: 8px;
+    }
 }

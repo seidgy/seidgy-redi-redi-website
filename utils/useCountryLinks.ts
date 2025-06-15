@@ -4,7 +4,7 @@ type CountryCode =
 
 type LinkType =
   | 'home' | 'sobre' | 'catalogo' | 'blog' | 'premium' | 'entrar'
-  | 'politica' | 'termos' | 'ajuda' | 'registro'
+  | 'politica' | 'termos' | 'ajuda' | 'registro' | 'app_store' | 'play_store'
 
 const countries: Record<CountryCode, Record<LinkType, string>> = {
   AR: {
@@ -17,7 +17,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/ar/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   BR: {
     home: 'https://rediredi.com/br/',
@@ -29,7 +31,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/br/termos-e-condicoes/',
     ajuda: 'https://help.rediredi.com/pt-BR/',
     entrar: 'https://app.rediredi.com/pt-BR/signin',
-    registro: 'https://app.rediredi.com/pt-BR/signup'
+    registro: 'https://app.rediredi.com/pt-BR/signup',
+    app_store: 'https://apps.apple.com/br/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=pt_BR'
   },
   CL: {
     home: 'https://rediredi.com/cl/',
@@ -41,7 +45,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/cl/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   CO: {
     home: 'https://rediredi.com/co/',
@@ -53,7 +59,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/co/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   EC: {
     home: 'https://rediredi.com/ec/',
@@ -65,7 +73,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/ec/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   ES: {
     home: 'https://rediredi.com/es/',
@@ -77,7 +87,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/es/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   IN: {
     home: 'https://rediredi.com/in/',
@@ -89,7 +101,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/in/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
     entrar: 'https://app.rediredi.com/en/signin',
-    registro: 'https://app.rediredi.com/en/signup'
+    registro: 'https://app.rediredi.com/en/signup',
+    app_store: 'https://apps.apple.com/us/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=en'
   },
   MX: {
     home: 'https://rediredi.com/mx/',
@@ -101,7 +115,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/mx/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   NG: {
     home: 'https://rediredi.com/ng/',
@@ -113,7 +129,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/ng/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
     entrar: 'https://app.rediredi.com/en/signin',
-    registro: 'https://app.rediredi.com/en/signup'
+    registro: 'https://app.rediredi.com/en/signup',
+    app_store: 'https://apps.apple.com/us/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=en'
   },
   PY: {
     home: 'https://rediredi.com/py/',
@@ -125,7 +143,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/py/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   PE: {
     home: 'https://rediredi.com/pe/',
@@ -137,7 +157,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/pe/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   },
   US: {
     home: 'https://rediredi.com/us/',
@@ -149,7 +171,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/us/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
     entrar: 'https://app.rediredi.com/en/signin',
-    registro: 'https://app.rediredi.com/en/signup'
+    registro: 'https://app.rediredi.com/en/signup',
+    app_store: 'https://apps.apple.com/us/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=en'
   },
   UK: {
     home: 'https://rediredi.com/uk/',
@@ -161,7 +185,9 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/uk/terms-and-conditions/',
     ajuda: 'https://help.rediredi.com/en/',
     entrar: 'https://app.rediredi.com/en/signin',
-    registro: 'https://app.rediredi.com/en/signup'
+    registro: 'https://app.rediredi.com/en/signup',
+    app_store: 'https://apps.apple.com/us/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=en'
   },
   UY: {
     home: 'https://rediredi.com/uy/',
@@ -173,11 +199,44 @@ const countries: Record<CountryCode, Record<LinkType, string>> = {
     termos: 'https://rediredi.com/uy/terminos-y-condiciones/',
     ajuda: 'https://help.rediredi.com/es/',
     entrar: 'https://app.rediredi.com/es/signin',
-    registro: 'https://app.rediredi.com/es/signup'
+    registro: 'https://app.rediredi.com/es/signup',
+    app_store: 'https://apps.apple.com/es/app/rediredi-create-online-store/id6477599681',
+    play_store: 'https://play.google.com/store/apps/details?id=com.rediredi.mobile.app&hl=es'
   }
 }
 
+function addUtmParams(url: string, route: any): string {
+  const urlObj = new URL(url)
+  const currentParams = new URLSearchParams(route.query)
+  
+  // Adiciona todos os parâmetros UTM da URL atual
+  for (const [key, value] of currentParams.entries()) {
+    if (key.startsWith('utm_')) {
+      urlObj.searchParams.set(key, value)
+    }
+  }
+  
+  // Se não existir utm_source, adiciona um valor padrão
+  if (!urlObj.searchParams.has('utm_source')) {
+    const path = route.path
+    // Remove o locale do path (primeiro segmento após /)
+    const pathWithoutLocale = path.split('/').slice(2).join('/')
+    const defaultSource = pathWithoutLocale === '' ? 'new-site' : pathWithoutLocale.split('/').pop() || 'new-site'
+    urlObj.searchParams.set('utm_source', defaultSource)
+  }
+  
+  return urlObj.toString()
+}
+
 export function getCountryLink(code: string, section: LinkType): string {
+  const route = useRoute()
   const country = countries[code.toUpperCase() as CountryCode] || countries['US']
-  return country[section]
+  const baseUrl = country[section]
+  
+  // Adiciona UTM apenas para links de signin e signup
+  if (section === 'entrar' || section === 'registro') {
+    return addUtmParams(baseUrl, route)
+  }
+  
+  return baseUrl
 }

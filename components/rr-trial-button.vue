@@ -1,5 +1,5 @@
 <template>
-    <nuxt-link target="_blank" :to="getCountryLink(country, 'registro')" class="button" :class="{'button--xs': size == 'xs', 'button--small': size == 'sm', 'button--large': size == 'lg'}" color="primary" visuals="primary">{{ label }}</nuxt-link>
+    <nuxt-link  :to="getCountryLink(country, 'registro')" class="button" :class="{'button--xs': size == 'xs', 'button--small': size == 'sm', 'button--large': size == 'lg'}" color="primary" visuals="primary">{{ label }}</nuxt-link>
 </template>
 <script setup>
 import { getCountryLink } from '~/utils/useCountryLinks'

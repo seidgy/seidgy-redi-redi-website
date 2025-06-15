@@ -41,12 +41,24 @@ export default defineNuxtConfig({
     ]
   },
 
-  modules: ['@nuxt/content', '@nuxtjs/i18n'],
+  modules: [
+    '@nuxt/content',
+    '@nuxtjs/i18n',
+    '@nuxt/eslint',
+    '@zadigetvoltaire/nuxt-gtm',
+    '@nuxtjs/sitemap',
+  ],
+
   i18n: {
     lazy: true,
     locales,
     defaultLocale: 'pt'
   },
+  gtm: {
+    id: 'GTM-M2KS3TD',
+    defer: true
+  },
+
   generate: {
     routes: [
     ]
@@ -70,4 +82,8 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-04-10',
+
+  devtools: {
+    enabled: false,
+  },
 });

@@ -10,11 +10,8 @@ export const useUserCountry = async (event: H3Event) => {
     const resolvedIP = (clientIP && clientIP !== '::1' && clientIP !== '127.0.0.1') 
       ? clientIP.split(',')[0].trim() // Pega o primeiro IP se houver múltiplos
       : '8.8.8.8'
-    
-    console.log('IP detectado:', resolvedIP)
 
     const res = await $fetch(`https://ipinfo.io/${resolvedIP}/json?token=c5dcb76c0a809b`)
-    console.log('Resposta da API IPAPI:', res)
 
     return {
       country: res?.country || null,

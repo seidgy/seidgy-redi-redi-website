@@ -2,25 +2,29 @@
     <div class="center">
         <nav class="rr-menu" :class="{'rr-menu--active': data.menuActive}">
             <div class="flex flex--60 flex-center">
-                <nuxt-link target="_blank" :to="getCountryLink(country, 'home')">
+                <nuxt-link  :to="getCountryLink(country, 'home')">
                     <img src="/images/redi-redi.svg" alt="RediRedi">
                 </nuxt-link>
                 <nav class="rr-menu__nav not-mobile">
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'sobre')" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'catalogo')" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'blog')" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'premium')" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
                 </nav>
             </div>
-            <div class="flex flex-center flex--8">
-                <nuxt-link target="_blank" :to="getCountryLink(country, 'entrar')" class="button button--xs not-desktop" size="xs" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
+            <div class="flex flex-center flex--16">
+                <nuxt-link  :to="getCountryLink(country, 'entrar')" class="button button--xs not-desktop" size="xs" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
+                <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5 not-desktop" :class="{'language-selector--active': data.languageActive}"><img src="/images/world.svg" alt="Change language" /><img src="/images/chevron-down.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
+                <ul class="language-select not-desktop" v-if="data.languageActive">
+                    <li v-for="loc in locales"><SwitchLocalePathLink @click="data.languageActive = false" class="locale" :class="{'locale--active': loc.code == locale}" :locale="loc.code">{{ loc.name }}</SwitchLocalePathLink></li>
+                </ul>
                 <button class="rr-menu__trigger not-desktop" @click="data.menuActive = true">
                     <img src="/images/menu.svg" alt="Abrir menu" aria-hidden="true" />
                 </button>
             </div>
             <div class="rr-menu__links">
                 <nav class="rr-menu__nav rr-menu__nav--small">
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'entrar')" class="button button--small not-mobile" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'entrar')" class="button button--small not-mobile" visuals="secondary" color="w-primary">{{ pageContent.textObj['botao entrar'] }}</nuxt-link>
                     <rr-trial-button class="not-mobile" size="sm" :label="pageContent.textObj['botao experimente']"></rr-trial-button>
                     <rr-trial-button class="not-desktop" size="xs" :label="pageContent.textObj['botao experimente']"></rr-trial-button> 
                     <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5 not-mobile" :class="{'language-selector--active': data.languageActive}"><img src="/images/world.svg" alt="Change language" /><img src="/images/chevron-down.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
@@ -29,16 +33,12 @@
                     </ul>
                 </nav>
                 <nav class="rr-menu__nav not-desktop">
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'sobre')" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'catalogo')" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'blog')" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
-                    <nuxt-link target="_blank" :to="getCountryLink(country, 'premium')" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'sobre')" class="rr-menu__nav-link">{{ pageContent.textObj['sobre'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'catalogo')" class="rr-menu__nav-link">{{ pageContent.textObj['catalogo'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'blog')" class="rr-menu__nav-link">{{ pageContent.textObj['blog'] }}</nuxt-link>
+                    <nuxt-link  :to="getCountryLink(country, 'premium')" class="rr-menu__nav-link">{{ pageContent.textObj['premium'] }}</nuxt-link>
                 </nav>
                 <div class="rr-menu-header not-desktop">
-                    <nuxt-link @click.prevent="data.languageActive = !data.languageActive" class="language-selector flex flex-center flex--5" :class="{'language-selector--active': data.languageActive}"><img src="/images/world-negative.svg" alt="Change language" /><img src="/images/chevron-down-negative.svg" alt="chevron" class="chevron" aria-hidden="true"></nuxt-link>
-                    <ul class="language-select not-desktop" v-if="data.languageActive">
-                        <li v-for="loc in locales"><SwitchLocalePathLink @click="data.languageActive = false" class="locale" :class="{'locale--active': loc.code == locale}" :locale="loc.code">{{ loc.name }}</SwitchLocalePathLink></li>
-                    </ul>
                     <button class="rr-menu__trigger not-desktop" @click="data.menuActive = false">
                         <img src="/images/close.svg" alt="Fechar menu" aria-hidden="true" />
                     </button>
@@ -73,7 +73,7 @@ const data = reactive({
         @media (max-width: 36em) {
             padding-block: 0;
             :deep(img) {
-                max-width: 140px;
+                max-width: 115px;
             }
             &::before {
                 content: '';
@@ -141,8 +141,7 @@ const data = reactive({
                 }
             }
             @media (max-width: 36em) {
-                right: auto;
-                left: 20px;
+                right: 24px;
                 width: 170px;
             }
         }

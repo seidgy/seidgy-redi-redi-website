@@ -1,11 +1,19 @@
 <template>
     <div class="rr-store">
-        <a href="" target="_blank"><img src="/images/appstore.svg" alt="App Store"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.rediredi.mobile.app" target="_blank"><img src="/images/playstore.svg" alt="Google Play Store"></a>
+        <a :href="appStore" target="_blank"><img src="/images/appstore.svg" alt="App Store"></a>
+        <a :href="playStore" target="_blank"><img src="/images/playstore.svg" alt="Google Play Store"></a>
     </div>
 </template>
 <script setup>
 const props = defineProps({
+    appStore: {
+        type: String,
+        required: true
+    },
+    playStore: {
+        type: String,
+        required: true
+    },
 })
 </script>
 <style scoped lang="scss">

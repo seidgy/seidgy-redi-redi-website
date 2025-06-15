@@ -1,0 +1,42 @@
+{
+  "name": "rediredi-website-infra",
+  "version": "0.1.0",
+  "bin": {
+    "infra": "bin/app-infra.js"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "cdk:bootstrap": "cdk bootstrap",
+    "cdk:deploy:ci": "cdk deploy --require-approval never",
+    "cdk:deploy": "cdk deploy",
+    "cdk:destroy:ci": "cdk destroy --force",
+    "cdk:destroy": "cdk destroy",
+    "cdk:diff": "cdk diff",
+    "cdk:synth": "cdk synth",
+    "cdk": "cdk",
+    "test": "jest",
+    "watch": "tsc -w",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.14",
+    "aws-cdk": "2.80.0",
+    "jest": "^29.5.0",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~5.0.4"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.202.0",
+    "@aws-cdk/aws-ssm": "^1.202.0",
+    "@cloudcomponents/cdk-static-website": "^2.0.0",
+    "aws-cdk-lib": "2.80.0",
+    "constructs": "^10.2.31",
+    "dotenv": "^16.0.3",
+    "source-map-support": "^0.5.21"
+  }
+}

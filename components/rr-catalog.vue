@@ -8,35 +8,35 @@
       <div class="flex flex--col flex--44">
         <p class="flex flex--center flex--16 text--sb">{{ pageContent.textObj['veja exemplos catalogo'] }} <img src="/images/arrow-down.svg" alt="Seta para baixo" aria-hidden="true" /></p>
         <div class="flex flex--16 catalog-list">
-          <nuxt-link to="https://petshop.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+          <nuxt-link to="https://petshop.rdi.store/products" class="image-button flex flex-center flex--col flex--between">
             <p class="text--2xs text--sb flex flex--3 flex-center">
               <img width="20px" src="/images/circle-brazil.svg" alt="Brazil" />
               {{ pageContent.textObj['pet shop'] }}
             </p>
             <img src="/images/dog.webp" alt="Dog" />
           </nuxt-link>
-          <nuxt-link to="https://cosmetico.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+          <nuxt-link to="https://cosmetico.rdi.store/products" class="image-button flex flex-center flex--col flex--between">
             <p class="text--2xs text--sb flex flex--3 flex-center">
               <img width="20px" src="/images/circle-colombia.svg" alt="Colombia" />
               {{ pageContent.textObj['cosmeticos'] }}
             </p>
             <img src="/images/lipstick.webp" alt="Lipstick" />
           </nuxt-link>
-          <nuxt-link to="https://moda.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+          <nuxt-link to="https://moda.rdi.store/products" class="image-button flex flex-center flex--col flex--between">
             <p class="text--2xs text--sb flex flex--3 flex-center">
               <img width="20px" src="/images/circle-mexico.svg" alt="Mexico" />
               {{ pageContent.textObj['moda'] }}
             </p>
             <img src="/images/shoe.webp" alt="Shoe" />
           </nuxt-link>
-          <nuxt-link to="https://supplements.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+          <nuxt-link to="https://supplements.rdi.store/products" class="image-button flex flex-center flex--col flex--between">
             <p class="text--2xs text--sb flex flex--3 flex-center">
               <img width="20px" src="/images/circle-usa.svg" alt="USA" />
               {{ pageContent.textObj['suplementos'] }}
             </p>
             <img src="/images/whey.webp" alt="Whey protein" />
           </nuxt-link>
-          <nuxt-link to="https://eletronicos.rdi.store/products" target="_blank" class="image-button flex flex-center flex--col flex--between">
+          <nuxt-link to="https://eletronicos.rdi.store/products" class="image-button flex flex-center flex--col flex--between">
             <p class="text--2xs text--sb flex flex--3 flex-center">
               <img width="20px" src="/images/circle-spain.svg" alt="Spain" />
               {{ pageContent.textObj['eletronicos'] }}
@@ -65,6 +65,12 @@ const props = defineProps({
 </script>
 
 <style scoped lang="scss">
+.catalogo {
+  @media (max-width: 36em) {
+      padding-top: 50px;
+  }
+}
+
 .catalog-list {
   @media (max-width: 36em) {
       flex-flow:  row wrap;
