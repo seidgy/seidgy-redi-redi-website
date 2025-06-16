@@ -83,7 +83,7 @@ const pageContent = await queryContent('paginas-fixas', 'homepage').findOne();
 
 const seoTitle = pageData?.title
 const seoDescription = pageData?.description
-const seoImage = pageData.imagem_OG?pageData?.imagem_OG:'/OG.jpg'
+const seoImage = pageData && pageData.imagem_OG?pageData?.imagem_OG:'/OG.jpg'
 useHead({
     title: seoTitle,
     meta: [
